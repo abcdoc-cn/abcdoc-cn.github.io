@@ -1,778 +1,556 @@
 <!DOCTYPE html>
-<html>
-
+<html lang=zh>
 <head>
-    <meta charset="utf-8">
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <!-- Color theme for statusbar -->
+  <meta name="theme-color" content="#000000" />
+  <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
+  <meta http-equiv="window-target" content="_top" />
+  
+  
+  <title>Hexo</title>
+  <meta property="og:type" content="website">
+<meta property="og:title" content="天空">
+<meta property="og:url" content="https://abcdoc-cn.github.io/page/6/index.html">
+<meta property="og:site_name" content="天空">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://abcdoc-cn.github.io/page/6/index.html">
+  
+  
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+  
+  
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="天空" type="application/atom+xml">
+</head>
+
+
+<body class="main-center" itemscope itemtype="http://schema.org/WebPage">
+  <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+  <div class="slimContent">
+    <div class="navbar-header">
+      
+      <div class="search" id="search-form-wrap">
+
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="搜索" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i class="icon icon-search"></i></button>
+            </span>
+        </div>
+    </form>
+    <div class="ins-search">
+  <div class="ins-search-mask"></div>
+  <div class="ins-search-container">
+    <div class="ins-input-wrapper">
+      <input type="text" class="ins-search-input" placeholder="想要查找什么..." x-webkit-speech />
+      <button type="button" class="close ins-close ins-selectable" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+    </div>
+    <div class="ins-section-wrapper">
+      <div class="ins-section-container"></div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+      <ul class="nav navbar-nav main-nav menu-highlight">
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/.">
+            
+            <i class="icon icon-home-fill"></i>
+            
+            <span class="menu-title">首页</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives">
+            
+            <i class="icon icon-archives-fill"></i>
+            
+            <span class="menu-title">归档</span>
+          </a>
+        </li>
+        
+      </ul>
+      
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/abcdoc-cn" target="_blank" title="Github" ><i class="icon icon-github"></i></a></li>
+        
+    </ul>
+
+    </nav>
+  </div>
+</header>
+
+  
+    <aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
     
-    <title>天空</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+      
+  <div class="widget">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget-body tagcloud">
+      <a href="/tags/C/" style="font-size: 13.29px;">C</a> <a href="/tags/C/" style="font-size: 13.29px;">C++</a> <a href="/tags/CentOS/" style="font-size: 13.29px;">CentOS</a> <a href="/tags/Docker/" style="font-size: 13px;">Docker</a> <a href="/tags/Electron/" style="font-size: 13px;">Electron</a> <a href="/tags/Git/" style="font-size: 13px;">Git</a> <a href="/tags/HAProxy/" style="font-size: 13px;">HAProxy</a> <a href="/tags/Hexo/" style="font-size: 13px;">Hexo</a> <a href="/tags/Java/" style="font-size: 13.57px;">Java</a> <a href="/tags/Jenkins/" style="font-size: 13px;">Jenkins</a> <a href="/tags/Linux/" style="font-size: 13.29px;">Linux</a> <a href="/tags/Maven/" style="font-size: 13px;">Maven</a> <a href="/tags/MySQL/" style="font-size: 13.71px;">MySQL</a> <a href="/tags/NTP/" style="font-size: 13px;">NTP</a> <a href="/tags/Oracle/" style="font-size: 13.29px;">Oracle</a> <a href="/tags/SQLite/" style="font-size: 13px;">SQLite</a> <a href="/tags/STL/" style="font-size: 13px;">STL</a> <a href="/tags/SpringBoot/" style="font-size: 13.14px;">SpringBoot</a> <a href="/tags/TCP-IP/" style="font-size: 13.43px;">TCP/IP</a> <a href="/tags/Typora/" style="font-size: 13px;">Typora</a> <a href="/tags/VS2015/" style="font-size: 13.43px;">VS2015</a> <a href="/tags/VUE/" style="font-size: 13px;">VUE</a> <a href="/tags/Vditor/" style="font-size: 13px;">Vditor</a> <a href="/tags/nodejs/" style="font-size: 13.14px;">nodejs</a> <a href="/tags/openssl/" style="font-size: 13px;">openssl</a> <a href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/" style="font-size: 13.29px;">多线程</a> <a href="/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/" style="font-size: 13.29px;">开发工具</a> <a href="/tags/%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/" style="font-size: 13.57px;">异常处理</a> <a href="/tags/%E6%89%B9%E5%A4%84%E7%90%86/" style="font-size: 13.14px;">批处理</a> <a href="/tags/%E6%B5%8B%E8%AF%95/" style="font-size: 13.14px;">测试</a> <a href="/tags/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" style="font-size: 13.57px;">环境搭建</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 13.29px;">算法</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/" style="font-size: 13.14px;">计算机组成原理</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" style="font-size: 13.86px;">计算机网络</a> <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" style="font-size: 13px;">设计模式</a> <a href="/tags/%E9%80%9F%E6%9F%A5/" style="font-size: 14px;">速查</a> <a href="/tags/%E9%AB%98%E5%8F%AF%E7%94%A8/" style="font-size: 13px;">高可用</a>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget-body">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C++</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/CentOS/">CentOS</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Electron/">Electron</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/GIt/">GIt</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Maven/">Maven</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MySQL/">MySQL</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Nodejs/">Nodejs</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Oracle/">Oracle</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/SpringBoot/">SpringBoot</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/VS2015/">VS2015</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/VUE/">VUE</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%B5%8B%E8%AF%95/">测试</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%BB%98%E8%AE%A4%E5%88%86%E7%B1%BB/">默认分类</a><span class="category-list-count">3</span></li></ul>
+    </div>
+  </div>
+
+
+    
+  </div>
+</aside>
+
+  
+  <main class="main" role="main">
+  
+  <div class="content article-list">
+    
+      <article class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="article-header">
+    
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/Java/JDK8%20Stream%20%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/">JDK8 Stream 常用方法</a>
+    </h1>
+  
+
+  </div>
+  
+  <p class="article-meta">
+    <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/Java/JDK8%20Stream%20%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/" class="article-date">
+	  <time datetime="2021-04-25T04:40:44.571Z" itemprop="datePublished">4月 25</time>
+	</a>
+</span>
+    
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/Java/">Java</a>
+  </span>
+
+    
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/Java/" rel="tag">Java</a>, <a class="article-tag-link-link" href="/tags/%E9%80%9F%E6%9F%A5/" rel="tag">速查</a>
+  </span>
+
+
+    <span class="post-comment"><i class="icon icon-comment"></i> <a href="/Java/JDK8%20Stream%20%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/#comments" class="article-comment-link">评论</a></span>
+    
+  </p>
+</article>
+
+    
+      <article class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="article-header">
+    
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/C++/C++%20%E6%A0%87%E5%87%86%E6%A8%A1%E6%9D%BF%E5%BA%93%20STL/">C++ 标准模板库 STL</a>
+    </h1>
+  
+
+  </div>
+  
+  <p class="article-meta">
+    <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/C++/C++%20%E6%A0%87%E5%87%86%E6%A8%A1%E6%9D%BF%E5%BA%93%20STL/" class="article-date">
+	  <time datetime="2021-04-24T17:51:31.000Z" itemprop="datePublished">4月 25</time>
+	</a>
+</span>
+    
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/C/">C++</a>
+  </span>
+
+    
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/C/" rel="tag">C++</a>, <a class="article-tag-link-link" href="/tags/STL/" rel="tag">STL</a>
+  </span>
+
+
+    <span class="post-comment"><i class="icon icon-comment"></i> <a href="/C++/C++%20%E6%A0%87%E5%87%86%E6%A8%A1%E6%9D%BF%E5%BA%93%20STL/#comments" class="article-comment-link">评论</a></span>
+    
+  </p>
+</article>
+
+    
+      <article class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="article-header">
+    
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/Cron%20%E8%A1%A8%E8%BE%BE%E5%BC%8F/">Cron 表达式</a>
+    </h1>
+  
+
+  </div>
+  
+  <p class="article-meta">
+    <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/Cron%20%E8%A1%A8%E8%BE%BE%E5%BC%8F/" class="article-date">
+	  <time datetime="2021-04-23T05:28:26.028Z" itemprop="datePublished">4月 23</time>
+	</a>
+</span>
+    
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/%E9%BB%98%E8%AE%A4%E5%88%86%E7%B1%BB/">默认分类</a>
+  </span>
 
     
 
+    <span class="post-comment"><i class="icon icon-comment"></i> <a href="/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/Cron%20%E8%A1%A8%E8%BE%BE%E5%BC%8F/#comments" class="article-comment-link">评论</a></span>
     
+  </p>
+</article>
 
     
+      <article class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="article-header">
+    
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/Java/JDK%20keytool%20%E7%94%A8%E6%B3%95/">JDK keytool 用法</a>
+    </h1>
+  
+
+  </div>
+  
+  <p class="article-meta">
+    <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/Java/JDK%20keytool%20%E7%94%A8%E6%B3%95/" class="article-date">
+	  <time datetime="2021-04-23T05:27:36.310Z" itemprop="datePublished">4月 23</time>
+	</a>
+</span>
+    
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/Java/">Java</a>
+  </span>
 
     
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/Java/" rel="tag">Java</a>
+  </span>
+
+
+    <span class="post-comment"><i class="icon icon-comment"></i> <a href="/Java/JDK%20keytool%20%E7%94%A8%E6%B3%95/#comments" class="article-comment-link">评论</a></span>
+    
+  </p>
+</article>
 
     
+      <article class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="article-header">
+    
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/Hexo/Hexo%20%E6%8A%A5%E9%94%99%EF%BC%9AERROR%20Deployer%20not%20found%20git/">Hexo 报错： ERROR Deployer not found git</a>
+    </h1>
+  
+
+  </div>
+  
+  <p class="article-meta">
+    <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/Hexo/Hexo%20%E6%8A%A5%E9%94%99%EF%BC%9AERROR%20Deployer%20not%20found%20git/" class="article-date">
+	  <time datetime="2021-04-23T05:27:23.000Z" itemprop="datePublished">4月 23</time>
+	</a>
+</span>
+    
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/Hexo/">Hexo</a>
+  </span>
 
     
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/Hexo/" rel="tag">Hexo</a>, <a class="article-tag-link-link" href="/tags/%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/" rel="tag">异常处理</a>
+  </span>
+
+
+    <span class="post-comment"><i class="icon icon-comment"></i> <a href="/Hexo/Hexo%20%E6%8A%A5%E9%94%99%EF%BC%9AERROR%20Deployer%20not%20found%20git/#comments" class="article-comment-link">评论</a></span>
+    
+  </p>
+</article>
 
     
+      <article class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="article-header">
+    
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/SpringBoot/SpringBoot%20%E6%89%93%E5%8C%85%E5%8F%AF%E6%89%A7%E8%A1%8C%20jar/">SpringBoot 打包可执行 jar</a>
+    </h1>
+  
+
+  </div>
+  
+  <p class="article-meta">
+    <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/SpringBoot/SpringBoot%20%E6%89%93%E5%8C%85%E5%8F%AF%E6%89%A7%E8%A1%8C%20jar/" class="article-date">
+	  <time datetime="2021-04-23T05:27:23.000Z" itemprop="datePublished">4月 23</time>
+	</a>
+</span>
+    
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/SpringBoot/">SpringBoot</a>
+  </span>
 
     
-<link rel="stylesheet" href="/dist/build.css?v=1623049492098.css">
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/SpringBoot/" rel="tag">SpringBoot</a>, <a class="article-tag-link-link" href="/tags/%E9%80%9F%E6%9F%A5/" rel="tag">速查</a>
+  </span>
+
+
+    <span class="post-comment"><i class="icon icon-comment"></i> <a href="/SpringBoot/SpringBoot%20%E6%89%93%E5%8C%85%E5%8F%AF%E6%89%A7%E8%A1%8C%20jar/#comments" class="article-comment-link">评论</a></span>
+    
+  </p>
+</article>
+
+    
+      <article class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="article-header">
+    
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/%E6%89%B9%E5%A4%84%E7%90%86%E5%91%BD%E4%BB%A4/%E6%89%B9%E5%A4%84%E7%90%86%E5%91%BD%E4%BB%A4/">批处理命令</a>
+    </h1>
+  
+
+  </div>
+  
+  <p class="article-meta">
+    <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/%E6%89%B9%E5%A4%84%E7%90%86%E5%91%BD%E4%BB%A4/%E6%89%B9%E5%A4%84%E7%90%86%E5%91%BD%E4%BB%A4/" class="article-date">
+	  <time datetime="2021-04-23T05:27:13.137Z" itemprop="datePublished">4月 23</time>
+	</a>
+</span>
+    
+    
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/%E6%89%B9%E5%A4%84%E7%90%86/" rel="tag">批处理</a>, <a class="article-tag-link-link" href="/tags/%E9%80%9F%E6%9F%A5/" rel="tag">速查</a>
+  </span>
+
+
+    <span class="post-comment"><i class="icon icon-comment"></i> <a href="/%E6%89%B9%E5%A4%84%E7%90%86%E5%91%BD%E4%BB%A4/%E6%89%B9%E5%A4%84%E7%90%86%E5%91%BD%E4%BB%A4/#comments" class="article-comment-link">评论</a></span>
+    
+  </p>
+</article>
+
+    
+      <article class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="article-header">
+    
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/Maven/pom.xml%20%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%AF%B4%E6%98%8E/">pom.xml配置文件说明</a>
+    </h1>
+  
+
+  </div>
+  
+  <p class="article-meta">
+    <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/Maven/pom.xml%20%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%AF%B4%E6%98%8E/" class="article-date">
+	  <time datetime="2021-04-23T05:26:16.000Z" itemprop="datePublished">4月 23</time>
+	</a>
+</span>
+    
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/Maven/">Maven</a>
+  </span>
+
+    
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/Maven/" rel="tag">Maven</a>, <a class="article-tag-link-link" href="/tags/%E9%80%9F%E6%9F%A5/" rel="tag">速查</a>
+  </span>
+
+
+    <span class="post-comment"><i class="icon icon-comment"></i> <a href="/Maven/pom.xml%20%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%AF%B4%E6%98%8E/#comments" class="article-comment-link">评论</a></span>
+    
+  </p>
+</article>
+
+    
+      <article class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="article-header">
+    
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/Git/Git%20%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">Git常用命令</a>
+    </h1>
+  
+
+  </div>
+  
+  <p class="article-meta">
+    <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/Git/Git%20%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="article-date">
+	  <time datetime="2021-04-23T05:24:27.000Z" itemprop="datePublished">4月 23</time>
+	</a>
+</span>
+    
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/GIt/">GIt</a>
+  </span>
+
+    
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/Git/" rel="tag">Git</a>, <a class="article-tag-link-link" href="/tags/%E9%80%9F%E6%9F%A5/" rel="tag">速查</a>
+  </span>
+
+
+    <span class="post-comment"><i class="icon icon-comment"></i> <a href="/Git/Git%20%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/#comments" class="article-comment-link">评论</a></span>
+    
+  </p>
+</article>
+
+    
+  </div>
+
+  
+    
+    <nav class="bar bar-footer clearfix" data-stick-bottom>
+        <div class="bar-inner">
+        <ul class="pager pull-left">
+            
+            <li class="prev">
+                <a href="/page/5/">
+                    <i class="icon icon-angle-left"></i>
+                    上一页
+                </a>
+            </li>
+            
+            
+            <li class="next disabled">
+                <a href="javascript:;">
+                    下一页
+                    <i class="icon icon-angle-right"></i>                    
+                </a>
+            </li>
+            
+        </ul>
+        <div class="total-article bar-right">Page 6 of 6</div>
+        </div>
+    </nav>
+    
+ 
+</main>
+
+  <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+	
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/abcdoc-cn" target="_blank" title="Github" ><i class="icon icon-github"></i></a></li>
+        
+    </ul>
+
+    <div class="copyright">
+    	
+        <div class="publishby">
+        	Theme by <a href="https://github.com/cofess" target="_blank"> cofess </a>base on <a href="https://github.com/cofess/hexo-theme-pure" target="_blank">pure</a>.
+        </div>
+    </div>
+</footer>
+  <script src="//cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script>
+window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+
+<script src="/js/plugin.min.js"></script>
+
+
+<script src="/js/application.js"></script>
 
 
     <script>
-        window.isPost = false
-        window.aomori = {
-            
-            
-            
-        }
-        window.aomori_logo_typed_animated = false
-        window.aomori_search_algolia = false
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
 
-    </script>
+<script src="/js/insight.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"></head>
 
-<body>
 
-    <div class="container">
-    <header class="header">
-        <div class="header-type">
-            
-            <div class="header-type-inner">
-                
-                    <a class="header-type-title" href="/">天空</a>
-                
-    
-                
-            </div>
-        </div>
-        <div class="header-menu">
-            <div class="header-menu-inner">
-                
-                <a href="/">首页</a>
-                
-                <a href="/archives">存档</a>
-                
-            </div>
-            <div class="header-menu-social">
-                
-            </div>
-        </div>
 
-        <div class="header-menu-mobile">
-            <div class="header-menu-mobile-inner" id="mobile-menu-open">
-                <i class="icon icon-menu"></i>
-            </div>
-        </div>
-    </header>
 
-    <div class="header-menu-mobile-menu">
-        <div class="header-menu-mobile-menu-bg"></div>
-        <div class="header-menu-mobile-menu-wrap">
-            <div class="header-menu-mobile-menu-inner">
-                <div class="header-menu-mobile-menu-close" id="mobile-menu-close">
-                    <i class="icon icon-cross"></i>
-                </div>
-                <div class="header-menu-mobile-menu-list">
-                    
-                    <a href="/">首页</a>
-                    
-                    <a href="/archives">存档</a>
-                    
-                </div>
-            </div>
-        </div>
-    </div>
 
-</div>
-
-    <div class="container">
-        <div class="main">
-            <section class="inner">
-                <section class="inner-main">
-                    <div class="index">
-  
-    
-      <article
-id="post-常用工具/Cron 表达式"
-class="article article-type-post"
->
-
-
-
-<div class="article-inner">
-    
-
-    <div class="article-body">
-    <header class="article-title">
-        <a href="/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/Cron%20%E8%A1%A8%E8%BE%BE%E5%BC%8F/">Cron 表达式</a>
-    </header>
-    <div class="article-entry post-inner-html">
-        
-        <h1 id="Cron表达式"><a href="#Cron表达式" class="headerlink" title="Cron表达式"></a>Cron表达式</h1><blockquote>
-<p>Cron表达式是一个字符串，包括6~7个时间元素，在SpringTask中可以用于指定任务的执行时间。</p>
-</blockquote>
-<h2 id="Cron的语法格式"><a href="#Cron的语法格式" class="headerlink" title="Cron的语法格式"></a>Cron的语法格式</h2><p>Seconds Minutes Hours DayofMonth Month DayofWeek</p>
-<h2 id="Cron格式中每个时间元素的说明"><a href="#Cron格式中每个时间元素的说明" class="headerlink" title="Cron格式中每个时间元素的说明"></a>Cron格式中每个时间元素的说明</h2><table>
-<thead>
-<tr>
-<th>时间元素</th>
-<th>可出现的字符</th>
-<th>有效数值范围</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Seconds</td>
-<td>, - * /</td>
-<td>0-59</td>
-</tr>
-<tr>
-<td>Minutes</td>
-<td>, - * /</td>
-<td>0-59</td>
-</tr>
-<tr>
-<td>Hours</td>
-<td>, - * /</td>
-<td>0-23</td>
-</tr>
-<tr>
-<td>DayofMonth</td>
-<td>, - * / ? L W</td>
-<td>0-31</td>
-</tr>
-<tr>
-<td>Month</td>
-<td>, - * /</td>
-<td>1-12</td>
-</tr>
-<tr>
-<td>DayofWeek</td>
-<td>, - * / ? L #</td>
-<td>1-7或SUN-SAT</td>
-</tr>
-</tbody></table>
-<h2 id="Cron格式中特殊字符说明"><a href="#Cron格式中特殊字符说明" class="headerlink" title="Cron格式中特殊字符说明"></a>Cron格式中特殊字符说明</h2><table>
-<thead>
-<tr>
-<th>字符</th>
-<th>作用</th>
-<th>举例</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>,</td>
-<td>列出枚举值</td>
-<td>在Minutes域使用5,10，表示在5分和10分各触发一次</td>
-</tr>
-<tr>
-<td>-</td>
-<td>表示触发范围</td>
-<td>在Minutes域使用5-10，表示从5分到10分钟每分钟触发一次</td>
-</tr>
-<tr>
-<td>*</td>
-<td>匹配任意值</td>
-<td>在Minutes域使用*, 表示每分钟都会触发一次</td>
-</tr>
-<tr>
-<td>/</td>
-<td>起始时间开始触发，每隔固定时间触发一次</td>
-<td>在Minutes域使用5/10,表示5分时触发一次，每10分钟再触发一次</td>
-</tr>
-<tr>
-<td>?</td>
-<td>在DayofMonth和DayofWeek中，用于匹配任意值</td>
-<td>在DayofMonth域使用?,表示每天都触发一次</td>
-</tr>
-<tr>
-<td>#</td>
-<td>在DayofMonth中，确定第几个星期几</td>
-<td>1#3表示第三个星期日</td>
-</tr>
-<tr>
-<td>L</td>
-<td>表示最后</td>
-<td>在DayofWeek中使用5L,表示在最后一个星期四触发</td>
-</tr>
-<tr>
-<td>W</td>
-<td>表示有效工作日(周一到周五)</td>
-<td>在DayofMonth使用5W，如果5日是星期六，则将在最近的工作日4日触发一次</td>
-</tr>
-</tbody></table>
-
-        
-    </div>
-    </div>
-
-    <div class="article-badge">
-        
-        
-    </div>
-
-</div>
-
-<footer class="article-footer">
-    <div class="article-more-info">
-    <div class="article-date">
-  <time datetime="2021-04-23T05:28:26.028Z" itemprop="datePublished">2021-04-23</time>
-</div>
-    
-        <div class="article-category">
-        <a class="article-category-link" href="/categories/%E9%BB%98%E8%AE%A4%E5%88%86%E7%B1%BB/">默认分类</a>
-        </div>
-    
-    
-    </div>
-</footer>
-
-</article>
-
-    
-  
-    
-      <article
-id="post-Java/JDK keytool 用法"
-class="article article-type-post"
->
-
-
-
-<div class="article-inner">
-    
-
-    <div class="article-body">
-    <header class="article-title">
-        <a href="/Java/JDK%20keytool%20%E7%94%A8%E6%B3%95/">JDK keytool 用法</a>
-    </header>
-    <div class="article-entry post-inner-html">
-        
-        <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">keytool -import -alias &quot;tsinghua&quot; -keystore &quot;C:\Program Files\Java\jdk1.8.0_77\jre\lib\security\cacerts&quot; -file C:\Users\zhanbo\Desktop\tsinghua.cer</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">keytool -printcert -rfc -sslServer &quot;http://updates.jenkins-ci.org&quot;</span><br></pre></td></tr></table></figure>
-        
-    </div>
-    </div>
-
-    <div class="article-badge">
-        
-        
-    </div>
-
-</div>
-
-<footer class="article-footer">
-    <div class="article-more-info">
-    <div class="article-date">
-  <time datetime="2021-04-23T05:27:36.310Z" itemprop="datePublished">2021-04-23</time>
-</div>
-    
-        <div class="article-category">
-        <a class="article-category-link" href="/categories/Java/">Java</a>
-        </div>
-    
-    
-        <div class="article-tag">
-        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/" rel="tag">Java</a></li></ul>
-        </div>
-    
-    </div>
-</footer>
-
-</article>
-
-    
-  
-    
-      <article
-id="post-Hexo/Hexo 报错：ERROR Deployer not found git"
-class="article article-type-post"
->
-
-
-
-<div class="article-inner">
-    
-
-    <div class="article-body">
-    <header class="article-title">
-        <a href="/Hexo/Hexo%20%E6%8A%A5%E9%94%99%EF%BC%9AERROR%20Deployer%20not%20found%20git/">Hexo 报错： ERROR Deployer not found git</a>
-    </header>
-    <div class="article-entry post-inner-html">
-        
-        <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo d</span><br><span class="line">ERROR Deployer not found: git</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo-deployer-git</span><br></pre></td></tr></table></figure>
-
-        
-    </div>
-    </div>
-
-    <div class="article-badge">
-        
-        
-    </div>
-
-</div>
-
-<footer class="article-footer">
-    <div class="article-more-info">
-    <div class="article-date">
-  <time datetime="2021-04-23T05:27:23.000Z" itemprop="datePublished">2021-04-23</time>
-</div>
-    
-        <div class="article-category">
-        <a class="article-category-link" href="/categories/Hexo/">Hexo</a>
-        </div>
-    
-    
-        <div class="article-tag">
-        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/" rel="tag">异常处理</a></li></ul>
-        </div>
-    
-    </div>
-</footer>
-
-</article>
-
-    
-  
-    
-      <article
-id="post-SpringBoot/SpringBoot 打包可执行 jar"
-class="article article-type-post"
->
-
-
-
-<div class="article-inner">
-    
-
-    <div class="article-body">
-    <header class="article-title">
-        <a href="/SpringBoot/SpringBoot%20%E6%89%93%E5%8C%85%E5%8F%AF%E6%89%A7%E8%A1%8C%20jar/">SpringBoot 打包可执行 jar</a>
-    </header>
-    <div class="article-entry post-inner-html">
-        
-        <h2 id="配置-pom-xml"><a href="#配置-pom-xml" class="headerlink" title="配置 pom.xml"></a>配置 pom.xml</h2><p>在 pom.xml 中添加</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">plugins</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 将 前端 页面一同打包到 Jar 包中 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>maven-resources-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">executions</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">execution</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">id</span>&gt;</span>copy-resources<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">phase</span>&gt;</span>validate<span class="tag">&lt;/<span class="name">phase</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">goals</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">goal</span>&gt;</span>copy-resources<span class="tag">&lt;/<span class="name">goal</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">goals</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">outputDirectory</span>&gt;</span>$&#123;basedir&#125;/target/classes/static<span class="tag">&lt;/<span class="name">outputDirectory</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">resources</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">resource</span>&gt;</span></span><br><span class="line">                            <span class="tag">&lt;<span class="name">directory</span>&gt;</span>../web/dist<span class="tag">&lt;/<span class="name">directory</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;/<span class="name">resource</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;/<span class="name">resources</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">execution</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">executions</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!-- 打包可执行的 jar 包 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-maven-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">executable</span>&gt;</span>true<span class="tag">&lt;/<span class="name">executable</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">executions</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">execution</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">goals</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">goal</span>&gt;</span>repackage<span class="tag">&lt;/<span class="name">goal</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">goals</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">classifier</span>&gt;</span>exec<span class="tag">&lt;/<span class="name">classifier</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">execution</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">executions</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">plugins</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="打包部署"><a href="#打包部署" class="headerlink" title="打包部署"></a>打包部署</h2><p>在项目根目录下（即包含pom.xml的目录），在命令行里输入：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn clean package</span><br></pre></td></tr></table></figure>
-
-<p>等待打包完成，出现 [INFO] BUILD SUCCESS 即为打包成功。</p>
-<h2 id="运行发布"><a href="#运行发布" class="headerlink" title="运行发布"></a>运行发布</h2><p>把 <code>target</code> 目录下的 *-exec.jar 包放到 服务器 目录下，直接执行命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nohup java -jar *-exec.jar &gt; nohup.out &amp;</span><br></pre></td></tr></table></figure>
-        
-    </div>
-    </div>
-
-    <div class="article-badge">
-        
-        
-    </div>
-
-</div>
-
-<footer class="article-footer">
-    <div class="article-more-info">
-    <div class="article-date">
-  <time datetime="2021-04-23T05:27:23.000Z" itemprop="datePublished">2021-04-23</time>
-</div>
-    
-        <div class="article-category">
-        <a class="article-category-link" href="/categories/SpringBoot/">SpringBoot</a>
-        </div>
-    
-    
-        <div class="article-tag">
-        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SpringBoot/" rel="tag">SpringBoot</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%80%9F%E6%9F%A5/" rel="tag">速查</a></li></ul>
-        </div>
-    
-    </div>
-</footer>
-
-</article>
-
-    
-  
-    
-      <article
-id="post-批处理命令/批处理命令"
-class="article article-type-post"
->
-
-
-
-<div class="article-inner">
-    
-
-    <div class="article-body">
-    <header class="article-title">
-        <a href="/%E6%89%B9%E5%A4%84%E7%90%86%E5%91%BD%E4%BB%A4/%E6%89%B9%E5%A4%84%E7%90%86%E5%91%BD%E4%BB%A4/">批处理命令</a>
-    </header>
-    <div class="article-entry post-inner-html">
-        
-        <h1 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h1><h2 id="复制包含关键字的行到新文件"><a href="#复制包含关键字的行到新文件" class="headerlink" title="复制包含关键字的行到新文件"></a>复制包含关键字的行到新文件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">findstr /c:<span class="string">&quot;keyworld&quot;</span> old-file.txt &gt; new-file.txt</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="关闭回显"><a href="#关闭回显" class="headerlink" title="关闭回显"></a>关闭回显</h3><ul>
-<li><p>@ 的作用就是关闭紧跟其后的一条命令的回显</p>
-</li>
-<li><p>echo 显示</p>
-</li>
-<li><p>echo.  输出一个空行，相当于敲一个回车</p>
-<ul>
-<li>“.” 必须紧跟在 echo 命令的后面，而且 “.” 也可以被 ，：；”／等任一的符号代替</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">rem 后面所有的命令均不显示，包括本条命令</span><br><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"></span><br><span class="line">rem 后面所有的命令均不显示，但本条命令是显示的</span><br><span class="line"><span class="built_in">echo</span> off</span><br></pre></td></tr></table></figure>
-
-<h3 id="pause-暂停执行"><a href="#pause-暂停执行" class="headerlink" title="pause 暂停执行"></a>pause 暂停执行</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rem 请按任意键以继续</span><br><span class="line">pause</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rem 其他提示语</span><br><span class="line"><span class="built_in">echo</span> 其他提示语 &amp; pause &gt; nul</span><br></pre></td></tr></table></figure>
-
-<h3 id="Set-设置变量"><a href="#Set-设置变量" class="headerlink" title="Set 设置变量"></a>Set 设置变量</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">set</span> a=1</span><br><span class="line">rem 显示 变量</span><br><span class="line"><span class="built_in">echo</span> %a%</span><br></pre></td></tr></table></figure>
-
-<h3 id="Set-是否继续执行"><a href="#Set-是否继续执行" class="headerlink" title="Set 是否继续执行"></a>Set 是否继续执行</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">:: 输入 y，执行操作</span><br><span class="line">:: 输入 n，跳过执行</span><br><span class="line">:: 输入 q，退出执行</span><br><span class="line">set /p input=&quot;是否继续执行 (y/n/q): &quot;</span><br><span class="line">if %input% == y (</span><br><span class="line">	rem 执行操作</span><br><span class="line">) else (</span><br><span class="line">	if %input% == q (</span><br><span class="line">		pause</span><br><span class="line">		exit 0</span><br><span class="line">	)</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
-
-<h3 id="title-改变窗口标题"><a href="#title-改变窗口标题" class="headerlink" title="title 改变窗口标题"></a>title 改变窗口标题</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">:: 使用之后就会显示新的标题框了</span><br><span class="line">title 新标题</span><br></pre></td></tr></table></figure>
-
-<h3 id="call-调用另一个批处理文件"><a href="#call-调用另一个批处理文件" class="headerlink" title="call 调用另一个批处理文件"></a>call 调用另一个批处理文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">call E:\Temp.bat</span><br><span class="line">rem 正在执行 Temp.bat</span><br><span class="line">pause</span><br></pre></td></tr></table></figure>
-
-<h3 id="attrib-更改文件属性"><a href="#attrib-更改文件属性" class="headerlink" title="attrib 更改文件属性"></a>attrib 更改文件属性</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">:: 将文件夹Temp属性设为存档、系统、隐藏属性</span><br><span class="line">:: 如果没有在 Temp 所在路径执行需要加上Temp的路径</span><br><span class="line">attrib +a +s +h Temp</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="修改系统时间"><a href="#修改系统时间" class="headerlink" title="修改系统时间"></a>修改系统时间</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> 设置时间为23:59:10</span><br><span class="line">time 23:59:10</span><br></pre></td></tr></table></figure>
-
-<h3 id="跳转当前目录"><a href="#跳转当前目录" class="headerlink" title="跳转当前目录"></a>跳转当前目录</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /d %~dp0</span><br></pre></td></tr></table></figure>
-
-<h3 id="循环获取-config-ini-参数"><a href="#循环获取-config-ini-参数" class="headerlink" title="循环获取 config.ini 参数"></a>循环获取 config.ini 参数</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> /d %~dp0</span><br><span class="line"></span><br><span class="line">setlocal enabledelayedexpansion</span><br><span class="line"><span class="keyword">for</span> /f <span class="string">&quot;delims=&quot;</span> %%i <span class="keyword">in</span> (<span class="string">&#x27;type &quot;config.ini&quot;^| find /i &quot;=&quot;&#x27;</span>) <span class="keyword">do</span> <span class="built_in">set</span> %%i</span><br><span class="line"></span><br><span class="line">:: 使用方法</span><br><span class="line"><span class="built_in">echo</span> %ZIP_PATH%</span><br><span class="line"><span class="built_in">echo</span> %MSBUILD_PATH%</span><br></pre></td></tr></table></figure>
-
-<p>config.ini 内容</p>
-<figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">ZIP_PATH</span>=<span class="string">&quot;C:\Program Files\WinRAR\&quot;</span></span><br><span class="line"><span class="attr">MSBUILD_PATH</span>=<span class="string">C:\Program Files (x86)\MSBuild\14.0\Bin\MSBuild.exe</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="目录操作"><a href="#目录操作" class="headerlink" title="目录操作"></a>目录操作</h2><h3 id="mklink-创建目录链接"><a href="#mklink-创建目录链接" class="headerlink" title="mklink 创建目录链接"></a>mklink 创建目录链接</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">:: 创建 pathA  到 pathB 链接</span><br><span class="line">mklink /j pathB pathA</span><br></pre></td></tr></table></figure>
-
-<h3 id="md-创建目录"><a href="#md-创建目录" class="headerlink" title="md 创建目录"></a>md 创建目录</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">:: 如果 app 目录不存在，创建 app 目录</span><br><span class="line"><span class="keyword">if</span> not exist app md app</span><br></pre></td></tr></table></figure>
-
-<h3 id="cp-拷贝文件"><a href="#cp-拷贝文件" class="headerlink" title="cp 拷贝文件"></a>cp 拷贝文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">:: 将 uninst.exe 拷贝到 app 目录</span><br><span class="line">copy %SETUP_PATH%\app\uninst.exe app\</span><br></pre></td></tr></table></figure>
-
-<h2 id="WinRAR"><a href="#WinRAR" class="headerlink" title="WinRAR"></a>WinRAR</h2><h3 id="添加到压缩文件"><a href="#添加到压缩文件" class="headerlink" title="添加到压缩文件"></a>添加到压缩文件</h3><p>命令格式：</p>
-<ul>
-<li>RAR &lt;命令&gt;   [ -&lt;开关&gt;  ]  &lt;压缩文件&gt;  [ &lt;@列表文件…&gt; ]</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;C:\Program Files (x86)\WinRAR\WinRAR.exe&quot;</span> a -as -r -ibck new.zip file1.ini path1</span><br></pre></td></tr></table></figure>
-
-<table>
-<thead>
-<tr>
-<th>参数</th>
-<th>说明</th>
-<th></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>a</td>
-<td>备份所有文件</td>
-<td></td>
-</tr>
-<tr>
-<td>-as</td>
-<td>同步压缩文件内容</td>
-<td></td>
-</tr>
-<tr>
-<td>-r</td>
-<td>备份目录和子目录</td>
-<td></td>
-</tr>
-<tr>
-<td>-ibck</td>
-<td>后台运行</td>
-<td></td>
-</tr>
-</tbody></table>
-
-        
-    </div>
-    </div>
-
-    <div class="article-badge">
-        
-        
-    </div>
-
-</div>
-
-<footer class="article-footer">
-    <div class="article-more-info">
-    <div class="article-date">
-  <time datetime="2021-04-23T05:27:13.137Z" itemprop="datePublished">2021-04-23</time>
-</div>
-    
-    
-        <div class="article-tag">
-        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%89%B9%E5%A4%84%E7%90%86/" rel="tag">批处理</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%80%9F%E6%9F%A5/" rel="tag">速查</a></li></ul>
-        </div>
-    
-    </div>
-</footer>
-
-</article>
-
-    
-  
-    
-      <article
-id="post-Maven/pom.xml 配置文件说明"
-class="article article-type-post"
->
-
-
-
-<div class="article-inner">
-    
-
-    <div class="article-body">
-    <header class="article-title">
-        <a href="/Maven/pom.xml%20%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%AF%B4%E6%98%8E/">pom.xml配置文件说明</a>
-    </header>
-    <div class="article-entry post-inner-html">
-        
-        <h2 id="pom-xml-配置文件说明"><a href="#pom-xml-配置文件说明" class="headerlink" title="pom.xml 配置文件说明"></a>pom.xml 配置文件说明</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br><span class="line">282</span><br><span class="line">283</span><br><span class="line">284</span><br><span class="line">285</span><br><span class="line">286</span><br><span class="line">287</span><br><span class="line">288</span><br><span class="line">289</span><br><span class="line">290</span><br><span class="line">291</span><br><span class="line">292</span><br><span class="line">293</span><br><span class="line">294</span><br><span class="line">295</span><br><span class="line">296</span><br><span class="line">297</span><br><span class="line">298</span><br><span class="line">299</span><br><span class="line">300</span><br><span class="line">301</span><br><span class="line">302</span><br><span class="line">303</span><br><span class="line">304</span><br><span class="line">305</span><br><span class="line">306</span><br><span class="line">307</span><br><span class="line">308</span><br><span class="line">309</span><br><span class="line">310</span><br><span class="line">311</span><br><span class="line">312</span><br><span class="line">313</span><br><span class="line">314</span><br><span class="line">315</span><br><span class="line">316</span><br><span class="line">317</span><br><span class="line">318</span><br><span class="line">319</span><br><span class="line">320</span><br><span class="line">321</span><br><span class="line">322</span><br><span class="line">323</span><br><span class="line">324</span><br><span class="line">325</span><br><span class="line">326</span><br><span class="line">327</span><br><span class="line">328</span><br><span class="line">329</span><br><span class="line">330</span><br><span class="line">331</span><br><span class="line">332</span><br><span class="line">333</span><br><span class="line">334</span><br><span class="line">335</span><br><span class="line">336</span><br><span class="line">337</span><br><span class="line">338</span><br><span class="line">339</span><br><span class="line">340</span><br><span class="line">341</span><br><span class="line">342</span><br><span class="line">343</span><br><span class="line">344</span><br><span class="line">345</span><br><span class="line">346</span><br><span class="line">347</span><br><span class="line">348</span><br><span class="line">349</span><br><span class="line">350</span><br><span class="line">351</span><br><span class="line">352</span><br><span class="line">353</span><br><span class="line">354</span><br><span class="line">355</span><br><span class="line">356</span><br><span class="line">357</span><br><span class="line">358</span><br><span class="line">359</span><br><span class="line">360</span><br><span class="line">361</span><br><span class="line">362</span><br><span class="line">363</span><br><span class="line">364</span><br><span class="line">365</span><br><span class="line">366</span><br><span class="line">367</span><br><span class="line">368</span><br><span class="line">369</span><br><span class="line">370</span><br><span class="line">371</span><br><span class="line">372</span><br><span class="line">373</span><br><span class="line">374</span><br><span class="line">375</span><br><span class="line">376</span><br><span class="line">377</span><br><span class="line">378</span><br><span class="line">379</span><br><span class="line">380</span><br><span class="line">381</span><br><span class="line">382</span><br><span class="line">383</span><br><span class="line">384</span><br><span class="line">385</span><br><span class="line">386</span><br><span class="line">387</span><br><span class="line">388</span><br><span class="line">389</span><br><span class="line">390</span><br><span class="line">391</span><br><span class="line">392</span><br><span class="line">393</span><br><span class="line">394</span><br><span class="line">395</span><br><span class="line">396</span><br><span class="line">397</span><br><span class="line">398</span><br><span class="line">399</span><br><span class="line">400</span><br><span class="line">401</span><br><span class="line">402</span><br><span class="line">403</span><br><span class="line">404</span><br><span class="line">405</span><br><span class="line">406</span><br><span class="line">407</span><br><span class="line">408</span><br><span class="line">409</span><br><span class="line">410</span><br><span class="line">411</span><br><span class="line">412</span><br><span class="line">413</span><br><span class="line">414</span><br><span class="line">415</span><br><span class="line">416</span><br><span class="line">417</span><br><span class="line">418</span><br><span class="line">419</span><br><span class="line">420</span><br><span class="line">421</span><br><span class="line">422</span><br><span class="line">423</span><br><span class="line">424</span><br><span class="line">425</span><br><span class="line">426</span><br><span class="line">427</span><br><span class="line">428</span><br><span class="line">429</span><br><span class="line">430</span><br><span class="line">431</span><br><span class="line">432</span><br><span class="line">433</span><br><span class="line">434</span><br><span class="line">435</span><br><span class="line">436</span><br><span class="line">437</span><br><span class="line">438</span><br><span class="line">439</span><br><span class="line">440</span><br><span class="line">441</span><br><span class="line">442</span><br><span class="line">443</span><br><span class="line">444</span><br><span class="line">445</span><br><span class="line">446</span><br><span class="line">447</span><br><span class="line">448</span><br><span class="line">449</span><br><span class="line">450</span><br><span class="line">451</span><br><span class="line">452</span><br><span class="line">453</span><br><span class="line">454</span><br><span class="line">455</span><br><span class="line">456</span><br><span class="line">457</span><br><span class="line">458</span><br><span class="line">459</span><br><span class="line">460</span><br><span class="line">461</span><br><span class="line">462</span><br><span class="line">463</span><br><span class="line">464</span><br><span class="line">465</span><br><span class="line">466</span><br><span class="line">467</span><br><span class="line">468</span><br><span class="line">469</span><br><span class="line">470</span><br><span class="line">471</span><br><span class="line">472</span><br><span class="line">473</span><br><span class="line">474</span><br><span class="line">475</span><br><span class="line">476</span><br><span class="line">477</span><br><span class="line">478</span><br><span class="line">479</span><br><span class="line">480</span><br><span class="line">481</span><br><span class="line">482</span><br><span class="line">483</span><br><span class="line">484</span><br><span class="line">485</span><br><span class="line">486</span><br><span class="line">487</span><br><span class="line">488</span><br><span class="line">489</span><br><span class="line">490</span><br><span class="line">491</span><br><span class="line">492</span><br><span class="line">493</span><br><span class="line">494</span><br><span class="line">495</span><br><span class="line">496</span><br><span class="line">497</span><br><span class="line">498</span><br><span class="line">499</span><br><span class="line">500</span><br><span class="line">501</span><br><span class="line">502</span><br><span class="line">503</span><br><span class="line">504</span><br><span class="line">505</span><br><span class="line">506</span><br><span class="line">507</span><br><span class="line">508</span><br><span class="line">509</span><br><span class="line">510</span><br><span class="line">511</span><br><span class="line">512</span><br><span class="line">513</span><br><span class="line">514</span><br><span class="line">515</span><br><span class="line">516</span><br><span class="line">517</span><br><span class="line">518</span><br><span class="line">519</span><br><span class="line">520</span><br><span class="line">521</span><br><span class="line">522</span><br><span class="line">523</span><br><span class="line">524</span><br><span class="line">525</span><br><span class="line">526</span><br><span class="line">527</span><br><span class="line">528</span><br><span class="line">529</span><br><span class="line">530</span><br><span class="line">531</span><br><span class="line">532</span><br><span class="line">533</span><br><span class="line">534</span><br><span class="line">535</span><br><span class="line">536</span><br><span class="line">537</span><br><span class="line">538</span><br><span class="line">539</span><br><span class="line">540</span><br><span class="line">541</span><br><span class="line">542</span><br><span class="line">543</span><br><span class="line">544</span><br><span class="line">545</span><br><span class="line">546</span><br><span class="line">547</span><br><span class="line">548</span><br><span class="line">549</span><br><span class="line">550</span><br><span class="line">551</span><br><span class="line">552</span><br><span class="line">553</span><br><span class="line">554</span><br><span class="line">555</span><br><span class="line">556</span><br><span class="line">557</span><br><span class="line">558</span><br><span class="line">559</span><br><span class="line">560</span><br><span class="line">561</span><br><span class="line">562</span><br><span class="line">563</span><br><span class="line">564</span><br><span class="line">565</span><br><span class="line">566</span><br><span class="line">567</span><br><span class="line">568</span><br><span class="line">569</span><br><span class="line">570</span><br><span class="line">571</span><br><span class="line">572</span><br><span class="line">573</span><br><span class="line">574</span><br><span class="line">575</span><br><span class="line">576</span><br><span class="line">577</span><br><span class="line">578</span><br><span class="line">579</span><br><span class="line">580</span><br><span class="line">581</span><br><span class="line">582</span><br><span class="line">583</span><br><span class="line">584</span><br><span class="line">585</span><br><span class="line">586</span><br><span class="line">587</span><br><span class="line">588</span><br><span class="line">589</span><br><span class="line">590</span><br><span class="line">591</span><br><span class="line">592</span><br><span class="line">593</span><br><span class="line">594</span><br><span class="line">595</span><br><span class="line">596</span><br><span class="line">597</span><br><span class="line">598</span><br><span class="line">599</span><br><span class="line">600</span><br><span class="line">601</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">project</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://maven.apache.org/POM/4.0.0&quot;</span></span></span><br><span class="line"><span class="tag">         <span class="attr">xmlns:xsi</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span></span><br><span class="line"><span class="tag">         <span class="attr">xsi:schemaLocation</span>=<span class="string">&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd&quot;</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--父项目的坐标。如果项目中没有规定某个元素的值，那么父项目中的对应值即为项目的默认值。 坐标包括group ID，artifact ID和 version。--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">parent</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--被继承的父项目的构件标识符--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>/&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--被继承的父项目的全球唯一标识符--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>/&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--被继承的父项目的版本--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>/&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--父项目的pom.xml文件的相对路径。相对路径允许你选择一个不同的路径。默认值是../pom.xml。Maven首先在构建当前项目的地方寻找父项目的pom，其次在文件系统的这个位置（relativePath位置），然后在本地仓库，最后在远程仓库寻找父项目的pom。--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">relativePath</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">parent</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--声明项目描述符遵循哪一个POM模型版本。模型本身的版本很少改变，虽然如此，但它仍然是必不可少的，这是为了当Maven引入了新的特性或者其他模型变更的时候，确保稳定性。--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">modelVersion</span>&gt;</span>4.0.0<span class="tag">&lt;/<span class="name">modelVersion</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--项目的全球唯一标识符，通常使用全限定的包名区分该项目和其他项目。并且构建时生成的路径也是由此生成， 如com.mycompany.app生成的相对路径为：/com/mycompany/app--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>xyz.devabc<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--构件的标识符，它和group ID一起唯一标识一个构件。换句话说，你不能有两个不同的项目拥有同样的artifact ID和groupID；在某个特定的group ID下，artifact ID也必须是唯一的。构件是项目产生的或使用的一个东西，Maven为项目产生的构件包括：JARs，源码，二进制发布和WARs等。--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>zhangboxyz-maven<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--项目产生的构件类型，例如jar、war、ear、pom。插件可以创建他们自己的构件类型，所以前面列的不是全部构件类型--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">packaging</span>&gt;</span>jar<span class="tag">&lt;/<span class="name">packaging</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--项目当前版本，格式为:主版本.次版本.增量版本-限定版本号--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.0-SNAPSHOT<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--项目的名称, Maven产生的文档用--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>zhangboxyz-maven<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--项目主页的URL, Maven产生的文档用--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://www.baidu.com/zhangboxyz<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--项目的详细描述, Maven 产生的文档用。 当这个元素能够用HTML格式描述时（例如，CDATA中的文本会被解析器忽略，就可以包含HTML标签）， 不鼓励使用纯文本描述。如果你需要修改产生的web站点的索引页面，你应该修改你自己的索引页文件，而不是调整这里的文档。--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">description</span>&gt;</span>A maven project to study maven.<span class="tag">&lt;/<span class="name">description</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--描述了这个项目构建环境中的前提条件。--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">prerequisites</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--构建该项目或使用该插件所需要的Maven的最低版本--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">maven</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">prerequisites</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--项目的问题管理系统(Bugzilla, Jira, Scarab,或任何你喜欢的问题管理系统)的名称和URL，本例为 jira--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">issueManagement</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--问题管理系统（例如jira）的名字，--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">system</span>&gt;</span>jira<span class="tag">&lt;/<span class="name">system</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--该项目使用的问题管理系统的URL--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://jira.baidu.com/zhangboxyz<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">issueManagement</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--项目持续集成信息--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ciManagement</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--持续集成系统的名字，例如continuum--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">system</span>/&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--该项目使用的持续集成系统的URL（如果持续集成系统有web接口的话）。--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">url</span>/&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--构建完成时，需要通知的开发者/用户的配置项。包括被通知者信息和通知条件（错误，失败，成功，警告）--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">notifiers</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--配置一种方式，当构建中断时，以该方式通知用户/开发者--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">notifier</span>&gt;</span></span><br><span class="line">                <span class="comment">&lt;!--传送通知的途径--&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">type</span>/&gt;</span></span><br><span class="line">                <span class="comment">&lt;!--发生错误时是否通知--&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">sendOnError</span>/&gt;</span></span><br><span class="line">                <span class="comment">&lt;!--构建失败时是否通知--&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">sendOnFailure</span>/&gt;</span></span><br><span class="line">                <span class="comment">&lt;!--构建成功时是否通知--&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">sendOnSuccess</span>/&gt;</span></span><br><span class="line">                <span class="comment">&lt;!--发生警告时是否通知--&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">sendOnWarning</span>/&gt;</span></span><br><span class="line">                <span class="comment">&lt;!--不赞成使用。通知发送到哪里--&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">address</span>/&gt;</span></span><br><span class="line">                <span class="comment">&lt;!--扩展配置项--&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">configuration</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">notifier</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">notifiers</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">ciManagement</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--项目创建年份，4位数字。当产生版权信息时需要使用这个值。--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">inceptionYear</span>/&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--项目相关邮件列表信息--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">mailingLists</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--该元素描述了项目相关的所有邮件列表。自动产生的网站引用这些信息。--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">mailingList</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--邮件的名称--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">name</span>&gt;</span>Demo<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--发送邮件的地址或链接，如果是邮件地址，创建文档时，mailto: 链接会被自动创建--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">post</span>&gt;</span>zhangboxyz@163.com<span class="tag">&lt;/<span class="name">post</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--订阅邮件的地址或链接，如果是邮件地址，创建文档时，mailto: 链接会被自动创建--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">subscribe</span>&gt;</span>zhangboxyz@163.com<span class="tag">&lt;/<span class="name">subscribe</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--取消订阅邮件的地址或链接，如果是邮件地址，创建文档时，mailto: 链接会被自动创建--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">unsubscribe</span>&gt;</span>zhangboxyz@163.com<span class="tag">&lt;/<span class="name">unsubscribe</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--你可以浏览邮件信息的URL--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">archive</span>&gt;</span>http:/hi.baidu.com/zhangboxyz<span class="tag">&lt;/<span class="name">archive</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">mailingList</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">mailingLists</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--项目开发者列表--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">developers</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--某个项目开发者的信息--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">developer</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--SCM里项目开发者的唯一标识符--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">id</span>&gt;</span>HELLO WORLD<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--项目开发者的全名--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">name</span>&gt;</span>zhangboxyz<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--项目开发者的email--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">email</span>&gt;</span>zhangboxyz@163.com<span class="tag">&lt;/<span class="name">email</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--项目开发者的主页的URL--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">url</span>/&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--项目开发者在项目中扮演的角色，角色元素描述了各种角色--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">roles</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">role</span>&gt;</span>Project Manager<span class="tag">&lt;/<span class="name">role</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">role</span>&gt;</span>Architect<span class="tag">&lt;/<span class="name">role</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">roles</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--项目开发者所属组织--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">organization</span>&gt;</span>demo<span class="tag">&lt;/<span class="name">organization</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--项目开发者所属组织的URL--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">organizationUrl</span>&gt;</span>http://hi.baidu.com/zhangboxyz<span class="tag">&lt;/<span class="name">organizationUrl</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--项目开发者属性，如即时消息如何处理等--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">properties</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">dept</span>&gt;</span>No<span class="tag">&lt;/<span class="name">dept</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--项目开发者所在时区， -11到12范围内的整数。--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">timezone</span>&gt;</span>-5<span class="tag">&lt;/<span class="name">timezone</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">developer</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">developers</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--项目的其他贡献者列表--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">contributors</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--项目的其他贡献者。参见developers/developer元素--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">contributor</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">name</span>/&gt;</span><span class="tag">&lt;<span class="name">email</span>/&gt;</span><span class="tag">&lt;<span class="name">url</span>/&gt;</span><span class="tag">&lt;<span class="name">organization</span>/&gt;</span><span class="tag">&lt;<span class="name">organizationUrl</span>/&gt;</span><span class="tag">&lt;<span class="name">roles</span>/&gt;</span><span class="tag">&lt;<span class="name">timezone</span>/&gt;</span><span class="tag">&lt;<span class="name">properties</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">contributor</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">contributors</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--该元素描述了项目所有License列表。 应该只列出该项目的license列表，不要列出依赖项目的 license列表。如果列出多个license，用户可以选择它们中的一个而不是接受所有license。--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">licenses</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--描述了项目的license，用于生成项目的web站点的license页面，其他一些报表和validation也会用到该元素。--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">license</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--license用于法律上的名称--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">name</span>&gt;</span>Apache 2<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--官方的license正文页面的URL--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://www.baidu.com/zhangboxyz/LICENSE-2.0.txt<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--项目分发的主要方式：</span></span><br><span class="line"><span class="comment">            repo，可以从Maven库下载</span></span><br><span class="line"><span class="comment">            manual， 用户必须手动下载和安装依赖--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">distribution</span>&gt;</span>repo<span class="tag">&lt;/<span class="name">distribution</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--关于license的补充信息--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">comments</span>&gt;</span>A business-friendly OSS license<span class="tag">&lt;/<span class="name">comments</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">license</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">licenses</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--SCM(Source Control Management)标签允许你配置你的代码库，供Maven web站点和其它插件使用。--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">scm</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--SCM的URL,该URL描述了版本库和如何连接到版本库。欲知详情，请看SCMs提供的URL格式和列表。该连接只读。--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">connection</span>&gt;</span></span><br><span class="line">            scm:svn:http://svn.baidu.com/zhangboxyz/</span><br><span class="line">        <span class="tag">&lt;/<span class="name">connection</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--给开发者使用的，类似connection元素。即该连接不仅仅只读--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">developerConnection</span>&gt;</span></span><br><span class="line">            scm:svn:http://svn.baidu.com/zhangboxyz</span><br><span class="line">        <span class="tag">&lt;/<span class="name">developerConnection</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--当前代码的标签，在开发阶段默认为HEAD--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">tag</span>/&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--指向项目的可浏览SCM库（例如ViewVC或者Fisheye）的URL。--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://svn.baidu.com/zhangboxyz<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">scm</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--描述项目所属组织的各种属性。Maven产生的文档用--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">organization</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--组织的全名--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">name</span>&gt;</span>demo<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--组织主页的URL--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://www.baidu.com/zhangboxyz<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">organization</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--构建项目需要的信息--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">build</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--该元素设置了项目源码目录，当构建项目的时候，构建系统会编译目录里的源码。该路径是相对于pom.xml的相对路径。--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">sourceDirectory</span>/&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--该元素设置了项目脚本源码目录，该目录和源码目录不同：绝大多数情况下，该目录下的内容 会被拷贝到输出目录(因为脚本是被解释的，而不是被编译的)。--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">scriptSourceDirectory</span>/&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--该元素设置了项目单元测试使用的源码目录，当测试项目的时候，构建系统会编译目录里的源码。该路径是相对于pom.xml的相对路径。--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">testSourceDirectory</span>/&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--被编译过的应用程序class文件存放的目录。--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">outputDirectory</span>/&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--被编译过的测试class文件存放的目录。--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">testOutputDirectory</span>/&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--使用来自该项目的一系列构建扩展--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">extensions</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--描述使用到的构建扩展。--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">extension</span>&gt;</span></span><br><span class="line">                <span class="comment">&lt;!--构建扩展的groupId--&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">groupId</span>/&gt;</span></span><br><span class="line">                <span class="comment">&lt;!--构建扩展的artifactId--&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">artifactId</span>/&gt;</span></span><br><span class="line">                <span class="comment">&lt;!--构建扩展的版本--&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">version</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">extension</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">extensions</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--当项目没有规定目标（Maven2 叫做阶段）时的默认值--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">defaultGoal</span>/&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--这个元素描述了项目相关的所有资源路径列表，例如和项目相关的属性文件，这些资源被包含在最终的打包文件里。--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">resources</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--这个元素描述了项目相关或测试相关的所有资源路径--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">resource</span>&gt;</span></span><br><span class="line">                <span class="comment">&lt;!--描述了资源的目标路径。该路径相对target/classes目录（例如$&#123;project.build.outputDirectory&#125;）。举个例子，如果你想资源在特定的包里(org.apache.maven.messages)，你就必须该元素设置为org/apache/maven/messages。然而，如果你只是想把资源放到源码目录结构里，就不需要该配置。--&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">targetPath</span>/&gt;</span></span><br><span class="line">                <span class="comment">&lt;!--是否使用参数值代替参数名。参数值取自properties元素或者文件里配置的属性，文件在filters元素里列出。--&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">filtering</span>/&gt;</span></span><br><span class="line">                <span class="comment">&lt;!--描述存放资源的目录，该路径相对POM路径--&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">directory</span>/&gt;</span></span><br><span class="line">                <span class="comment">&lt;!--包含的模式列表，例如**/*.xml.--&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">includes</span>/&gt;</span></span><br><span class="line">                <span class="comment">&lt;!--排除的模式列表，例如**/*.xml--&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">excludes</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">resource</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">resources</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--这个元素描述了单元测试相关的所有资源路径，例如和单元测试相关的属性文件。--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">testResources</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--这个元素描述了测试相关的所有资源路径，参见build/resources/resource元素的说明--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">testResource</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">targetPath</span>/&gt;</span><span class="tag">&lt;<span class="name">filtering</span>/&gt;</span><span class="tag">&lt;<span class="name">directory</span>/&gt;</span><span class="tag">&lt;<span class="name">includes</span>/&gt;</span><span class="tag">&lt;<span class="name">excludes</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">testResource</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">testResources</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--构建产生的所有文件存放的目录--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">directory</span>/&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--产生的构件的文件名，默认值是$&#123;artifactId&#125;-$&#123;version&#125;。--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">finalName</span>/&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--当filtering开关打开时，使用到的过滤器属性文件列表--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">filters</span>/&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--子项目可以引用的默认插件信息。该插件配置项直到被引用时才会被解析或绑定到生命周期。给定插件的任何本地配置都会覆盖这里的配置--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">pluginManagement</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--使用的插件列表 。--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">plugins</span>&gt;</span></span><br><span class="line">                <span class="comment">&lt;!--plugin元素包含描述插件所需要的信息。--&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">                    <span class="comment">&lt;!--插件在仓库里的group ID--&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">groupId</span>/&gt;</span></span><br><span class="line">                    <span class="comment">&lt;!--插件在仓库里的artifact ID--&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">artifactId</span>/&gt;</span></span><br><span class="line">                    <span class="comment">&lt;!--被使用的插件的版本（或版本范围）--&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">version</span>/&gt;</span></span><br><span class="line">                    <span class="comment">&lt;!--是否从该插件下载Maven扩展（例如打包和类型处理器），由于性能原因，只有在真需要下载时，该元素才被设置成enabled。--&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">extensions</span>/&gt;</span></span><br><span class="line">                    <span class="comment">&lt;!--在构建生命周期中执行一组目标的配置。每个目标可能有不同的配置。--&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">executions</span>&gt;</span></span><br><span class="line">                        <span class="comment">&lt;!--execution元素包含了插件执行需要的信息--&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">execution</span>&gt;</span></span><br><span class="line">                            <span class="comment">&lt;!--执行目标的标识符，用于标识构建过程中的目标，或者匹配继承过程中需要合并的执行目标--&gt;</span></span><br><span class="line">                            <span class="tag">&lt;<span class="name">id</span>/&gt;</span></span><br><span class="line">                            <span class="comment">&lt;!--绑定了目标的构建生命周期阶段，如果省略，目标会被绑定到源数据里配置的默认阶段--&gt;</span></span><br><span class="line">                            <span class="tag">&lt;<span class="name">phase</span>/&gt;</span></span><br><span class="line">                            <span class="comment">&lt;!--配置的执行目标--&gt;</span></span><br><span class="line">                            <span class="tag">&lt;<span class="name">goals</span>/&gt;</span></span><br><span class="line">                            <span class="comment">&lt;!--配置是否被传播到子POM--&gt;</span></span><br><span class="line">                            <span class="tag">&lt;<span class="name">inherited</span>/&gt;</span></span><br><span class="line">                            <span class="comment">&lt;!--作为DOM对象的配置--&gt;</span></span><br><span class="line">                            <span class="tag">&lt;<span class="name">configuration</span>/&gt;</span></span><br><span class="line">                        <span class="tag">&lt;/<span class="name">execution</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;/<span class="name">executions</span>&gt;</span></span><br><span class="line">                    <span class="comment">&lt;!--项目引入插件所需要的额外依赖--&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">                        <span class="comment">&lt;!--参见dependencies/dependency元素--&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">                            ......</span><br><span class="line">                        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br><span class="line">                    <span class="comment">&lt;!--任何配置是否被传播到子项目--&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">inherited</span>/&gt;</span></span><br><span class="line">                    <span class="comment">&lt;!--作为DOM对象的配置--&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">configuration</span>/&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">plugins</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">pluginManagement</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--使用的插件列表--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">plugins</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--参见build/pluginManagement/plugins/plugin元素--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">groupId</span>/&gt;</span><span class="tag">&lt;<span class="name">artifactId</span>/&gt;</span><span class="tag">&lt;<span class="name">version</span>/&gt;</span><span class="tag">&lt;<span class="name">extensions</span>/&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">executions</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">execution</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">id</span>/&gt;</span><span class="tag">&lt;<span class="name">phase</span>/&gt;</span><span class="tag">&lt;<span class="name">goals</span>/&gt;</span><span class="tag">&lt;<span class="name">inherited</span>/&gt;</span><span class="tag">&lt;<span class="name">configuration</span>/&gt;</span></span><br><span class="line">                    <span class="tag">&lt;/<span class="name">execution</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">executions</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">                    <span class="comment">&lt;!--参见dependencies/dependency元素--&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">                        ......</span><br><span class="line">                    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">goals</span>/&gt;</span><span class="tag">&lt;<span class="name">inherited</span>/&gt;</span><span class="tag">&lt;<span class="name">configuration</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">plugins</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">build</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--在列的项目构建profile，如果被激活，会修改构建处理--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">profiles</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--根据环境参数或命令行参数激活某个构建处理--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">profile</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--构建配置的唯一标识符。即用于命令行激活，也用于在继承时合并具有相同标识符的profile。--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">id</span>/&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--自动触发profile的条件逻辑。Activation是profile的开启钥匙。profile的力量来自于它</span></span><br><span class="line"><span class="comment">            能够在某些特定的环境中自动使用某些特定的值；这些环境通过activation元素指定。activation元素并不是激活profile的唯一方式。--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">activation</span>&gt;</span></span><br><span class="line">                <span class="comment">&lt;!--profile默认是否激活的标志--&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">activeByDefault</span>/&gt;</span></span><br><span class="line">                <span class="comment">&lt;!--当匹配的jdk被检测到，profile被激活。例如，1.4激活JDK1.4，1.4.0_2，而!1.4激活所有版本不是以1.4开头的JDK。--&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">jdk</span>/&gt;</span></span><br><span class="line">                <span class="comment">&lt;!--当匹配的操作系统属性被检测到，profile被激活。os元素可以定义一些操作系统相关的属性。--&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">os</span>&gt;</span></span><br><span class="line">                    <span class="comment">&lt;!--激活profile的操作系统的名字--&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">name</span>&gt;</span>Windows XP<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">                    <span class="comment">&lt;!--激活profile的操作系统所属家族(如 &#x27;windows&#x27;)--&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">family</span>&gt;</span>Windows<span class="tag">&lt;/<span class="name">family</span>&gt;</span></span><br><span class="line">                    <span class="comment">&lt;!--激活profile的操作系统体系结构 --&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">arch</span>&gt;</span>x86<span class="tag">&lt;/<span class="name">arch</span>&gt;</span></span><br><span class="line">                    <span class="comment">&lt;!--激活profile的操作系统版本--&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">version</span>&gt;</span>5.1.2600<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">os</span>&gt;</span></span><br><span class="line">                <span class="comment">&lt;!--如果Maven检测到某一个属性（其值可以在POM中通过$&#123;名称&#125;引用），其拥有对应的名称和值，Profile就会被激活。如果值</span></span><br><span class="line"><span class="comment">                字段是空的，那么存在属性名称字段就会激活profile，否则按区分大小写方式匹配属性值字段--&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">                    <span class="comment">&lt;!--激活profile的属性的名称--&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">name</span>&gt;</span>mavenVersion<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">                    <span class="comment">&lt;!--激活profile的属性的值--&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">value</span>&gt;</span>2.0.3<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">                <span class="comment">&lt;!--提供一个文件名，通过检测该文件的存在或不存在来激活profile。missing检查文件是否存在，如果不存在则激活</span></span><br><span class="line"><span class="comment">                profile。另一方面，exists则会检查文件是否存在，如果存在则激活profile。--&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">file</span>&gt;</span></span><br><span class="line">                    <span class="comment">&lt;!--如果指定的文件存在，则激活profile。--&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">exists</span>&gt;</span>/usr/local/jobs/maven-guide-zh-to-production/workspace/<span class="tag">&lt;/<span class="name">exists</span>&gt;</span></span><br><span class="line">                    <span class="comment">&lt;!--如果指定的文件不存在，则激活profile。--&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">missing</span>&gt;</span>/usr/local/jobs/maven-guide-zh-to-production/workspace/<span class="tag">&lt;/<span class="name">missing</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">file</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">activation</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--构建项目所需要的信息。参见build元素--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">build</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">defaultGoal</span>/&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">resources</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">resource</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">targetPath</span>/&gt;</span><span class="tag">&lt;<span class="name">filtering</span>/&gt;</span><span class="tag">&lt;<span class="name">directory</span>/&gt;</span><span class="tag">&lt;<span class="name">includes</span>/&gt;</span><span class="tag">&lt;<span class="name">excludes</span>/&gt;</span></span><br><span class="line">                    <span class="tag">&lt;/<span class="name">resource</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">resources</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">testResources</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">testResource</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">targetPath</span>/&gt;</span><span class="tag">&lt;<span class="name">filtering</span>/&gt;</span><span class="tag">&lt;<span class="name">directory</span>/&gt;</span><span class="tag">&lt;<span class="name">includes</span>/&gt;</span><span class="tag">&lt;<span class="name">excludes</span>/&gt;</span></span><br><span class="line">                    <span class="tag">&lt;/<span class="name">testResource</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">testResources</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">directory</span>/&gt;</span><span class="tag">&lt;<span class="name">finalName</span>/&gt;</span><span class="tag">&lt;<span class="name">filters</span>/&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">pluginManagement</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">plugins</span>&gt;</span></span><br><span class="line">                        <span class="comment">&lt;!--参见build/pluginManagement/plugins/plugin元素--&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">                            <span class="tag">&lt;<span class="name">groupId</span>/&gt;</span><span class="tag">&lt;<span class="name">artifactId</span>/&gt;</span><span class="tag">&lt;<span class="name">version</span>/&gt;</span><span class="tag">&lt;<span class="name">extensions</span>/&gt;</span></span><br><span class="line">                            <span class="tag">&lt;<span class="name">executions</span>&gt;</span></span><br><span class="line">                                <span class="tag">&lt;<span class="name">execution</span>&gt;</span></span><br><span class="line">                                    <span class="tag">&lt;<span class="name">id</span>/&gt;</span><span class="tag">&lt;<span class="name">phase</span>/&gt;</span><span class="tag">&lt;<span class="name">goals</span>/&gt;</span><span class="tag">&lt;<span class="name">inherited</span>/&gt;</span><span class="tag">&lt;<span class="name">configuration</span>/&gt;</span></span><br><span class="line">                                <span class="tag">&lt;/<span class="name">execution</span>&gt;</span></span><br><span class="line">                            <span class="tag">&lt;/<span class="name">executions</span>&gt;</span></span><br><span class="line">                            <span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">                                <span class="comment">&lt;!--参见dependencies/dependency元素--&gt;</span></span><br><span class="line">                                <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">                                    ......</span><br><span class="line">                                <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">                            <span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br><span class="line">                            <span class="tag">&lt;<span class="name">goals</span>/&gt;</span><span class="tag">&lt;<span class="name">inherited</span>/&gt;</span><span class="tag">&lt;<span class="name">configuration</span>/&gt;</span></span><br><span class="line">                        <span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;/<span class="name">plugins</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">pluginManagement</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">plugins</span>&gt;</span></span><br><span class="line">                    <span class="comment">&lt;!--参见build/pluginManagement/plugins/plugin元素--&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">groupId</span>/&gt;</span><span class="tag">&lt;<span class="name">artifactId</span>/&gt;</span><span class="tag">&lt;<span class="name">version</span>/&gt;</span><span class="tag">&lt;<span class="name">extensions</span>/&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">executions</span>&gt;</span></span><br><span class="line">                            <span class="tag">&lt;<span class="name">execution</span>&gt;</span></span><br><span class="line">                                <span class="tag">&lt;<span class="name">id</span>/&gt;</span><span class="tag">&lt;<span class="name">phase</span>/&gt;</span><span class="tag">&lt;<span class="name">goals</span>/&gt;</span><span class="tag">&lt;<span class="name">inherited</span>/&gt;</span><span class="tag">&lt;<span class="name">configuration</span>/&gt;</span></span><br><span class="line">                            <span class="tag">&lt;/<span class="name">execution</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;/<span class="name">executions</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">                            <span class="comment">&lt;!--参见dependencies/dependency元素--&gt;</span></span><br><span class="line">                            <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">                                ......</span><br><span class="line">                            <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">goals</span>/&gt;</span><span class="tag">&lt;<span class="name">inherited</span>/&gt;</span><span class="tag">&lt;<span class="name">configuration</span>/&gt;</span></span><br><span class="line">                    <span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">plugins</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">build</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--模块（有时称作子项目） 被构建成项目的一部分。列出的每个模块元素是指向该模块的目录的相对路径--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">modules</span>/&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--发现依赖和扩展的远程仓库列表。--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">repositories</span>&gt;</span></span><br><span class="line">                <span class="comment">&lt;!--参见repositories/repository元素--&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">repository</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">releases</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">enabled</span>/&gt;</span><span class="tag">&lt;<span class="name">updatePolicy</span>/&gt;</span><span class="tag">&lt;<span class="name">checksumPolicy</span>/&gt;</span></span><br><span class="line">                    <span class="tag">&lt;/<span class="name">releases</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">snapshots</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">enabled</span>/&gt;</span><span class="tag">&lt;<span class="name">updatePolicy</span>/&gt;</span><span class="tag">&lt;<span class="name">checksumPolicy</span>/&gt;</span></span><br><span class="line">                    <span class="tag">&lt;/<span class="name">snapshots</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">id</span>/&gt;</span><span class="tag">&lt;<span class="name">name</span>/&gt;</span><span class="tag">&lt;<span class="name">url</span>/&gt;</span><span class="tag">&lt;<span class="name">layout</span>/&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">repository</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">repositories</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--发现插件的远程仓库列表，这些插件用于构建和报表--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">pluginRepositories</span>&gt;</span></span><br><span class="line">                <span class="comment">&lt;!--包含需要连接到远程插件仓库的信息.参见repositories/repository元素--&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">pluginRepository</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">releases</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">enabled</span>/&gt;</span><span class="tag">&lt;<span class="name">updatePolicy</span>/&gt;</span><span class="tag">&lt;<span class="name">checksumPolicy</span>/&gt;</span></span><br><span class="line">                    <span class="tag">&lt;/<span class="name">releases</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">snapshots</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">enabled</span>/&gt;</span><span class="tag">&lt;<span class="name">updatePolicy</span>/&gt;</span><span class="tag">&lt;<span class="name">checksumPolicy</span>/&gt;</span></span><br><span class="line">                    <span class="tag">&lt;/<span class="name">snapshots</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">id</span>/&gt;</span><span class="tag">&lt;<span class="name">name</span>/&gt;</span><span class="tag">&lt;<span class="name">url</span>/&gt;</span><span class="tag">&lt;<span class="name">layout</span>/&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">pluginRepository</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">pluginRepositories</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--该元素描述了项目相关的所有依赖。 这些依赖组成了项目构建过程中的一个个环节。它们自动从项目定义的仓库中下载。要获取更多信息，请看项目依赖机制。--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">                <span class="comment">&lt;!--参见dependencies/dependency元素--&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">                    ......</span><br><span class="line">                <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--不赞成使用. 现在Maven忽略该元素.--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">reports</span>/&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--该元素包括使用报表插件产生报表的规范。当用户执行“mvn site”，这些报表就会运行。 在页面导航栏能看到所有报表的链接。参见reporting元素--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">reporting</span>&gt;</span></span><br><span class="line">                ......</span><br><span class="line">            <span class="tag">&lt;/<span class="name">reporting</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--参见dependencyManagement元素--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">dependencyManagement</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">                    <span class="comment">&lt;!--参见dependencies/dependency元素--&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">                        ......</span><br><span class="line">                    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">dependencyManagement</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--参见distributionManagement元素--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">distributionManagement</span>&gt;</span></span><br><span class="line">                ......</span><br><span class="line">            <span class="tag">&lt;/<span class="name">distributionManagement</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--参见properties元素--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">properties</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">profile</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">profiles</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--模块（有时称作子项目） 被构建成项目的一部分。列出的每个模块元素是指向该模块的目录的相对路径--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">modules</span>/&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--发现依赖和扩展的远程仓库列表。--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">repositories</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--包含需要连接到远程仓库的信息--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">repository</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--如何处理远程仓库里发布版本的下载--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">releases</span>&gt;</span></span><br><span class="line">                <span class="comment">&lt;!--true或者false表示该仓库是否为下载某种类型构件（发布版，快照版）开启。 --&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">enabled</span>/&gt;</span></span><br><span class="line">                <span class="comment">&lt;!--该元素指定更新发生的频率。Maven会比较本地POM和远程POM的时间戳。这里的选项是：always（一直），daily（默认，每日），interval：X（这里X是以分钟为单位的时间间隔），或者never（从不）。--&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">updatePolicy</span>/&gt;</span></span><br><span class="line">                <span class="comment">&lt;!--当Maven验证构件校验文件失败时该怎么做：ignore（忽略），fail（失败），或者warn（警告）。--&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">checksumPolicy</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">releases</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--如何处理远程仓库里快照版本的下载。有了releases和snapshots这两组配置，POM就可以在每个单独的仓库中，为每种类型的构件采取不同的策略。例如，可能有人会决定只为开发目的开启对快照版本下载的支持。参见repositories/repository/releases元素--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">snapshots</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">enabled</span>/&gt;</span><span class="tag">&lt;<span class="name">updatePolicy</span>/&gt;</span><span class="tag">&lt;<span class="name">checksumPolicy</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">snapshots</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--远程仓库唯一标识符。可以用来匹配在settings.xml文件里配置的远程仓库--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">id</span>&gt;</span>zhangboxyz-repository-proxy<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--远程仓库名称--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">name</span>&gt;</span>zhangboxyz-repository-proxy<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--远程仓库URL，按protocol://hostname/path形式--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://192.168.1.169:9999/repository/<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--用于定位和排序构件的仓库布局类型-可以是default（默认）或者legacy（遗留）。Maven 2为其仓库提供了一个默认的布局；然而，Maven 1.x有一种不同的布局。我们可以使用该元素指定布局是default（默认）还是legacy（遗留）。--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">layout</span>&gt;</span>default<span class="tag">&lt;/<span class="name">layout</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">repository</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">repositories</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--发现插件的远程仓库列表，这些插件用于构建和报表--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">pluginRepositories</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--包含需要连接到远程插件仓库的信息.参见repositories/repository元素--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">pluginRepository</span>&gt;</span></span><br><span class="line">            ......</span><br><span class="line">        <span class="tag">&lt;/<span class="name">pluginRepository</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">pluginRepositories</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!--该元素描述了项目相关的所有依赖。 这些依赖组成了项目构建过程中的一个个环节。它们自动从项目定义的仓库中下载。要获取更多信息，请看项目依赖机制。--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--依赖的group ID--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.maven<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--依赖的artifact ID--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>maven-artifact<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--依赖的版本号。 在Maven 2里, 也可以配置成版本号的范围。--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.8.1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--依赖类型，默认类型是jar。它通常表示依赖的文件的扩展名，但也有例外。一个类型可以被映射成另外一个扩展名或分类器。类型经常和使用的打包方式对应，尽管这也有例外。一些类型的例子：jar，war，ejb-client和test-jar。如果设置extensions为 true，就可以在plugin里定义新的类型。所以前面的类型的例子不完整。--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">type</span>&gt;</span>jar<span class="tag">&lt;/<span class="name">type</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--依赖的分类器。分类器可以区分属于同一个POM，但不同构建方式的构件。分类器名被附加到文件名的版本号后面。例如，如果你想要构建两个单独的构件成JAR，一个使用Java 1.4编译器，另一个使用Java 6编译器，你就可以使用分类器来生成两个单独的JAR构件。--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">classifier</span>&gt;</span><span class="tag">&lt;/<span class="name">classifier</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--依赖范围。在项目发布过程中，帮助决定哪些构件被包括进来。欲知详情请参考依赖机制。 </span></span><br><span class="line"><span class="comment">            - compile ：默认范围，用于编译 </span></span><br><span class="line"><span class="comment">            - provided：类似于编译，但支持你期待jdk或者容器提供，类似于classpath </span></span><br><span class="line"><span class="comment">            - runtime: 在执行时需要使用 </span></span><br><span class="line"><span class="comment">            - test: 用于test任务时使用 </span></span><br><span class="line"><span class="comment">            - system: 需要外在提供相应的元素。通过systemPath来取得 </span></span><br><span class="line"><span class="comment">            - systemPath: 仅用于范围为system。提供相应的路径 </span></span><br><span class="line"><span class="comment">            - optional: 当项目自身被依赖时，标注依赖是否传递。用于连续依赖时使用--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">scope</span>&gt;</span>test<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--仅供system范围使用。注意，不鼓励使用这个元素，并且在新的版本中该元素可能被覆盖掉。该元素为依赖规定了文件系统上的路径。需要绝对路径而不是相对路径。推荐使用属性匹配绝对路径，例如$&#123;java.home&#125;。--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">systemPath</span>&gt;</span><span class="tag">&lt;/<span class="name">systemPath</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--当计算传递依赖时， 从依赖构件列表里，列出被排除的依赖构件集。即告诉maven你只依赖指定的项目，不依赖项目的依赖。此元素主要用于解决版本冲突问题--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">exclusions</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">exclusion</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-core<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">exclusion</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">exclusions</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--可选依赖，如果你在项目B中把C依赖声明为可选，你就需要在依赖于B的项目（例如项目A）中显式的引用对C的依赖。可选依赖阻断依赖的传递性。--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">optional</span>&gt;</span>true<span class="tag">&lt;/<span class="name">optional</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--不赞成使用. 现在Maven忽略该元素.--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">reports</span>&gt;</span><span class="tag">&lt;/<span class="name">reports</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--该元素描述使用报表插件产生报表的规范。当用户执行“mvn site”，这些报表就会运行。 在页面导航栏能看到所有报表的链接。--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">reporting</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--true，则，网站不包括默认的报表。这包括“项目信息”菜单中的报表。--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">excludeDefaults</span>/&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--所有产生的报表存放到哪里。默认值是$&#123;project.build.directory&#125;/site。--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">outputDirectory</span>/&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--使用的报表插件和他们的配置。--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">plugins</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--plugin元素包含描述报表插件需要的信息--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">                <span class="comment">&lt;!--报表插件在仓库里的group ID--&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">groupId</span>/&gt;</span></span><br><span class="line">                <span class="comment">&lt;!--报表插件在仓库里的artifact ID--&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">artifactId</span>/&gt;</span></span><br><span class="line">                <span class="comment">&lt;!--被使用的报表插件的版本（或版本范围）--&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">version</span>/&gt;</span></span><br><span class="line">                <span class="comment">&lt;!--任何配置是否被传播到子项目--&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">inherited</span>/&gt;</span></span><br><span class="line">                <span class="comment">&lt;!--报表插件的配置--&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">configuration</span>/&gt;</span></span><br><span class="line">                <span class="comment">&lt;!--一组报表的多重规范，每个规范可能有不同的配置。一个规范（报表集）对应一个执行目标 。例如，有1，2，3，4，5，6，7，8，9个报表。1，2，5构成A报表集，对应一个执行目标。2，5，8构成B报表集，对应另一个执行目标--&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">reportSets</span>&gt;</span></span><br><span class="line">                    <span class="comment">&lt;!--表示报表的一个集合，以及产生该集合的配置--&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">reportSet</span>&gt;</span></span><br><span class="line">                        <span class="comment">&lt;!--报表集合的唯一标识符，POM继承时用到--&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">id</span>/&gt;</span></span><br><span class="line">                        <span class="comment">&lt;!--产生报表集合时，被使用的报表的配置--&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">configuration</span>/&gt;</span></span><br><span class="line">                        <span class="comment">&lt;!--配置是否被继承到子POMs--&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">inherited</span>/&gt;</span></span><br><span class="line">                        <span class="comment">&lt;!--这个集合里使用到哪些报表--&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">reports</span>/&gt;</span></span><br><span class="line">                    <span class="tag">&lt;/<span class="name">reportSet</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">reportSets</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">plugins</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">reporting</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--继承自该项目的所有子项目的默认依赖信息。这部分的依赖信息不会被立即解析,而是当子项目声明一个依赖（必须描述group ID和artifact ID信息），如果group ID和artifact ID以外的一些信息没有描述，则通过group ID和artifact ID匹配到这里的依赖，并使用这里的依赖信息。--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependencyManagement</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--参见dependencies/dependency元素--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">                ......</span><br><span class="line">            <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependencyManagement</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--项目分发信息，在执行mvn deploy后表示要发布的位置。有了这些信息就可以把网站部署到远程服务器或者把构件部署到远程仓库。--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">distributionManagement</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--部署项目产生的构件到远程仓库需要的信息--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">repository</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--是分配给快照一个唯一的版本号（由时间戳和构建流水号）？还是每次都使用相同的版本号？参见repositories/repository元素--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">uniqueVersion</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">id</span>&gt;</span>zhangboxyz-maven2<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">name</span>&gt;</span>zhangboxyz maven2<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">url</span>&gt;</span>file://$&#123;basedir&#125;/target/deploy<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">layout</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">repository</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--构件的快照部署到哪里？如果没有配置该元素，默认部署到repository元素配置的仓库，参见distributionManagement/repository元素--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">snapshotRepository</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">uniqueVersion</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">id</span>&gt;</span>zhangboxyz-maven2<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">name</span>&gt;</span>zhangboxyz-maven2 Snapshot Repository<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">url</span>&gt;</span>scp://svn.baidu.com/zhangboxyz:/usr/local/maven-snapshot<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">layout</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">snapshotRepository</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--部署项目的网站需要的信息--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">site</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--部署位置的唯一标识符，用来匹配站点和settings.xml文件里的配置--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">id</span>&gt;</span>zhangboxyz-site<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--部署位置的名称--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">name</span>&gt;</span>business api website<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--部署位置的URL，按protocol://hostname/path形式--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">url</span>&gt;</span></span><br><span class="line">                scp://svn.baidu.com/zhangboxyz:/var/www/localhost/zhangboxyz-web</span><br><span class="line">            <span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">site</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--项目下载页面的URL。如果没有该元素，用户应该参考主页。使用该元素的原因是：帮助定位那些不在仓库里的构件（由于license限制）。--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">downloadUrl</span>/&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--如果构件有了新的group ID和artifact ID（构件移到了新的位置），这里列出构件的重定位信息。--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">relocation</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--构件新的group ID--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>/&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--构件新的artifact ID--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>/&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--构件新的版本号--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">version</span>/&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--显示给用户的，关于移动的额外信息，例如原因。--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">message</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">relocation</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--给出该构件在远程仓库的状态。不得在本地项目中设置该元素，因为这是工具自动更新的。有效的值有：none（默认），converted（仓库管理员从Maven 1 POM转换过来），partner（直接从伙伴Maven 2仓库同步过来），deployed（从Maven 2实例部署），verified（被核实时正确的和最终的）。--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">status</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">distributionManagement</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--以值替代名称，Properties可以在整个POM中使用，也可以作为触发条件（见settings.xml配置文件里activation元素的说明）。格式是&lt;name&gt;value&lt;/name&gt;。--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">properties</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">project</span>&gt;</span></span><br></pre></td></tr></table></figure>
-        
-    </div>
-    </div>
-
-    <div class="article-badge">
-        
-        
-    </div>
-
-</div>
-
-<footer class="article-footer">
-    <div class="article-more-info">
-    <div class="article-date">
-  <time datetime="2021-04-23T05:26:16.000Z" itemprop="datePublished">2021-04-23</time>
-</div>
-    
-        <div class="article-category">
-        <a class="article-category-link" href="/categories/Maven/">Maven</a>
-        </div>
-    
-    
-        <div class="article-tag">
-        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Maven/" rel="tag">Maven</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%80%9F%E6%9F%A5/" rel="tag">速查</a></li></ul>
-        </div>
-    
-    </div>
-</footer>
-
-</article>
-
-    
-  
-    
-      <article
-id="post-Git/Git 常用命令"
-class="article article-type-post"
->
-
-
-
-<div class="article-inner">
-    
-
-    <div class="article-body">
-    <header class="article-title">
-        <a href="/Git/Git%20%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">Git常用命令</a>
-    </header>
-    <div class="article-entry post-inner-html">
-        
-        <h1 id="Git-命令速查"><a href="#Git-命令速查" class="headerlink" title="Git 命令速查"></a>Git 命令速查</h1><h2 id="本地初始化项目"><a href="#本地初始化项目" class="headerlink" title="本地初始化项目"></a>本地初始化项目</h2><ul>
-<li>配置提交代码时的用户信息</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;你的名字或昵称&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;你的邮箱&quot;</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>创建初始化版本库，并推送到远程地址</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line"><span class="comment">## 添加远程仓库地址</span></span><br><span class="line">git remote add origin &lt;你的项目地址&gt; </span><br><span class="line"><span class="comment">## 推送到远程仓库</span></span><br><span class="line">git push -u origin master </span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>从远程地址下载版本库</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 在当前目录新建一个Git代码库</span></span><br><span class="line">$ git init</span><br><span class="line"></span><br><span class="line"><span class="comment"># 新建一个目录，将其初始化为Git代码库</span></span><br><span class="line">$ git init [project-name]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 下载一个项目和它的整个代码历史</span></span><br><span class="line">$ git <span class="built_in">clone</span> [url]</span><br></pre></td></tr></table></figure>
-
-<h2 id="创建-合并-dev-分支"><a href="#创建-合并-dev-分支" class="headerlink" title="创建/合并 dev 分支"></a>创建/合并 dev 分支</h2><h3 id="创建-dev-分支"><a href="#创建-dev-分支" class="headerlink" title="创建 dev 分支"></a>创建 dev 分支</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m ‘dev<span class="string">&#x27;</span></span><br><span class="line"><span class="string">git push -u origin dev</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="合并-dev-分支到-master"><a href="#合并-dev-分支到-master" class="headerlink" title="合并 dev 分支到 master"></a>合并 dev 分支到 master</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 切换到 master 分支</span></span><br><span class="line">git checkout master</span><br><span class="line"><span class="comment"># pull 远程 master 到本地</span></span><br><span class="line">git pull origin master</span><br><span class="line"><span class="comment"># 合并 dev 到 master</span></span><br><span class="line">git merge dev</span><br><span class="line"><span class="comment"># 查看本地状态</span></span><br><span class="line">git status</span><br><span class="line"><span class="comment"># push 本地到远程 master</span></span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
-
-<h2 id="配置信息"><a href="#配置信息" class="headerlink" title="配置信息"></a>配置信息</h2><p>Git的配置文件为<code>.gitconfig</code></p>
-<ul>
-<li>全局配置： 用户主目录下</li>
-<li>项目配置： 项目目录下</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 显示当前的Git配置</span></span><br><span class="line">$ git config --list</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 编辑Git配置文件</span></span><br><span class="line">$ git config -e [--global]</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 设置提交代码时的用户信息</span></span><br><span class="line">$ git config [--global] user.name <span class="string">&quot;[name]&quot;</span></span><br><span class="line">$ git config [--global] user.email <span class="string">&quot;[email address]&quot;</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="增加-删除文件"><a href="#增加-删除文件" class="headerlink" title="增加/删除文件"></a>增加/删除文件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># 添加指定文件到暂存区</span></span><br><span class="line">$ git add [file1] [file2] ...</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 添加指定目录到暂存区，包括子目录</span></span><br><span class="line">$ git add [dir]</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 添加当前目录的所有文件到暂存区</span></span><br><span class="line">$ git add .</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 添加每个变化前，都会要求确认</span></span><br><span class="line"><span class="comment"># 对于同一个文件的多处变化，可以实现分次提交</span></span><br><span class="line">$ git add -p</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 删除工作区文件，并且将这次删除放入暂存区</span></span><br><span class="line">$ git rm [file1] [file2] ...</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 停止追踪指定文件，但该文件会保留在工作区</span></span><br><span class="line">$ git rm --cached [file]</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 改名文件，并且将这个改名放入暂存区</span></span><br><span class="line">$ git mv [file-original] [file-renamed]</span><br></pre></td></tr></table></figure>
-
-<h2 id="代码提交"><a href="#代码提交" class="headerlink" title="代码提交"></a>代码提交</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 提交暂存区到仓库区</span></span><br><span class="line">$ git commit -m [message]</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 提交暂存区的指定文件到仓库区</span></span><br><span class="line">$ git commit [file1] [file2] ... -m [message]</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 提交工作区自上次commit之后的变化，直接到仓库区</span></span><br><span class="line">$ git commit -a</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 提交时显示所有diff信息</span></span><br><span class="line">$ git commit -v</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 使用一次新的commit，替代上一次提交</span></span><br><span class="line"><span class="comment"># 如果代码没有任何新变化，则用来改写上一次commit的提交信息</span></span><br><span class="line">$ git commit --amend -m [message]</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 重做上一次commit，并包括指定文件的新变化</span></span><br><span class="line">$ git commit --amend [file1] [file2] ...</span><br></pre></td></tr></table></figure>
-
-<h2 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 列出所有本地分支</span></span><br><span class="line">$ git branch</span><br><span class="line"></span><br><span class="line"><span class="comment"># 列出所有远程分支</span></span><br><span class="line">$ git branch -r</span><br><span class="line"></span><br><span class="line"><span class="comment"># 列出所有本地分支和远程分支</span></span><br><span class="line">$ git branch -a</span><br><span class="line"></span><br><span class="line"><span class="comment"># 新建一个分支，但依然停留在当前分支</span></span><br><span class="line">$ git branch [branch-name]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 新建一个分支，并切换到该分支</span></span><br><span class="line">$ git checkout -b [branch]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 新建一个分支，指向指定commit</span></span><br><span class="line">$ git branch [branch] [commit]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 新建一个分支，与指定的远程分支建立追踪关系</span></span><br><span class="line">$ git branch --track [branch] [remote-branch]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 切换到指定分支，并更新工作区</span></span><br><span class="line">$ git checkout [branch-name]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 切换到上一个分支</span></span><br><span class="line">$ git checkout -</span><br><span class="line"></span><br><span class="line"><span class="comment"># 建立追踪关系，在现有分支与指定的远程分支之间</span></span><br><span class="line">$ git branch --set-upstream [branch] [remote-branch]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 合并指定分支到当前分支</span></span><br><span class="line">$ git merge [branch]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 选择一个commit，合并进当前分支</span></span><br><span class="line">$ git cherry-pick [commit]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 删除分支</span></span><br><span class="line">$ git branch -d [branch-name]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 删除远程分支</span></span><br><span class="line">$ git push origin --delete [branch-name]</span><br><span class="line">$ git branch -dr [remote/branch]</span><br></pre></td></tr></table></figure>
-
-<h2 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 列出所有tag</span></span><br><span class="line">$ git tag</span><br><span class="line"></span><br><span class="line"><span class="comment"># 列出符合检索条件的 tag</span></span><br><span class="line">$ git tag -l 1..</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 查看tag信息</span></span><br><span class="line">$ git show [tag]</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 新建一个tag在当前commit</span></span><br><span class="line">$ git tag [tag]</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 新建一个tag在指定commit</span></span><br><span class="line">$ git tag [tag] [commit]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 新建一个带备注标签（推荐）</span></span><br><span class="line">$ git tag -a [tag] -m <span class="string">&quot;备注信息&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 针对指定 commit 版本创建标签</span></span><br><span class="line">$ git tag -a [tag] [commit] -m <span class="string">&quot;备注信息&quot;</span></span><br><span class="line"> </span><br><span class="line"><span class="comment"># 删除本地tag</span></span><br><span class="line">$ git tag -d [tag]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 删除远程 tag（Git 版本 &gt; 1.7.0）</span></span><br><span class="line">$ git push origin --delete 1.0.0</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 删除远程 tag（Git 版本 &lt; 1.7.0)</span></span><br><span class="line">$ git push origin :refs/tags/[tagName]</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 提交指定tag</span></span><br><span class="line">$ git push [remote] [tag]</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 提交所有tag</span></span><br><span class="line">$ git push [remote] --tags</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 新建一个分支，指向某个tag</span></span><br><span class="line">$ git checkout -b [branch] [tag]</span><br></pre></td></tr></table></figure>
-
-<h2 id="查看信息"><a href="#查看信息" class="headerlink" title="查看信息"></a>查看信息</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 显示有变更的文件</span></span><br><span class="line">$ git status</span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示当前分支的版本历史</span></span><br><span class="line">$ git <span class="built_in">log</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示commit历史，以及每次commit发生变更的文件</span></span><br><span class="line">$ git <span class="built_in">log</span> --<span class="built_in">stat</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 搜索提交历史，根据关键词</span></span><br><span class="line">$ git <span class="built_in">log</span> -S [keyword]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示某个commit之后的所有变动，每个commit占据一行</span></span><br><span class="line">$ git <span class="built_in">log</span> [tag] HEAD --pretty=format:%s</span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示某个commit之后的所有变动，其&quot;提交说明&quot;必须符合搜索条件</span></span><br><span class="line">$ git <span class="built_in">log</span> [tag] HEAD --grep feature</span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示某个文件的版本历史，包括文件改名</span></span><br><span class="line">$ git <span class="built_in">log</span> --follow [file]</span><br><span class="line">$ git whatchanged [file]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示指定文件相关的每一次diff</span></span><br><span class="line">$ git <span class="built_in">log</span> -p [file]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示过去5次提交</span></span><br><span class="line">$ git <span class="built_in">log</span> -5 --pretty --oneline</span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示所有提交过的用户，按提交次数排序</span></span><br><span class="line">$ git shortlog -sn</span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示指定文件是什么人在什么时间修改过</span></span><br><span class="line">$ git blame [file]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示暂存区和工作区的代码差异</span></span><br><span class="line">$ git diff</span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示暂存区和上一个commit的差异</span></span><br><span class="line">$ git diff --cached [file]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示工作区与当前分支最新commit之间的差异</span></span><br><span class="line">$ git diff HEAD</span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示两次提交之间的差异</span></span><br><span class="line">$ git diff [first-branch]...[second-branch]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示今天你写了多少行代码</span></span><br><span class="line">$ git diff --shortstat <span class="string">&quot;@&#123;0 day ago&#125;&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示某次提交的元数据和内容变化</span></span><br><span class="line">$ git show [commit]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示某次提交发生变化的文件</span></span><br><span class="line">$ git show --name-only [commit]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示某次提交时，某个文件的内容</span></span><br><span class="line">$ git show [commit]:[filename]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示当前分支的最近几次提交</span></span><br><span class="line">$ git reflog</span><br><span class="line"></span><br><span class="line"><span class="comment"># 从本地master拉取代码更新当前分支：branch 一般为master</span></span><br><span class="line">$ git rebase [branch]</span><br></pre></td></tr></table></figure>
-
-<h2 id="远程同步"><a href="#远程同步" class="headerlink" title="远程同步"></a>远程同步</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 更新远程仓储</span></span><br><span class="line">$ git remote update</span><br><span class="line"></span><br><span class="line"><span class="comment"># 下载远程仓库的所有变动</span></span><br><span class="line">$ git fetch [remote]</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 显示所有远程仓库</span></span><br><span class="line">$ git remote -v</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 显示某个远程仓库的信息</span></span><br><span class="line">$ git remote show [remote]</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 增加一个新的远程仓库，并命名</span></span><br><span class="line">$ git remote add [shortname] [url]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 删除一个远程参数</span></span><br><span class="line">$ git remote rm [shortname]</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 取回远程仓库的变化，并与本地分支合并</span></span><br><span class="line">$ git pull [remote] [branch]</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 上传本地指定分支到远程仓库</span></span><br><span class="line">$ git push [remote] [branch]</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 强行推送当前分支到远程仓库，即使有冲突</span></span><br><span class="line">$ git push [remote] --force</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 推送所有分支到远程仓库</span></span><br><span class="line">$ git push [remote] --all</span><br><span class="line"></span><br><span class="line"><span class="comment"># 切换远程仓库地址</span></span><br><span class="line">$ git remote set-url origin &#123;新的 git 地址&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 测试远程仓库地址</span></span><br><span class="line">$ git ls-remote -h -- &#123;git 地址&#125; HEAD</span><br></pre></td></tr></table></figure>
-
-<h2 id="暂存区"><a href="#暂存区" class="headerlink" title="暂存区"></a>暂存区</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 恢复暂存区的指定文件到工作区</span></span><br><span class="line">$ git checkout [file]</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 恢复某个commit的指定文件到暂存区和工作区</span></span><br><span class="line">$ git checkout [commit] [file]</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 恢复暂存区的所有文件到工作区</span></span><br><span class="line">$ git checkout .</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 重置暂存区的指定文件，与上一次commit保持一致，但工作区不变</span></span><br><span class="line">$ git reset [file]</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 重置暂存区与工作区，与上一次commit保持一致</span></span><br><span class="line">$ git reset --hard</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 重置当前分支的指针为指定commit，同时重置暂存区，但工作区不变</span></span><br><span class="line">$ git reset [commit]</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 重置当前分支的HEAD为指定commit，同时重置暂存区和工作区，与指定commit一致</span></span><br><span class="line">$ git reset --hard [commit]</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 重置当前HEAD为指定commit，但保持暂存区和工作区不变</span></span><br><span class="line">$ git reset --keep [commit]</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 新建一个commit，用来撤销指定commit</span></span><br><span class="line"><span class="comment"># 后者的所有变化都将被前者抵消，并且应用到当前分支</span></span><br><span class="line">$ git revert [commit]</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 暂时将未提交的变化移除，稍后再移入</span></span><br><span class="line">$ git stash</span><br><span class="line">$ git stash pop</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<hr>
-<h2 id="生成公钥"><a href="#生成公钥" class="headerlink" title="生成公钥"></a>生成公钥</h2><h3 id="生成-SSH-keys-公钥"><a href="#生成-SSH-keys-公钥" class="headerlink" title="生成 SSH keys 公钥"></a>生成 SSH keys 公钥</h3><p>存放路径为：<code>c:/Users/xxx/.ssh/</code></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">&quot;xxx@yyy.com&quot;</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Generating public/private rsa key pair.</span><br><span class="line"><span class="comment">#不填直接回车</span></span><br><span class="line">Enter file <span class="keyword">in</span> <span class="built_in">which</span> to save the key (/c/Users/xxx/.ssh/id_rsa):</span><br><span class="line"><span class="comment">#输入密码（可以为空）</span></span><br><span class="line">Enter passphrase (empty <span class="keyword">for</span> no passphrase):</span><br><span class="line"><span class="comment">#再次确认密码（可以为空）</span></span><br><span class="line">Enter same passphrase again:</span><br><span class="line"><span class="comment">#生成的密钥</span></span><br><span class="line">Your identification has been saved <span class="keyword">in</span> /c/Users/xxx/.ssh/id_rsa.</span><br><span class="line"><span class="comment">#生成的公钥</span></span><br><span class="line">Your public key has been saved <span class="keyword">in</span> /c/Users/xxx/.ssh/id_rsa.pub.</span><br><span class="line">The key fingerprint is:</span><br><span class="line">e3:51:33:xx:xx:xx:xx:xxx:61:28:83:e2:81 xxx@yyy.com</span><br></pre></td></tr></table></figure>
-
-<h3 id="测试-SSH-keys-是否设置成功"><a href="#测试-SSH-keys-是否设置成功" class="headerlink" title="测试 SSH keys 是否设置成功"></a>测试 SSH keys 是否设置成功</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -T git@github.com</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">The authenticity of host <span class="string">&#x27;github.com (192.30.252.129)&#x27;</span> can<span class="string">&#x27;t be established.</span></span><br><span class="line"><span class="string">RSA key fingerprint is 16:27:xx:xx:xx:xx:xx:4d:eb:df:a6:48.</span></span><br><span class="line"><span class="string">#确认你是否继续联系，输入yes</span></span><br><span class="line"><span class="string">Are you sure you want to continue connecting (yes/no)? yes </span></span><br><span class="line"><span class="string">Warning: Permanently added &#x27;</span>github.com,192.30.252.129<span class="string">&#x27; (RSA) to the list of known hosts.</span></span><br><span class="line"><span class="string">#生成ssh kye是密码为空则无此项，若设置有密码则有此项且，输入生成ssh key时设置的密码即可。</span></span><br><span class="line"><span class="string">Enter passphrase for key &#x27;</span>/c/Users/xxx/.ssh/id_rsa<span class="string">&#x27;:  </span></span><br><span class="line"><span class="string">#出现词句话，说明设置成功。</span></span><br><span class="line"><span class="string">Hi xxx! You&#x27;</span>ve successfully authenticated, but GitHub does not provide shell access.</span><br></pre></td></tr></table></figure>
-
-<h3 id="TortoiseGit-配置"><a href="#TortoiseGit-配置" class="headerlink" title="TortoiseGit 配置"></a>TortoiseGit 配置</h3><p><img src="images/image-20200824103332733.png" alt="TortoiseGit配置SSH客户端"></p>
-<h2 id="设置项目代理"><a href="#设置项目代理" class="headerlink" title="设置项目代理"></a>设置项目代理</h2><p>参数：</p>
-<ul>
-<li>–global 全局</li>
-<li>– local 当前项目</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 设置代理</span></span><br><span class="line">git config --<span class="built_in">local</span> http.proxy 127.0.0.1:8580</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 取消代理</span></span><br><span class="line">git config --<span class="built_in">local</span> --<span class="built_in">unset</span> http.proxy</span><br></pre></td></tr></table></figure>
-
-<h2 id="忽略-SSL-验证"><a href="#忽略-SSL-验证" class="headerlink" title="忽略 SSL 验证"></a>忽略 SSL 验证</h2><p>服务器使用未经过 CA 签名的证书会导致客户端 clone 时报错：</p>
-<p> <code>SSL certificate problem: self signed certificate</code></p>
-<h3 id="TortoiseGit-配置-1"><a href="#TortoiseGit-配置-1" class="headerlink" title="TortoiseGit 配置"></a>TortoiseGit 配置</h3><p><img src="images/image-20200824103332733.png" alt="image-20200824103332733"></p>
-<h3 id="命令行配置"><a href="#命令行配置" class="headerlink" title="命令行配置"></a>命令行配置</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --system http.sslverify <span class="literal">false</span></span><br></pre></td></tr></table></figure>
-        
-    </div>
-    </div>
-
-    <div class="article-badge">
-        
-        
-    </div>
-
-</div>
-
-<footer class="article-footer">
-    <div class="article-more-info">
-    <div class="article-date">
-  <time datetime="2021-04-23T05:24:27.000Z" itemprop="datePublished">2021-04-23</time>
-</div>
-    
-        <div class="article-category">
-        <a class="article-category-link" href="/categories/GIt/">GIt</a>
-        </div>
-    
-    
-        <div class="article-tag">
-        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/" rel="tag">Git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%80%9F%E6%9F%A5/" rel="tag">速查</a></li></ul>
-        </div>
-    
-    </div>
-</footer>
-
-</article>
-
-    
-  
-
-  
-    <nav class="pagination">
-        <a class="extend prev" rel="prev" href="/page/5/">Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span>
-    </nav>
-  
-</div>
-
-                </section>
-            </section>
-
-            
-            <aside class="sidebar ">
-                
-
-
-<div class="widget" id="widget">
-    
-      
-    
-      
-  <div class="widget-wrap widget-tags">
-    <div class="widget-title"><span>Tags</span></div>
-    <div class="widget-inner">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C++</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CentOS/" rel="tag">CentOS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Docker/" rel="tag">Docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Electron/" rel="tag">Electron</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HAProxy/" rel="tag">HAProxy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/" rel="tag">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Jenkins/" rel="tag">Jenkins</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Maven/" rel="tag">Maven</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MySQL/" rel="tag">MySQL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NTP/" rel="tag">NTP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Oracle/" rel="tag">Oracle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SQLite/" rel="tag">SQLite</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/STL/" rel="tag">STL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SpringBoot/" rel="tag">SpringBoot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TCP-IP/" rel="tag">TCP/IP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Typora/" rel="tag">Typora</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VS2015/" rel="tag">VS2015</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VUE/" rel="tag">VUE</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vditor/" rel="tag">Vditor</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/" rel="tag">nodejs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/openssl/" rel="tag">openssl</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/" rel="tag">多线程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/" rel="tag">开发工具</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/" rel="tag">异常处理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%89%B9%E5%A4%84%E7%90%86/" rel="tag">批处理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" rel="tag">环境搭建</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/" rel="tag">计算机组成原理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" rel="tag">计算机网络</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" rel="tag">设计模式</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%80%9F%E6%9F%A5/" rel="tag">速查</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%AB%98%E5%8F%AF%E7%94%A8/" rel="tag">高可用</a></li></ul>
-    </div>
-  </div>
-
-
-    
-      
-  <div class="widget-wrap widget-cate">
-    <div class="widget-title"><span>Categories</span></div>
-    <div class="widget-inner">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C++</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/CentOS/">CentOS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Electron/">Electron</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/GIt/">GIt</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Maven/">Maven</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MySQL/">MySQL</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Nodejs/">Nodejs</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Oracle/">Oracle</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/SpringBoot/">SpringBoot</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/VS2015/">VS2015</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/VUE/">VUE</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%BB%98%E8%AE%A4%E5%88%86%E7%B1%BB/">默认分类</a></li></ul>
-    </div>
-  </div>
-
-
-    
-</div>
-
-<div id="backtop"><i class="icon icon-arrow-up"></i></div>
-            </aside>
-            
-        </div>
-    </div>
-
-    <!-- <footer class="footer">
-    <div class="footer-wave">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#3c4859" fill-opacity="1" d="M0,160L60,181.3C120,203,240,245,360,240C480,235,600,181,720,186.7C840,192,960,256,1080,261.3C1200,267,1320,213,1380,186.7L1440,160L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
-    </div>
-
-    <div class="footer-wrap">
-        <div class="footer-inner"> 
-            天空 &copy; 2021<br>
-            Powered By Hexo · Theme By <a href="https://github.com/lh1me/hexo-theme-aomori" target="_blank">Aomori</a>
-        </div>
-    </div>
-
-</footer> -->
-
-<!-- 
-
- -->
-
-
-<script src="/dist/build.js?1623049492098.js"></script>
-
-
-<script src="/dist/custom.js?1623049492098.js"></script>
+   
 
 
 
@@ -783,5 +561,4 @@ class="article article-type-post"
 
 
 </body>
-
 </html>

@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>天空</title>
+  
+  
+  <link href="https://abcdoc-cn.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://abcdoc-cn.github.io/"/>
+  <updated>2021-06-16T07:52:24.786Z</updated>
+  <id>https://abcdoc-cn.github.io/</id>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>测试修改</title>
+    <link href="https://abcdoc-cn.github.io/%E6%B5%8B%E8%AF%95%E4%BF%AE%E6%94%B9/"/>
+    <id>https://abcdoc-cn.github.io/%E6%B5%8B%E8%AF%95%E4%BF%AE%E6%94%B9/</id>
+    <published>2021-06-16T07:51:13.000Z</published>
+    <updated>2021-06-16T07:52:24.786Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="测试修改1"><a href="#测试修改1" class="headerlink" title="测试修改1"></a>测试修改1</h2>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;测试修改1&quot;&gt;&lt;a href=&quot;#测试修改1&quot; class=&quot;headerlink&quot; title=&quot;测试修改1&quot;&gt;&lt;/a&gt;测试修改1&lt;/h2&gt;</summary>
+      
+    
+    
+    
+    <category term="测试" scheme="https://abcdoc-cn.github.io/categories/%E6%B5%8B%E8%AF%95/"/>
+    
+    
+    <category term="测试" scheme="https://abcdoc-cn.github.io/tags/%E6%B5%8B%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>测试添加</title>
+    <link href="https://abcdoc-cn.github.io/%E6%B5%8B%E8%AF%95%E6%B7%BB%E5%8A%A0/"/>
+    <id>https://abcdoc-cn.github.io/%E6%B5%8B%E8%AF%95%E6%B7%BB%E5%8A%A0/</id>
+    <published>2021-06-16T07:49:09.000Z</published>
+    <updated>2021-06-16T07:49:09.751Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="测试添加"><a href="#测试添加" class="headerlink" title="测试添加"></a>测试添加</h2>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;测试添加&quot;&gt;&lt;a href=&quot;#测试添加&quot; class=&quot;headerlink&quot; title=&quot;测试添加&quot;&gt;&lt;/a&gt;测试添加&lt;/h2&gt;</summary>
+      
+    
+    
+    
+    <category term="测试" scheme="https://abcdoc-cn.github.io/categories/%E6%B5%8B%E8%AF%95/"/>
+    
+    
+    <category term="测试" scheme="https://abcdoc-cn.github.io/tags/%E6%B5%8B%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>VUE 常用方法</title>
+    <link href="https://abcdoc-cn.github.io/VUE/VUE%20%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/"/>
+    <id>https://abcdoc-cn.github.io/VUE/VUE%20%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/</id>
+    <published>2021-06-10T07:38:20.000Z</published>
+    <updated>2021-06-10T07:38:20.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="数组转字符串"><a href="#数组转字符串" class="headerlink" title="数组转字符串"></a>数组转字符串</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="string">&#x27;1&#x27;</span>,<span class="string">&#x27;2&#x27;</span>];</span><br><span class="line"><span class="keyword">let</span> str = arr.join(<span class="string">&quot;,&quot;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(str)<span class="comment">//1,2</span></span><br></pre></td></tr></table></figure><h3 id="字符串转数组"><a href="#字符串转数组" class="headerlink" title="字符串转数组"></a>字符串转数组</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">&#x27;1,2&#x27;</span></span><br><span class="line"><span class="keyword">let</span> arr = str.split(<span class="string">&#x27;,&#x27;</span>)</span><br><span class="line"><span class="built_in">console</span>.log(arr)<span class="comment">// [&quot;1&quot;, &quot;2&quot;]</span></span><br></pre></td></tr></table></figure><h3 id="删除数组元素"><a href="#删除数组元素" class="headerlink" title="删除数组元素"></a>删除数组元素</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//表示先获取这个元素的下标，然后从这个下标开始计算，删除长度为1的元素</span></span><br><span class="line"><span class="built_in">this</span>.arr.splice(<span class="built_in">this</span>.arr.indexOf(item), <span class="number">1</span>);</span><br></pre></td></tr></table></figure><h3 id="数组排序"><a href="#数组排序" class="headerlink" title="数组排序"></a>数组排序</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 排序时按照ASCII码进行排序，先看首个字符的ASCII码值，按照码值进行排序</span></span><br><span class="line">arr.sort();</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;数组转字符串&quot;&gt;&lt;a href=&quot;#数组转字符串&quot; class=&quot;headerlink&quot; title=&quot;数组转字符串&quot;&gt;&lt;/a&gt;数组转字符串&lt;/h3&gt;&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter</summary>
+      
+    
+    
+    
+    <category term="VUE" scheme="https://abcdoc-cn.github.io/categories/VUE/"/>
+    
+    
+    <category term="速查" scheme="https://abcdoc-cn.github.io/tags/%E9%80%9F%E6%9F%A5/"/>
+    
+    <category term="VUE" scheme="https://abcdoc-cn.github.io/tags/VUE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SpringBoot 跳过测试</title>
+    <link href="https://abcdoc-cn.github.io/SpringBoot/SpringBoot%20%E8%B7%B3%E8%BF%87%E6%B5%8B%E8%AF%95/"/>
+    <id>https://abcdoc-cn.github.io/SpringBoot/SpringBoot%20%E8%B7%B3%E8%BF%87%E6%B5%8B%E8%AF%95/</id>
+    <published>2021-06-08T21:05:37.000Z</published>
+    <updated>2021-06-09T09:11:48.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="pom-属性-skipTests"><a href="#pom-属性-skipTests" class="headerlink" title="pom 属性 skipTests"></a>pom 属性 skipTests</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">properties</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- surefire plugin方式跳过maven test， 等同$ mvn package -DskipTests --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">skipTests</span>&gt;</span>true<span class="tag">&lt;/<span class="name">skipTests</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br></pre></td></tr></table></figure><h3 id="pom-属性-maven-test-skip"><a href="#pom-属性-maven-test-skip" class="headerlink" title="pom 属性 maven.test.skip"></a>pom 属性 maven.test.skip</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">properties</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- maven方式跳过maven test, 等同$ mvn package -Dmaven.test.skip=true --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">maven.test.skip</span>&gt;</span>true<span class="tag">&lt;/<span class="name">maven.test.skip</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br></pre></td></tr></table></figure><h3 id="pom-里面增加插件跳过测试的插件"><a href="#pom-里面增加插件跳过测试的插件" class="headerlink" title="pom 里面增加插件跳过测试的插件"></a>pom 里面增加插件跳过测试的插件</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.maven.plugins<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>maven-surefire-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">skipTests</span>&gt;</span>true<span class="tag">&lt;/<span class="name">skipTests</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br></pre></td></tr></table></figure><h3 id="命令行添加-DskipTests"><a href="#命令行添加-DskipTests" class="headerlink" title="命令行添加 -DskipTests"></a>命令行添加 <code>-DskipTests</code></h3><ul><li>不执行测试用例</li><li>编译测试用例类生成相应的 class 文件至 target/test-classes下。</li></ul><h3 id="命令行添加-Dmaven-test-skip-true"><a href="#命令行添加-Dmaven-test-skip-true" class="headerlink" title="命令行添加 -Dmaven.test.skip=true"></a>命令行添加 <code>-Dmaven.test.skip=true</code></h3><ul><li>不执行测试用例</li><li>不编译测试用例类。</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;pom-属性-skipTests&quot;&gt;&lt;a href=&quot;#pom-属性-skipTests&quot; class=&quot;headerlink&quot; title=&quot;pom 属性 skipTests&quot;&gt;&lt;/a&gt;pom 属性 skipTests&lt;/h3&gt;&lt;figure class=&quot;hi</summary>
+      
+    
+    
+    
+    <category term="SpringBoot" scheme="https://abcdoc-cn.github.io/categories/SpringBoot/"/>
+    
+    
+    <category term="速查" scheme="https://abcdoc-cn.github.io/tags/%E9%80%9F%E6%9F%A5/"/>
+    
+    <category term="SpringBoot" scheme="https://abcdoc-cn.github.io/tags/SpringBoot/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C 基本数据类型大小</title>
+    <link href="https://abcdoc-cn.github.io/C/C%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%A4%A7%E5%B0%8F/"/>
+    <id>https://abcdoc-cn.github.io/C/C%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%A4%A7%E5%B0%8F/</id>
+    <published>2021-06-08T03:26:05.000Z</published>
+    <updated>2021-06-08T03:26:05.856Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://doc.cloudcollect.cc/upload/2021/06/C%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%A4%A7%E5%B0%8F-ebee98cca4d94f53a31ab2650687dbe3.jpg" alt="C基本数据类型大小"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;http://doc.cloudcollect.cc/upload/2021/06/C%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%A4%A7%E5%B0%8F-ebee98cca4d</summary>
+      
+    
+    
+    
+    <category term="C" scheme="https://abcdoc-cn.github.io/categories/C/"/>
+    
+    
+    <category term="速查" scheme="https://abcdoc-cn.github.io/tags/%E9%80%9F%E6%9F%A5/"/>
+    
+    <category term="C" scheme="https://abcdoc-cn.github.io/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Oracle 查询 - 时间函数</title>
+    <link href="https://abcdoc-cn.github.io/Oracle/Oracle%20%E6%9F%A5%E8%AF%A2%20-%20%E6%97%B6%E9%97%B4%E5%87%BD%E6%95%B0/"/>
+    <id>https://abcdoc-cn.github.io/Oracle/Oracle%20%E6%9F%A5%E8%AF%A2%20-%20%E6%97%B6%E9%97%B4%E5%87%BD%E6%95%B0/</id>
+    <published>2021-06-07T02:55:37.000Z</published>
+    <updated>2021-06-07T05:34:46.643Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="时间查询"><a href="#时间查询" class="headerlink" title="时间查询"></a>时间查询</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 30分钟后</span></span><br><span class="line"><span class="keyword">SELECT</span> sysdate<span class="operator">+</span><span class="number">1</span><span class="operator">/</span><span class="number">24</span><span class="operator">/</span><span class="number">2</span> <span class="keyword">FROM</span> DUAL;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 下一小时</span></span><br><span class="line"><span class="keyword">SELECT</span> sysdate<span class="operator">+</span><span class="number">1</span><span class="operator">/</span><span class="number">24</span> <span class="keyword">FROM</span> DUAL;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 下一天</span></span><br><span class="line"><span class="keyword">SELECT</span> sysdate<span class="operator">+</span><span class="number">1</span> <span class="keyword">FROM</span> DUAL;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 日期加减</span></span><br><span class="line"><span class="keyword">SELECT</span> to_char(sysdate<span class="number">-1</span>,<span class="string">&#x27;yyyymmdd&#x27;</span>) <span class="keyword">FROM</span> DUAL;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 下一个星期</span></span><br><span class="line"><span class="keyword">SELECT</span> sysdate<span class="operator">+</span><span class="number">7</span> <span class="keyword">FROM</span> DUAL;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 下个星期一的日期</span></span><br><span class="line"><span class="keyword">SELECT</span> Next_day(SYSDATE,<span class="string">&#x27;monday&#x27;</span>) <span class="keyword">FROM</span> DUAL</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 下个星期五中午</span></span><br><span class="line"><span class="keyword">SELECT</span> NEXT_DAY(TRUNC(SYSDATE),<span class="string">&#x27;星期五&#x27;</span>) <span class="operator">+</span> <span class="number">12</span><span class="operator">/</span><span class="number">24</span> <span class="keyword">FROM</span> DUAL;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 下一个月</span></span><br><span class="line"><span class="keyword">SELECT</span> add_months(sysdate,<span class="number">1</span>)  <span class="keyword">FROM</span> DUAL;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 下一年</span></span><br><span class="line"><span class="keyword">SELECT</span> add_months(sysdate,<span class="number">12</span>) <span class="keyword">FROM</span> DUAL;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 月份加减</span></span><br><span class="line"><span class="keyword">SELECT</span> to_char(add_months(sysdate,<span class="number">-1</span>),<span class="string">&#x27;yyyymm&#x27;</span>)  <span class="keyword">FROM</span> DUAL;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 今天是本月的第几周</span></span><br><span class="line"><span class="keyword">SELECT</span> TO_CHAR(SYSDATE,<span class="string">&#x27;WW&#x27;</span>) <span class="operator">-</span> TO_CHAR(TRUNC(SYSDATE,<span class="string">&#x27;MM&#x27;</span>),<span class="string">&#x27;WW&#x27;</span>) <span class="operator">+</span> <span class="number">1</span> <span class="keyword">AS</span> &quot;weekOfMon&quot; <span class="keyword">FROM</span> DUAL;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 今天是本年的第几周</span></span><br><span class="line"><span class="keyword">SELECT</span> TO_CHAR(SYSDATE,<span class="string">&#x27;WW&#x27;</span>) <span class="keyword">FROM</span> DUAL;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 本月的天数</span></span><br><span class="line"><span class="keyword">SELECT</span> to_char(last_day(SYSDATE),<span class="string">&#x27;dd&#x27;</span>) days <span class="keyword">FROM</span> DUAL;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 今年的天数</span></span><br><span class="line"><span class="keyword">SELECT</span> add_months(trunc(sysdate,<span class="string">&#x27;year&#x27;</span>), <span class="number">12</span>) <span class="operator">-</span> trunc(sysdate,<span class="string">&#x27;year&#x27;</span>) <span class="keyword">from</span> DUAL;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 本月底最后一秒</span></span><br><span class="line"><span class="keyword">SELECT</span> TRUNC (ADD_MONTHS (SYSDATE, <span class="number">1</span>), <span class="string">&#x27;MM&#x27;</span>) <span class="operator">-</span> <span class="number">1</span> <span class="operator">/</span> <span class="number">24</span> <span class="operator">/</span> <span class="number">60</span> <span class="operator">/</span> <span class="number">60</span> <span class="keyword">from</span> DUAL;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 本年底最后一秒</span></span><br><span class="line"><span class="keyword">SELECT</span> TRUNC (SYSDATE, <span class="string">&#x27;YYYY&#x27;</span>) <span class="operator">-</span> <span class="number">1</span> <span class="operator">/</span> <span class="number">24</span> <span class="operator">/</span> <span class="number">60</span> <span class="operator">/</span> <span class="number">60</span> <span class="keyword">from</span> DUAL;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 将当前时间归到节点</span></span><br><span class="line"><span class="keyword">SELECT</span> sysdate,trunc(sysdate,<span class="string">&#x27;hh&#x27;</span>)<span class="operator">+</span><span class="built_in">floor</span>(to_char(sysdate,<span class="string">&#x27;mi&#x27;</span>)<span class="operator">/</span><span class="number">15</span>)<span class="operator">*</span><span class="number">15</span><span class="operator">/</span><span class="number">60</span><span class="operator">/</span><span class="number">24</span> <span class="keyword">from</span> DUAL; </span><br><span class="line"></span><br><span class="line"><span class="comment">-- 毫秒</span></span><br><span class="line"><span class="keyword">SELECT</span> TO_TIMESTAMP(<span class="string">&#x27;20101101 14:10:10.123000&#x27;</span>, <span class="string">&#x27;YYYYMMDD HH24:MI:SS.FF&#x27;</span>) <span class="keyword">FROM</span> DUAL;</span><br><span class="line"><span class="keyword">SELECT</span> TO_TIMESTAMP(<span class="string">&#x27;20101101141010123&#x27;</span>, <span class="string">&#x27;YYYYMMDDHH24MISSFF3&#x27;</span>) <span class="keyword">FROM</span> DUAL;</span><br><span class="line"><span class="keyword">SELECT</span> TO_CHAR(SYSTIMESTAMP, <span class="string">&#x27;yyyymmddhh24missff3&#x27;</span>) <span class="keyword">FROM</span> DUAL;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 两时间差几个月</span></span><br><span class="line"><span class="keyword">SELECT</span> ROUND(<span class="built_in">ABS</span>(MONTHS_BETWEEN(SYSDATE,OPEN_TIME))) <span class="keyword">FROM</span> DUAL;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 查看本月日期</span></span><br><span class="line"><span class="keyword">SELECT</span> TRUNC(SYSDATE, <span class="string">&#x27;MM&#x27;</span>) <span class="operator">+</span> ROWNUM <span class="operator">-</span> <span class="number">1</span></span><br><span class="line"><span class="keyword">FROM</span> DUAL</span><br><span class="line"><span class="keyword">CONNECT</span> <span class="keyword">BY</span> ROWNUM <span class="operator">&lt;=</span> TO_NUMBER(TO_CHAR(LAST_DAY(SYSDATE), <span class="string">&#x27;dd&#x27;</span>));</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;时间查询&quot;&gt;&lt;a href=&quot;#时间查询&quot; class=&quot;headerlink&quot; title=&quot;时间查询&quot;&gt;&lt;/a&gt;时间查询&lt;/h3&gt;&lt;figure class=&quot;highlight sql&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;</summary>
+      
+    
+    
+    
+    <category term="Oracle" scheme="https://abcdoc-cn.github.io/categories/Oracle/"/>
+    
+    
+    <category term="速查" scheme="https://abcdoc-cn.github.io/tags/%E9%80%9F%E6%9F%A5/"/>
+    
+    <category term="Oracle" scheme="https://abcdoc-cn.github.io/tags/Oracle/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Oracle 查询 - 表空间</title>
+    <link href="https://abcdoc-cn.github.io/Oracle/Oracle%20%E6%9F%A5%E8%AF%A2%20-%20%E8%A1%A8%E7%A9%BA%E9%97%B4/"/>
+    <id>https://abcdoc-cn.github.io/Oracle/Oracle%20%E6%9F%A5%E8%AF%A2%20-%20%E8%A1%A8%E7%A9%BA%E9%97%B4/</id>
+    <published>2021-06-07T02:53:50.000Z</published>
+    <updated>2021-06-07T05:35:08.613Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="表空间"><a href="#表空间" class="headerlink" title="表空间"></a>表空间</h3><h4 id="表空间利用率"><a href="#表空间利用率" class="headerlink" title="表空间利用率"></a>表空间利用率</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> D.TABLESPACE_NAME,</span><br><span class="line">SPACE <span class="operator">||</span> <span class="string">&#x27;M&#x27;</span> &quot;SUM_SPACE(M)&quot;,</span><br><span class="line">BLOCKS &quot;SUM_BLOCKS&quot;,</span><br><span class="line">SPACE <span class="operator">-</span> NVL(FREE_SPACE, <span class="number">0</span>) <span class="operator">||</span> <span class="string">&#x27;M&#x27;</span> &quot;USED_SPACE(M)&quot;,</span><br><span class="line">ROUND((<span class="number">1</span> <span class="operator">-</span> NVL(FREE_SPACE, <span class="number">0</span>) <span class="operator">/</span> SPACE) <span class="operator">*</span> <span class="number">100</span>, <span class="number">2</span>) <span class="operator">||</span> <span class="string">&#x27;%&#x27;</span> &quot;USED_RATE(%)&quot;,</span><br><span class="line">FREE_SPACE <span class="operator">||</span> <span class="string">&#x27;M&#x27;</span> &quot;FREE_SPACE(M)&quot;</span><br><span class="line"><span class="keyword">FROM</span> (<span class="keyword">SELECT</span> TABLESPACE_NAME,</span><br><span class="line">ROUND(<span class="built_in">SUM</span>(BYTES) <span class="operator">/</span> (<span class="number">1024</span> <span class="operator">*</span> <span class="number">1024</span>), <span class="number">2</span>) SPACE,</span><br><span class="line"><span class="built_in">SUM</span>(BLOCKS) BLOCKS</span><br><span class="line"><span class="keyword">FROM</span> DBA_DATA_FILES</span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> TABLESPACE_NAME) D,</span><br><span class="line">(<span class="keyword">SELECT</span> TABLESPACE_NAME,</span><br><span class="line">ROUND(<span class="built_in">SUM</span>(BYTES) <span class="operator">/</span> (<span class="number">1024</span> <span class="operator">*</span> <span class="number">1024</span>), <span class="number">2</span>) FREE_SPACE</span><br><span class="line"><span class="keyword">FROM</span> DBA_FREE_SPACE</span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> TABLESPACE_NAME) F</span><br><span class="line"><span class="keyword">WHERE</span> D.TABLESPACE_NAME <span class="operator">=</span> F.TABLESPACE_NAME(<span class="operator">+</span>)</span><br><span class="line"><span class="keyword">UNION</span> <span class="keyword">ALL</span> <span class="comment">--如果有临时表空间</span></span><br><span class="line"><span class="keyword">SELECT</span> D.TABLESPACE_NAME,</span><br><span class="line">SPACE <span class="operator">||</span> <span class="string">&#x27;M&#x27;</span> &quot;SUM_SPACE(M)&quot;,</span><br><span class="line">BLOCKS SUM_BLOCKS,</span><br><span class="line">USED_SPACE <span class="operator">||</span> <span class="string">&#x27;M&#x27;</span> &quot;USED_SPACE(M)&quot;,</span><br><span class="line">ROUND(NVL(USED_SPACE, <span class="number">0</span>) <span class="operator">/</span> SPACE <span class="operator">*</span> <span class="number">100</span>, <span class="number">2</span>) <span class="operator">||</span> <span class="string">&#x27;%&#x27;</span> &quot;USED_RATE(%)&quot;,</span><br><span class="line">NVL(FREE_SPACE, <span class="number">0</span>) <span class="operator">||</span> <span class="string">&#x27;M&#x27;</span> &quot;FREE_SPACE(M)&quot;</span><br><span class="line"><span class="keyword">FROM</span> (<span class="keyword">SELECT</span> TABLESPACE_NAME,</span><br><span class="line">ROUND(<span class="built_in">SUM</span>(BYTES) <span class="operator">/</span> (<span class="number">1024</span> <span class="operator">*</span> <span class="number">1024</span>), <span class="number">2</span>) SPACE,</span><br><span class="line"><span class="built_in">SUM</span>(BLOCKS) BLOCKS</span><br><span class="line"><span class="keyword">FROM</span> DBA_TEMP_FILES</span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> TABLESPACE_NAME) D,</span><br><span class="line">(<span class="keyword">SELECT</span> TABLESPACE_NAME,</span><br><span class="line">ROUND(<span class="built_in">SUM</span>(BYTES_USED) <span class="operator">/</span> (<span class="number">1024</span> <span class="operator">*</span> <span class="number">1024</span>), <span class="number">2</span>) USED_SPACE,</span><br><span class="line">ROUND(<span class="built_in">SUM</span>(BYTES_FREE) <span class="operator">/</span> (<span class="number">1024</span> <span class="operator">*</span> <span class="number">1024</span>), <span class="number">2</span>) FREE_SPACE</span><br><span class="line"><span class="keyword">FROM</span> V$TEMP_SPACE_HEADER</span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> TABLESPACE_NAME) F</span><br><span class="line"><span class="keyword">WHERE</span> D.TABLESPACE_NAME <span class="operator">=</span> F.TABLESPACE_NAME(<span class="operator">+</span>)</span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="number">1</span>;</span><br></pre></td></tr></table></figure><h4 id="表空间名称及大小"><a href="#表空间名称及大小" class="headerlink" title="表空间名称及大小"></a>表空间名称及大小</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> t.tablespace_name, round(<span class="built_in">sum</span>(bytes<span class="operator">/</span>(<span class="number">1024</span><span class="operator">*</span><span class="number">1024</span>)),<span class="number">0</span>) ts_size</span><br><span class="line"><span class="keyword">from</span> dba_tablespaces t, dba_data_files d</span><br><span class="line"><span class="keyword">where</span> t.tablespace_name <span class="operator">=</span> d.tablespace_name</span><br><span class="line"><span class="keyword">group</span> <span class="keyword">by</span> t.tablespace_name;</span><br></pre></td></tr></table></figure><h4 id="表空间物理文件的名称、位置及大小"><a href="#表空间物理文件的名称、位置及大小" class="headerlink" title="表空间物理文件的名称、位置及大小"></a>表空间物理文件的名称、位置及大小</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> tablespace_name, file_id, file_name, round(bytes<span class="operator">/</span>(<span class="number">1024</span><span class="operator">*</span><span class="number">1024</span>),<span class="number">0</span>) total_space</span><br><span class="line"><span class="keyword">from</span> dba_data_files</span><br><span class="line"><span class="keyword">order</span> <span class="keyword">by</span> tablespace_name;</span><br></pre></td></tr></table></figure><h4 id="查看表空间是否自动增长"><a href="#查看表空间是否自动增长" class="headerlink" title="查看表空间是否自动增长"></a>查看表空间是否自动增长</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> FILE_NAME,TABLESPACE_NAME,AUTOEXTENSIBLE <span class="keyword">FROM</span> dba_data_files;</span><br></pre></td></tr></table></figure><h4 id="修改数据库文件大小（10G）"><a href="#修改数据库文件大小（10G）" class="headerlink" title="修改数据库文件大小（10G）"></a>修改数据库文件大小（10G）</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alter database datafile &#x27;/ora/oradata/radius/undo.dbf&#x27; resize 10240M;</span><br></pre></td></tr></table></figure><h4 id="设置表空间自动增长"><a href="#设置表空间自动增长" class="headerlink" title="设置表空间自动增长"></a>设置表空间自动增长</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 打开自动增长</span><br><span class="line"><span class="keyword">ALTER</span> DATABASE DATAFILE <span class="string">&#x27;c:\SmartDB01.ora&#x27;</span> AUTOEXTEND <span class="keyword">ON</span>;</span><br><span class="line"># 每次自动增长<span class="number">200</span>m</span><br><span class="line"><span class="keyword">ALTER</span> DATABASE DATAFILE <span class="string">&#x27;c:\SmartDB01.ora&#x27;</span> AUTOEXTEND <span class="keyword">ON</span> NEXT <span class="number">200</span>M;</span><br><span class="line"># 每次自动增长<span class="number">200</span>m，数据表最大不超过<span class="number">1</span>G</span><br><span class="line"><span class="keyword">ALTER</span> DATABASE DATAFILE <span class="string">&#x27;c:\SmartDB01.ora&#x27;</span> AUTOEXTEND <span class="keyword">ON</span> NEXT <span class="number">200</span>M MAXSIZE <span class="number">1024</span>M;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;表空间&quot;&gt;&lt;a href=&quot;#表空间&quot; class=&quot;headerlink&quot; title=&quot;表空间&quot;&gt;&lt;/a&gt;表空间&lt;/h3&gt;&lt;h4 id=&quot;表空间利用率&quot;&gt;&lt;a href=&quot;#表空间利用率&quot; class=&quot;headerlink&quot; title=&quot;表空间利用率&quot;&gt;&lt;</summary>
+      
+    
+    
+    
+    <category term="Oracle" scheme="https://abcdoc-cn.github.io/categories/Oracle/"/>
+    
+    
+    <category term="速查" scheme="https://abcdoc-cn.github.io/tags/%E9%80%9F%E6%9F%A5/"/>
+    
+    <category term="Oracle" scheme="https://abcdoc-cn.github.io/tags/Oracle/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MySQL 亿级表格插入一列</title>
+    <link href="https://abcdoc-cn.github.io/MySQL/MySQL%20%E4%BA%BF%E7%BA%A7%E8%A1%A8%E6%A0%BC%E6%8F%92%E5%85%A5%E4%B8%80%E5%88%97/"/>
+    <id>https://abcdoc-cn.github.io/MySQL/MySQL%20%E4%BA%BF%E7%BA%A7%E8%A1%A8%E6%A0%BC%E6%8F%92%E5%85%A5%E4%B8%80%E5%88%97/</id>
+    <published>2021-06-07T02:29:48.000Z</published>
+    <updated>2021-06-07T02:29:48.923Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>mysql中，一张表里有3亿数据，未分表，要求是在这个大表里添加一列数据。数据库不能停，并且还有增删改操作。</p><h3 id="实现方法"><a href="#实现方法" class="headerlink" title="实现方法"></a>实现方法</h3><p><strong>MySQL 5.6（包含）</strong> 以后的版本引入了<strong>在线 DDL 的功能</strong></p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Alter</span> <span class="keyword">table</span> 你的表 , ALGORITHM [<span class="operator">=</span>] &#123;<span class="keyword">DEFAULT</span><span class="operator">|</span>INSTANT<span class="operator">|</span>INPLACE<span class="operator">|</span><span class="keyword">COPY</span>&#125;, LOCK [<span class="operator">=</span>] &#123; <span class="keyword">DEFAULT</span><span class="operator">|</span> <span class="keyword">NONE</span><span class="operator">|</span> SHARED<span class="operator">|</span> EXCLUSIVE &#125;</span><br></pre></td></tr></table></figure><p>其中的参数：</p><ul><li>ALGORITHM：<br>DEFAULT：默认方式，在 MySQL 8.0中，如果未显示指定 ALGORITHM，那么会优先选择 INSTANT 算法，如果不行再使用 INPLACE 算法，如果不支持 INPLACE 算法则使用 COPY 的方式完成<br>INSTANT：8.0 中新添加的算法，添加列是立即返回。但是不能是虚拟列。这个原理很简单，对于新建一列，表所有原有数据并不是立刻发生变化，只是在表字典里面记录下这个列和默认值，对于默认的 Dynamic 行格式（其实就是 Compressed 的变种），如果更新了这一列则原有数据标记为删除在末尾追加更新后的记录。这样做就是没有提前预留出列空间，之后更新可能经常会发生行记录空间变动。但是对于大多数业务，都是最近的时间的记录才会修改，所以问题不大。<br>INPLACE：在原表上直接进行修改，不会拷贝临时表，可以逐条记录修改，不会产生大量的 undolog 以及 redolog，不会占用很多 buffer。可以避免重建表带来的IO和CPU消耗，保证期间依然良好的性能和并发。<br>COPY：拷贝到临时新表上进行修改。由于记录拷贝，会产生大量的 undolog 以及 redolog，并占用很多 buffer，对业务性能有影响。<br>LOCK：<br>DEFAULT：和 ALGORITHM 的 DEFAULT 类似<br>NONE：无锁，允许并发读取和更新表<br>SHARED：共享锁，允许读取不允许更新<br>EXCLUSIVE：不允许读取和更新</li></ul><h3 id="在线-DDL-的过程"><a href="#在线-DDL-的过程" class="headerlink" title="在线 DDL 的过程"></a>在线 DDL 的过程</h3><p><img src="https://img-blog.csdnimg.cn/img_convert/7cf1f2d9523b00ca19c003e247f549a7.png"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h3&gt;&lt;p&gt;mysql中，一张表里有3亿数据，未分表，要求是在这个大表里添加一列数据。数据库不能停，并且还有增删改操作。&lt;/p&gt;
+&lt;h3 id=&quot;实现方</summary>
+      
+    
+    
+    
+    <category term="MySQL" scheme="https://abcdoc-cn.github.io/categories/MySQL/"/>
+    
+    
+    <category term="MySQL" scheme="https://abcdoc-cn.github.io/tags/MySQL/"/>
+    
+    <category term="高可用" scheme="https://abcdoc-cn.github.io/tags/%E9%AB%98%E5%8F%AF%E7%94%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>二分查找算法</title>
+    <link href="https://abcdoc-cn.github.io/%E7%AE%97%E6%B3%95/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE%E7%AE%97%E6%B3%95/"/>
+    <id>https://abcdoc-cn.github.io/%E7%AE%97%E6%B3%95/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE%E7%AE%97%E6%B3%95/</id>
+    <published>2021-06-07T01:59:37.000Z</published>
+    <updated>2021-06-10T07:50:46.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="二分查找算法"><a href="#二分查找算法" class="headerlink" title="二分查找算法"></a>二分查找算法</h3><p>一种在<strong>有序数组</strong>中查找某一特定元素的搜索算法</p><ul><li>时间复杂度： O(logn)</li></ul><ol><li>从数组的中间元素开始，如果中间元素正好是要查找的元素，搜索结束；</li><li>如果某一特定元素大于或小于中间元素，在数组大于或小于中间元素的那一半中查找，跟开始一样从中间查找</li><li>如果某一步骤数组为空，代表找不到</li></ol><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">public static int binary(int[] arr, int data) &#123;</span><br><span class="line">int min = 0;</span><br><span class="line">int max = arr.length - 1;</span><br><span class="line">int mid;</span><br><span class="line">while (min &lt;= max) &#123;</span><br><span class="line">       // 第一种方法：防止溢出</span><br><span class="line">       mid =  min + (max - min) / 2;</span><br><span class="line">// 第二种方法：无符号位运算符的优先级较低，先括起来</span><br><span class="line">// mid =  min + ((max - min) &gt;&gt;&gt; 1);</span><br><span class="line">if (arr[mid] &gt; data) &#123;</span><br><span class="line">max = mid - 1;</span><br><span class="line">&#125; else if (arr[mid] &lt; data) &#123;</span><br><span class="line">min = mid + 1;</span><br><span class="line">&#125; else &#123;</span><br><span class="line">return mid;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">return -1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;二分查找算法&quot;&gt;&lt;a href=&quot;#二分查找算法&quot; class=&quot;headerlink&quot; title=&quot;二分查找算法&quot;&gt;&lt;/a&gt;二分查找算法&lt;/h3&gt;&lt;p&gt;一种在&lt;strong&gt;有序数组&lt;/strong&gt;中查找某一特定元素的搜索算法&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;时间</summary>
+      
+    
+    
+    
+    <category term="算法" scheme="https://abcdoc-cn.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="算法" scheme="https://abcdoc-cn.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SYN泛洪攻击</title>
+    <link href="https://abcdoc-cn.github.io/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/SYN%E6%B3%9B%E6%B4%AA%E6%94%BB%E5%87%BB/"/>
+    <id>https://abcdoc-cn.github.io/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/SYN%E6%B3%9B%E6%B4%AA%E6%94%BB%E5%87%BB/</id>
+    <published>2021-06-07T01:58:12.000Z</published>
+    <updated>2021-06-07T01:58:12.323Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="SYN泛洪攻击"><a href="#SYN泛洪攻击" class="headerlink" title="SYN泛洪攻击"></a>SYN泛洪攻击</h2><ul><li>利用 TCP 三次握手机制的缺陷进行攻击</li><li>主要发生在 OSI 第四层</li><li>DoS 攻击的一种</li></ul><h3 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h3><ul><li>客户端（攻击者）发送 TCP SYN，服务器返回 ACK 以后，客户端不再进行确认</li><li>此时连接就处在了一个挂起的状态，服务器收不到再确认的一个消息，还会重复发送 ACK 给客户端</li></ul><h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><ul><li>优化主机系统设置<ul><li>降低 SYN timeout 时间，使得主机尽快释放半连接的占用</li><li>采用 SYN cookie 设置，短时间内收到了某个 IP 的重复 SYN 请求，我们就认为受到了攻击，可以设置防火墙进行拦截</li></ul></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;SYN泛洪攻击&quot;&gt;&lt;a href=&quot;#SYN泛洪攻击&quot; class=&quot;headerlink&quot; title=&quot;SYN泛洪攻击&quot;&gt;&lt;/a&gt;SYN泛洪攻击&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;利用 TCP 三次握手机制的缺陷进行攻击&lt;/li&gt;
+&lt;li&gt;主要发生在 OSI 第四层&lt;</summary>
+      
+    
+    
+    
+    <category term="计算机网络" scheme="https://abcdoc-cn.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
+    
+    <category term="计算机网络" scheme="https://abcdoc-cn.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HTTPS</title>
+    <link href="https://abcdoc-cn.github.io/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/HTTPS/"/>
+    <id>https://abcdoc-cn.github.io/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/HTTPS/</id>
+    <published>2021-06-07T01:48:21.000Z</published>
+    <updated>2021-06-07T01:48:21.050Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="HTTPS"><a href="#HTTPS" class="headerlink" title="HTTPS"></a>HTTPS</h2><ul><li>全称：Hypertext Transfer Protocol over Secure Socket Layer</li><li>HTTP 的安全版，在 HTTP 下加入 SSL 层，默认端口号： <strong>443</strong></li><li>不是一种新的协议</li><li>先让 HTTP 与 SSL 通信，再由 SSL 和 TCP 通信</li></ul><p><img src="https://cc3dbad0-7829-45c1-a383-9085ac0d99b1.vscode-webview-test.com/vscode-resource/file///c%3A/Users/zhanbo/Documents/workspace/docs/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/images/1586611664794-491557c3-8b0d-4466-8e3a-4b1ab92debc5.png" alt="image.png"></p><h3 id="加密"><a href="#加密" class="headerlink" title="加密"></a>加密</h3><h4 id="对称密钥加密"><a href="#对称密钥加密" class="headerlink" title="对称密钥加密"></a>对称密钥加密</h4><h4 id="非对称密钥加密"><a href="#非对称密钥加密" class="headerlink" title="非对称密钥加密"></a>非对称密钥加密</h4><h4 id="HTTPS-使用对称-非对称加密方式"><a href="#HTTPS-使用对称-非对称加密方式" class="headerlink" title="HTTPS 使用对称 + 非对称加密方式"></a>HTTPS 使用对称 + 非对称加密方式</h4>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;HTTPS&quot;&gt;&lt;a href=&quot;#HTTPS&quot; class=&quot;headerlink&quot; title=&quot;HTTPS&quot;&gt;&lt;/a&gt;HTTPS&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;全称：Hypertext Transfer Protocol over Secure Socket La</summary>
+      
+    
+    
+    
+    <category term="计算机网络" scheme="https://abcdoc-cn.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
+    
+    <category term="计算机网络" scheme="https://abcdoc-cn.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SSL</title>
+    <link href="https://abcdoc-cn.github.io/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/SSL/"/>
+    <id>https://abcdoc-cn.github.io/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/SSL/</id>
+    <published>2021-06-07T01:47:21.000Z</published>
+    <updated>2021-06-07T01:47:21.632Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="SSL"><a href="#SSL" class="headerlink" title="SSL"></a>SSL</h2><ul><li>全称：安全套接字层 （Secure Socket Layer ）</li><li>有三个版本：<ul><li>SSL 1.0</li><li>SSL 2.0</li><li>SSL 3.0</li></ul></li><li>使用三种验证机制<ul><li>数据加密（防窃听）</li><li>身份验证（防伪装）</li><li>消息完成性（防篡改）</li></ul></li><li>支持各种应用层协议</li><li><strong>位于 应用层和传输层之间</strong></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;SSL&quot;&gt;&lt;a href=&quot;#SSL&quot; class=&quot;headerlink&quot; title=&quot;SSL&quot;&gt;&lt;/a&gt;SSL&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;全称：安全套接字层 （Secure Socket Layer ）&lt;/li&gt;
+&lt;li&gt;有三个版本：&lt;ul&gt;
+&lt;li&gt;SSL</summary>
+      
+    
+    
+    
+    <category term="计算机网络" scheme="https://abcdoc-cn.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
+    
+    <category term="计算机网络" scheme="https://abcdoc-cn.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java 锁升级</title>
+    <link href="https://abcdoc-cn.github.io/Java/Java%20%E9%94%81%E5%8D%87%E7%BA%A7/"/>
+    <id>https://abcdoc-cn.github.io/Java/Java%20%E9%94%81%E5%8D%87%E7%BA%A7/</id>
+    <published>2021-06-04T09:21:11.000Z</published>
+    <updated>2021-06-04T09:24:59.711Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Java-锁升级"><a href="#Java-锁升级" class="headerlink" title="Java 锁升级"></a>Java 锁升级</h2><h3 id="偏向锁"><a href="#偏向锁" class="headerlink" title="偏向锁"></a>偏向锁</h3><p>当只有一个线程使用synchronized给对象加锁时，其实在对象头中只是记录这个线程的id，并没有实际加锁，此时称为偏向锁（即无锁，对象头中锁标志位为01），效率较高；</p><h3 id="自旋锁"><a href="#自旋锁" class="headerlink" title="自旋锁"></a>自旋锁</h3><ul><li>当有线程争用锁时，锁升级为自旋锁（默认自旋10次，自旋的意义是让线程自旋等待去获取锁而不是阻塞，减少因线程阻塞带来的线程切换（线程挂起、恢复）），</li><li>线程自旋将占用CPU时间，</li><li>自旋结束后进入等待队列阻塞，所以，自旋锁适合少数线程争用锁的情况，否则会占用CPU资源过高；</li></ul><h3 id="自适应自旋锁"><a href="#自适应自旋锁" class="headerlink" title="自适应自旋锁"></a>自适应自旋锁</h3><p>自适应自旋假定不同线程持有同一个锁对象的时间基本相当，竞争程度趋于稳定，</p><p>因此，可以根据上一次自旋的时间与结果调整下一次自旋的时间；</p><h3 id="轻量级锁"><a href="#轻量级锁" class="headerlink" title="轻量级锁"></a>轻量级锁</h3><ul><li>当线程自旋指定次数后仍无法获得锁时，将升级为轻量级锁（对象头中锁标志位为00），</li><li>轻量级锁的目标是，减少无实际竞争情况下，使用重量级锁产生的性能消耗，包括系统调用引起的内核态与用户态切换、线程阻塞造成的线程切换等；</li></ul><h3 id="重量级锁"><a href="#重量级锁" class="headerlink" title="重量级锁"></a>重量级锁</h3><p>当锁竞争激励时，将升级为重量级锁（对象头中锁标志位为10）去操作系统请求资源。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;Java-锁升级&quot;&gt;&lt;a href=&quot;#Java-锁升级&quot; class=&quot;headerlink&quot; title=&quot;Java 锁升级&quot;&gt;&lt;/a&gt;Java 锁升级&lt;/h2&gt;&lt;h3 id=&quot;偏向锁&quot;&gt;&lt;a href=&quot;#偏向锁&quot; class=&quot;headerlink&quot; ti</summary>
+      
+    
+    
+    
+    <category term="Java" scheme="https://abcdoc-cn.github.io/categories/Java/"/>
+    
+    
+    <category term="Java" scheme="https://abcdoc-cn.github.io/tags/Java/"/>
+    
+    <category term="多线程" scheme="https://abcdoc-cn.github.io/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java 线程的6种状态</title>
+    <link href="https://abcdoc-cn.github.io/Java/Java-%E7%BA%BF%E7%A8%8B%E7%9A%846%E7%A7%8D%E7%8A%B6%E6%80%81/"/>
+    <id>https://abcdoc-cn.github.io/Java/Java-%E7%BA%BF%E7%A8%8B%E7%9A%846%E7%A7%8D%E7%8A%B6%E6%80%81/</id>
+    <published>2021-06-04T08:59:26.000Z</published>
+    <updated>2021-06-07T05:05:28.107Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Java-线程的6种状态"><a href="#Java-线程的6种状态" class="headerlink" title="Java 线程的6种状态"></a>Java 线程的6种状态</h2><ol><li>New：线程刚刚创建，还没有启动</li><li>RUNNABLE：可运行状态（调用start()方法后进入可运行状态），由线程调度器可以安排执行。包括READY和RUNNING两种细分状态，READY状态的线程主动调用Thread.yiled()方法让出CPU资源，等待线程调度器重新调起线程后获得CPU时间片继续执行，RUNNING状态的线程是正在执行的线程，正在执行的线程的执行时间就是CPU时间片的大小</li><li>WAITING：线程等待被唤醒，调用Object的notify()或者notifyAll()方法后可以唤醒线程</li><li>TIMED WAITING：线程等待指定时间后自动唤醒</li><li>BLOCKED：线程被阻塞，正在等待synchronied锁，获得锁后进入RUNNABLE状态</li><li>TERMINATED：线程结束，run()方法执行完成或者异常退出</li></ol><p><img src="http://doc.cloudcollect.cc/upload/2021/06/Java%E7%BA%BF%E7%A8%8B%E7%8A%B6%E6%80%81-89966ed0f8db41a6912d00d3c8ab8c11.png"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;Java-线程的6种状态&quot;&gt;&lt;a href=&quot;#Java-线程的6种状态&quot; class=&quot;headerlink&quot; title=&quot;Java 线程的6种状态&quot;&gt;&lt;/a&gt;Java 线程的6种状态&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;New：线程刚刚创建，还没有启动&lt;/li&gt;
+&lt;l</summary>
+      
+    
+    
+    
+    <category term="Java" scheme="https://abcdoc-cn.github.io/categories/Java/"/>
+    
+    
+    <category term="Java" scheme="https://abcdoc-cn.github.io/tags/Java/"/>
+    
+    <category term="多线程" scheme="https://abcdoc-cn.github.io/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java 创建线程的 5 种方法</title>
+    <link href="https://abcdoc-cn.github.io/Java/Java%20%E5%88%9B%E5%BB%BA%E7%BA%BF%E7%A8%8B%E7%9A%84%205%20%E7%A7%8D%E6%96%B9%E6%B3%95/"/>
+    <id>https://abcdoc-cn.github.io/Java/Java%20%E5%88%9B%E5%BB%BA%E7%BA%BF%E7%A8%8B%E7%9A%84%205%20%E7%A7%8D%E6%96%B9%E6%B3%95/</id>
+    <published>2021-06-04T08:53:20.000Z</published>
+    <updated>2021-06-04T08:53:20.095Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Java-创建线程的-5-种方法"><a href="#Java-创建线程的-5-种方法" class="headerlink" title="Java 创建线程的 5 种方法"></a>Java 创建线程的 5 种方法</h2><ol><li>继承Thread</li><li>实现Runnable接口，这种方式更加灵活，因为实现接口后还可以继承其他类</li><li>使用lambda方式</li><li>通过线程池创建线程</li><li>实现Callable接口，通过指定泛型来决定call()方法返回值的类型，相比实现Runnable接口来说，重写的call()方法可以有返回值</li></ol><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line">import java.util.concurrent.*;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * *创建线程的五种方法</span><br><span class="line"> */</span><br><span class="line">public class CreateThread &#123;</span><br><span class="line">  </span><br><span class="line">    //方式一：继承Thread</span><br><span class="line">    static class MyThread extends Thread &#123;</span><br><span class="line">        @Override</span><br><span class="line">        public void run() &#123;</span><br><span class="line">            System.out.println(&quot;Hello MyThread!&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    // 方式二：实现Runnable接口</span><br><span class="line">    static class MyRunnable implements Runnable &#123;</span><br><span class="line">        @Override</span><br><span class="line">        public void run() &#123;</span><br><span class="line">            System.out.println(&quot;Hello MyRunnable!&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    // 方式五：实现Callable接口</span><br><span class="line">    static class MyCallable implements Callable&lt;String&gt; &#123;</span><br><span class="line">        @Override</span><br><span class="line">        public String call() throws Exception &#123;</span><br><span class="line">            System.out.println(&quot;Hello MyCallable!&quot;);</span><br><span class="line">            return &quot;success&quot;;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) throws ExecutionException, InterruptedException &#123;</span><br><span class="line">        // 方式一的启动线程</span><br><span class="line">        new MyThread().start();</span><br><span class="line"></span><br><span class="line">        // 方式二的启动线程</span><br><span class="line">        new Thread(new MyRunnable()).start();</span><br><span class="line"></span><br><span class="line">        // 方式三：lambda方式</span><br><span class="line">        new Thread(() -&gt; &#123;</span><br><span class="line">            System.out.println(&quot;Hello Lambda!&quot;);</span><br><span class="line">        &#125;).start();</span><br><span class="line"></span><br><span class="line">        // 方式四：线程池方式</span><br><span class="line">        ExecutorService executorService = Executors.newCachedThreadPool();</span><br><span class="line">        executorService.execute(() -&gt; &#123;</span><br><span class="line">            System.out.println(&quot;Hello ThreadPool&quot;);</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">        // 方式五的启动线程方式之一</span><br><span class="line">        // 也可以使用以下线程池的方式将Callable对象传进去</span><br><span class="line">        FutureTask&lt;String&gt; task = new FutureTask&lt;&gt;(new MyCallable());</span><br><span class="line">        Thread thread = new Thread(task);</span><br><span class="line">        thread.start();</span><br><span class="line">        System.out.println(task.get());</span><br><span class="line"></span><br><span class="line">        // 方式五的启动线程方式之二</span><br><span class="line">        // 以线程池的方式来启动Callable类型的线程</span><br><span class="line">        // ExecutorService的submit方法可以接收Runnable或者Callable的对象</span><br><span class="line">        // Future代表是异步的，其get()方法是阻塞的，直到submit()方法中的对象（线程）就绪</span><br><span class="line">        Future&lt;String&gt; submit = executorService.submit(new MyCallable());</span><br><span class="line">        String s = submit.get();</span><br><span class="line">        System.out.println(s);</span><br><span class="line">        executorService.shutdown();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;Java-创建线程的-5-种方法&quot;&gt;&lt;a href=&quot;#Java-创建线程的-5-种方法&quot; class=&quot;headerlink&quot; title=&quot;Java 创建线程的 5 种方法&quot;&gt;&lt;/a&gt;Java 创建线程的 5 种方法&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;继承Thread</summary>
+      
+    
+    
+    
+    <category term="Java" scheme="https://abcdoc-cn.github.io/categories/Java/"/>
+    
+    
+    <category term="Java" scheme="https://abcdoc-cn.github.io/tags/Java/"/>
+    
+    <category term="多线程" scheme="https://abcdoc-cn.github.io/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Electron异常：Failed to fetch extension</title>
+    <link href="https://abcdoc-cn.github.io/Electron/Electron%20%E5%BC%82%E5%B8%B8%EF%BC%9AFailed%20to%20fetch%20extension/"/>
+    <id>https://abcdoc-cn.github.io/Electron/Electron%20%E5%BC%82%E5%B8%B8%EF%BC%9AFailed%20to%20fetch%20extension/</id>
+    <published>2021-06-04T01:54:24.000Z</published>
+    <updated>2021-06-07T02:32:13.233Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="问题现象"><a href="#问题现象" class="headerlink" title="问题现象"></a>问题现象</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Failed to fetch extension, trying 4 more times</span><br><span class="line">Failed to fetch extension, trying 3 more times</span><br><span class="line">Failed to fetch extension, trying 2 more times</span><br><span class="line">Failed to fetch extension, trying 1 more times</span><br><span class="line">Failed to fetch extension, trying 0 more times</span><br><span class="line">Vue Devtools failed to install: Error: net::ERR_TIMED_OUT</span><br></pre></td></tr></table></figure><h2 id="错误原因"><a href="#错误原因" class="headerlink" title="错误原因"></a>错误原因</h2><p>background.js 中安装 devtools 导致</p><h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>background.js中这几行注释掉</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">app.on(&#x27;ready&#x27;, async () =&gt; &#123;</span><br><span class="line">  // if (isDevelopment &amp;&amp; !process.env.IS_TEST) &#123;</span><br><span class="line">  //   // Install Vue Devtools</span><br><span class="line">  //   try &#123;</span><br><span class="line">  //     await installExtension(VUEJS_DEVTOOLS)</span><br><span class="line">  //   &#125; catch (e) &#123;</span><br><span class="line">  //     console.error(&#x27;Vue Devtools failed to install:&#x27;, e.toString())</span><br><span class="line">  //   &#125;</span><br><span class="line">  // &#125;</span><br><span class="line">  createWindow()</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;问题现象&quot;&gt;&lt;a href=&quot;#问题现象&quot; class=&quot;headerlink&quot; title=&quot;问题现象&quot;&gt;&lt;/a&gt;问题现象&lt;/h2&gt;&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;</summary>
+      
+    
+    
+    
+    <category term="Electron" scheme="https://abcdoc-cn.github.io/categories/Electron/"/>
+    
+    
+    <category term="Electron" scheme="https://abcdoc-cn.github.io/tags/Electron/"/>
+    
+    <category term="异常处理" scheme="https://abcdoc-cn.github.io/tags/%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>GCC 编译过程</title>
+    <link href="https://abcdoc-cn.github.io/GCC/GCC%20%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B/"/>
+    <id>https://abcdoc-cn.github.io/GCC/GCC%20%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B/</id>
+    <published>2021-04-30T07:43:45.237Z</published>
+    <updated>2021-04-30T09:34:20.656Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="GCC-编译过程"><a href="#GCC-编译过程" class="headerlink" title="GCC 编译过程"></a>GCC 编译过程</h1><ul><li>GCC（GUC 编译器套装，GNU Compiler Collectipon）</li></ul><p><img src="http://doc.cloudcollect.cc/upload/2021/04/GCC%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B-2b136eefac1b437eab9145b6ac338b54.png" alt="GCC编译过程"></p><h2 id="预处理-Prepressing"><a href="#预处理-Prepressing" class="headerlink" title="预处理(Prepressing)"></a>预处理(Prepressing)</h2><h3 id="执行命令"><a href="#执行命令" class="headerlink" title="执行命令"></a>执行命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc -E hello.c -o hello.i</span><br></pre></td></tr></table></figure><h3 id="处理过程"><a href="#处理过程" class="headerlink" title="处理过程"></a>处理过程</h3><ul><li>将所有的”#define”删除，并且展开所有的宏定义</li><li>处理所有条件预编译指令，比如”#if”、”#ifdef”、“#elif”、“#else”、”#endif”。</li><li>处理”#include”预编译指令<ul><li>将被包含的文件插入到该项预编译指令的位置</li><li>注意：这个过程是递归进行的，也就是说被包含的文件可能还包含其它文件。</li></ul></li><li>删除所有的注释”//”和”/* */”</li><li>添加行号和文件名标识<ul><li>便于编译时编译器产生调试用的行号信息及用于编译时产生编译错误或警告时能够显示行号。</li></ul></li><li>保留所有的#pragma编译器指令<ul><li>编译器须要使用它们</li></ul></li></ul><h2 id="编译-Compilation"><a href="#编译-Compilation" class="headerlink" title="编译(Compilation)"></a>编译(Compilation)</h2><ul><li><strong>编译过程就是把预处理完的文件进行一系列词法分析、语法分析、语义分析及优化后生成相应的汇编代码文件</strong></li></ul><p><img src="http://doc.cloudcollect.cc/upload/2021/04/%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B-360de1c62f4a4c5c9fd2e7ed08a5f972.png" alt="编译过程"></p><h3 id="执行命令-1"><a href="#执行命令-1" class="headerlink" title="执行命令"></a>执行命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc -S hello.i -o hello.s</span><br></pre></td></tr></table></figure><p>现在版本的GCC把预编译和编译两个步骤合成一个步骤，使用如下命令，也会生成 hello.s 文件</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc -S hello.c -o hello.s</span><br></pre></td></tr></table></figure><blockquote><ul><li>对于 C 语言来说，这个预编译和编译的程序是cc1</li><li>对于 C++ 来说，有对应的程序叫做cc1plus</li><li>Objective-C是cc1obj</li><li>Java 是 jc1</li></ul><p>gcc 这个命令只是这些后台程序的包装</p></blockquote><h3 id="处理过程-1"><a href="#处理过程-1" class="headerlink" title="处理过程"></a>处理过程</h3><p><a href="http://doc.cloudcollect.cc/archives/gcc%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B-%E7%BC%96%E8%AF%91compilation%E7%9A%846%E4%B8%AA%E6%AD%A5%E9%AA%A4">编译 (compilation) 的6个步骤</a></p><h2 id="汇编-Assembly"><a href="#汇编-Assembly" class="headerlink" title="汇编(Assembly)"></a>汇编(Assembly)</h2><h3 id="执行命令-2"><a href="#执行命令-2" class="headerlink" title="执行命令"></a>执行命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc -c hello.s -o hello.o</span><br></pre></td></tr></table></figure><p>也可以直接进行编译</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc -c hello.c -o hello.o</span><br></pre></td></tr></table></figure><p>查看汇编代码</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">objdump -d -M intel -S test.o</span><br></pre></td></tr></table></figure><h3 id="处理过程-2"><a href="#处理过程-2" class="headerlink" title="处理过程"></a>处理过程</h3><ul><li>汇编器是将汇编代码转变成机器可以执行的指令</li><li><strong>汇编过程只是根据汇编指令和机器指令的对照表一一翻译</strong><ul><li>没有复杂的语法</li><li>没有语义</li><li>也不需要做指令优化</li></ul></li><li><strong>每一个汇编语句几乎都对应一条机器指令</strong></li></ul><p><strong>符号 (Symbol) 用来表示一个地址</strong></p><ul><li>这个地址可能是一段子程序(后来发展成函数)的起始地址，</li><li>也可以是一个变量的起始地址</li></ul><h2 id="链接-Linking"><a href="#链接-Linking" class="headerlink" title="链接(Linking)"></a>链接(Linking)</h2><ul><li>链接的过程就是组装模块的过程<ul><li><strong>每个源代码模块独立地编译</strong></li><li><strong>然后按照须要将它们 <code>组装</code> 起来</strong></li></ul></li><li>链接的主要内容就是把各个模块之间相互引用的部分都处理好，使得各个模块之间能够正确地衔接。</li><li>从原理上来讲，链接器的工作就是<strong>把一些指令对其它符号地址的引用加以修正</strong></li></ul><h3 id="处理过程-3"><a href="#处理过程-3" class="headerlink" title="处理过程"></a>处理过程</h3><ul><li>链接过程主要包括：<ul><li><strong>地址和空间分配(Address and Storage Allocation)</strong></li><li><strong>符号决议(Symbol Resolution)</strong></li><li><strong>重定位(Relocation)</strong></li><li>……</li></ul></li></ul><h3 id="静态链接的最基本的过程和作用"><a href="#静态链接的最基本的过程和作用" class="headerlink" title="静态链接的最基本的过程和作用"></a><strong>静态链接的最基本的过程和作用</strong></h3><ul><li><p>在编译器编译main.c的时候它并不知道foo函数的地址，</p></li><li><p>所以它暂时把这些调用foo的指令的目标地址搁置，</p></li><li><p>等待最后链接的时候由链接器去将这些指令的目标地址修正。</p><ul><li>如果没有链接器，须要我们手工把每个调用foo的指令进行修正，则填入正确的foo函数地址。</li><li>当func.c模块被重新编译，foo函数的地址有可能改变时，那么我们在main.c中所有使用到foo的地址的指令将要全部重新调整。</li></ul></li><li><p>使用链接器，你可以直接引用其它模块的函数和全局变量而无需知道它们的地址</p><ul><li>链接器在链接的时候，会根据你所引用的符号foo，自动去相应的func.o模块查找foo的地址</li><li>然后将main.c模块中所有引用到foo的指令重新修正</li></ul></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;GCC-编译过程&quot;&gt;&lt;a href=&quot;#GCC-编译过程&quot; class=&quot;headerlink&quot; title=&quot;GCC 编译过程&quot;&gt;&lt;/a&gt;GCC 编译过程&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;GCC（GUC 编译器套装，GNU Compiler Collectipon）&lt;</summary>
+      
+    
+    
+    
+    <category term="C++" scheme="https://abcdoc-cn.github.io/categories/C/"/>
+    
+    
+    <category term="C++" scheme="https://abcdoc-cn.github.io/tags/C/"/>
+    
+    <category term="计算机组成原理" scheme="https://abcdoc-cn.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>GCC 编译过程 - 编译 (Compilation) 的 6 个步骤</title>
+    <link href="https://abcdoc-cn.github.io/GCC/GCC%20%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B%20-%20%E7%BC%96%E8%AF%91%20(Compilation)%20%E7%9A%84%206%20%E4%B8%AA%E6%AD%A5%E9%AA%A4/"/>
+    <id>https://abcdoc-cn.github.io/GCC/GCC%20%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B%20-%20%E7%BC%96%E8%AF%91%20(Compilation)%20%E7%9A%84%206%20%E4%B8%AA%E6%AD%A5%E9%AA%A4/</id>
+    <published>2021-04-30T07:43:40.948Z</published>
+    <updated>2021-04-30T07:49:31.272Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="编译-Compilation-的-6-个步骤"><a href="#编译-Compilation-的-6-个步骤" class="headerlink" title="编译 (Compilation) 的 6 个步骤"></a>编译 (Compilation) 的 6 个步骤</h1><h2 id="词法分析"><a href="#词法分析" class="headerlink" title="词法分析"></a>词法分析</h2><ul><li>首先源代码程序被输入到扫描器(Scanner)</li><li>运用一种类似于有限状态机(Finite State Machine)的算法可以很轻松地将源代码的字符序列分割成一系列的记号(Token)</li><li>产生的记号分为几大类：<ul><li>关键字</li><li>标识符</li><li>字面量(包含数字、字符串等)</li><li>特殊符号(如加号、等号)</li></ul></li><li>可用工具：<ul><li><a href="https://zh.wikipedia.org/wiki/Lex">lex</a></li></ul></li></ul><h2 id="语法分析"><a href="#语法分析" class="headerlink" title="语法分析"></a>语法分析</h2><ul><li>语法分析器(Grammar Parser)将对由扫描器产生的记号进行语法分析，从而产生语法树(Syntax Tree)</li><li>整个分析过程采用了上下文无关语法(Context-free Grammar)的分析手段</li><li>语法树就是以表达式(Expression)为节点的树<ul><li>C语言的一个语句是一个表达式</li><li>复杂的语句是很多表达式的组合</li></ul></li><li>语法分析阶段必须对表达式内容进行区分，<ul><li>如果出现了表达式不合法，<ul><li>比如各种括号不匹配、</li><li>表达式中缺少操作符等</li></ul></li><li>编译器就会报告语法分析阶段的错误</li></ul></li><li>可用工具：<ul><li><a href="https://zh.wikipedia.org/wiki/Yacc">yacc</a></li></ul></li></ul><h2 id="语义分析"><a href="#语义分析" class="headerlink" title="语义分析"></a>语义分析</h2><ul><li>由语义分析器(Semantic Analyzer)完成</li><li>判断语句是否真正有意义<ul><li>如一个指针和一个浮点数做乘法运算是否合法等</li></ul></li><li><strong>编译器所能分析的语义是静态语义(Static Semantic)</strong><ul><li><strong>静态语义是指在编译期可以确定的语义</strong><ul><li>静态语义通常包括声明和类型的匹配，类型的转换</li><li>比如当一个浮点型的表达式赋值给一个整型的表达式时，其中隐含了一个浮点到整型转换的过程，语义分析过程中需要完成这个步骤</li><li>比如将一个浮点型赋值给一个指针的时候，语义分析程序会发现这个类型不匹配，编译器将会报错</li></ul></li><li>与之对应的动态语义 (Dynamic Semantic) 就是只有在运行期才能确定的语义<ul><li>比如将0作为除数是一个运行期语义错误</li></ul></li></ul></li><li>经过语义分析阶段以后，整个语法树的表达式都被标识了类型<ul><li>如果有些类型需要做隐式转换，语义分析程序会在语法树中插入相应的转换节点</li></ul></li></ul><h2 id="源代码优化"><a href="#源代码优化" class="headerlink" title="源代码优化"></a>源代码优化</h2><ul><li>往往在源代码级别会有一个优化过程，使用源码级优化器 (Source Code Optimizer)<ul><li>不同的编译器中可能会有不同的定义或有一些其它的差异</li></ul></li><li>源代码优化器往往将整个语法树转换成中间代码(Intermediate Code)，</li><li>它是语法树的顺序表示</li><li>一般跟目标机器和运行时环境是无关的</li><li>中间代码使得编译器可以被分为前端和后端<ul><li><strong>编译器前端负责产生机器无关的中间代码</strong></li><li><strong>编译器后端将中间代码转换成目标机器代码</strong></li><li>这样对于一些可以跨平台的编译器而言，它们可以针对不同的平台使用同一个前端和针对不同机器平台的数个后端</li></ul></li></ul><h2 id="代码生成"><a href="#代码生成" class="headerlink" title="代码生成"></a>代码生成</h2><ul><li>属于编译器后端</li><li>代码生成器(Code Generator)</li><li>将中间代码转换成目标机器代码<ul><li><strong>过程十分依赖于目标机器</strong></li><li><strong>因为不同的机器有着不同的字长、寄存器、整数数据类型和浮点数数据类型等</strong></li></ul></li></ul><h2 id="目标代码优化"><a href="#目标代码优化" class="headerlink" title="目标代码优化"></a>目标代码优化</h2><ul><li>属于编译器后端</li><li>目标代码优化器(Target Code Optimizer)</li><li>对目标代码进行优化<ul><li>比如选择合适的寻址方式</li><li>使用位移来代替乘法运算</li><li>删除多余的指令</li><li>……</li></ul></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;编译-Compilation-的-6-个步骤&quot;&gt;&lt;a href=&quot;#编译-Compilation-的-6-个步骤&quot; class=&quot;headerlink&quot; title=&quot;编译 (Compilation) 的 6 个步骤&quot;&gt;&lt;/a&gt;编译 (Compilation) 的</summary>
+      
+    
+    
+    
+    <category term="C++" scheme="https://abcdoc-cn.github.io/categories/C/"/>
+    
+    
+    <category term="C++" scheme="https://abcdoc-cn.github.io/tags/C/"/>
+    
+    <category term="计算机组成原理" scheme="https://abcdoc-cn.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PKCS 发布的 15 个标准</title>
+    <link href="https://abcdoc-cn.github.io/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/PKCS%20%E5%8F%91%E5%B8%83%E7%9A%84%2015%20%E4%B8%AA%E6%A0%87%E5%87%86/"/>
+    <id>https://abcdoc-cn.github.io/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/PKCS%20%E5%8F%91%E5%B8%83%E7%9A%84%2015%20%E4%B8%AA%E6%A0%87%E5%87%86/</id>
+    <published>2021-04-28T04:45:38.000Z</published>
+    <updated>2021-06-08T03:29:55.024Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="PKCS-发布的-15-个标准"><a href="#PKCS-发布的-15-个标准" class="headerlink" title="PKCS 发布的 15 个标准"></a>PKCS 发布的 15 个标准</h1><ul><li><p>The Public-Key Cryptography Standards</p></li><li><p>由美国RSA<a href="https://baike.baidu.com/item/%E6%95%B0%E6%8D%AE%E5%AE%89%E5%85%A8/3204964">数据安全</a>公司及其合作伙伴制定的一组公钥密码学标准，</p></li><li><p>其中包括证书申请、证书更新、证书作废表发布、扩展证书内容以及<a href="https://baike.baidu.com/item/%E6%95%B0%E5%AD%97%E7%AD%BE%E5%90%8D/212550">数字签名</a>、<a href="https://baike.baidu.com/item/%E6%95%B0%E5%AD%97%E4%BF%A1%E5%B0%81/425647">数字信封</a>的格式等方面的一系列相关协议。</p></li></ul><h2 id="PKCS-1：RSA加密标准"><a href="#PKCS-1：RSA加密标准" class="headerlink" title="PKCS#1：RSA加密标准"></a>PKCS#1：RSA加密标准</h2><ul><li>PKCS#1定义了RSA公钥函数的基本格式标准，特别是数字签名。</li><li>它定义了数字签名如何计算，包括待签名数据和签名本身的格式；</li><li>它也定义了PSA公/私钥的语法。</li></ul><h2 id="PKCS-2"><a href="#PKCS-2" class="headerlink" title="PKCS#2"></a>PKCS#2</h2><p>涉及了RSA的消息摘要加密，这已被并入PKCS#1中。</p><h2 id="PKCS-3：Diffie-Hellman密钥协议标准"><a href="#PKCS-3：Diffie-Hellman密钥协议标准" class="headerlink" title="PKCS#3：Diffie-Hellman密钥协议标准"></a>PKCS#3：Diffie-Hellman密钥协议标准</h2><p>PKCS#3描述了一种实现Diffie- Hellman密钥协议的方法。</p><h2 id="PKCS-4"><a href="#PKCS-4" class="headerlink" title="PKCS#4"></a>PKCS#4</h2><p>最初是规定RSA密钥语法的，现已经被包含进PKCS#1中。</p><h2 id="PKCS-5：基于口令的加密标准"><a href="#PKCS-5：基于口令的加密标准" class="headerlink" title="PKCS#5：基于口令的加密标准"></a>PKCS#5：基于口令的加密标准</h2><p>PKCS#5描述了使用由口令生成的密钥来加密8位位组串并产生一个加密的8位位组串的方法。</p><p>PKCS#5可以用于加密私钥，以便于密钥的安全传输（这在PKCS#8中描述）。</p><h2 id="PKCS-6：扩展证书语法标准"><a href="#PKCS-6：扩展证书语法标准" class="headerlink" title="PKCS#6：扩展证书语法标准"></a>PKCS#6：扩展证书语法标准</h2><p>PKCS#6定义了提供附加实体信息的X.509证书属性扩展的语法</p><p>（当PKCS#6第一次发布时，X.509还不支持扩展。这些扩展因此被包括在X.509中）。</p><h2 id="PKCS-7：密码消息语法标准"><a href="#PKCS-7：密码消息语法标准" class="headerlink" title="PKCS#7：密码消息语法标准"></a>PKCS#7：密码消息语法标准</h2><p>PKCS#7为使用密码算法的数据规定了通用语法，比如数字签名和数字信封。</p><p>PKCS#7提供了许多格式选项，包括未加密或签名的格式化消息、已封装（加密）消息、已签名消息和既经过签名又经过加密的消息。</p><h2 id="PKCS-8：私钥信息语法标准"><a href="#PKCS-8：私钥信息语法标准" class="headerlink" title="PKCS#8：私钥信息语法标准"></a>PKCS#8：私钥信息语法标准</h2><p>PKCS#8定义了私钥信息语法和加密私钥语法，其中私钥加密使用了PKCS#5标准。</p><h2 id="PKCS-9：可选属性类型"><a href="#PKCS-9：可选属性类型" class="headerlink" title="PKCS#9：可选属性类型"></a>PKCS#9：可选属性类型</h2><p>PKCS#9定义了PKCS#6扩展证书、PKCS#7数字签名消息、PKCS#8私钥信息和PKCS#10证书签名请求中要用到的可选属性类型。</p><p>已定义的证书属性包括E-mail地址、无格式姓名、内容类型、消息摘要、签名时间、签名副本（counter signature）、质询口令字和扩展证书属性。</p><h2 id="PKCS-10：证书请求语法标准"><a href="#PKCS-10：证书请求语法标准" class="headerlink" title="PKCS#10：证书请求语法标准"></a>PKCS#10：证书请求语法标准</h2><p>PKCS#10定义了证书请求的语法。</p><p>证书请求包含了一个唯一识别名、公钥和可选的一组属性，它们一起被请求证书的实体签名（证书管理协议中的PKIX证书请求消息就是一个PKCS#10）。</p><h2 id="PKCS-11：密码令牌接口标准"><a href="#PKCS-11：密码令牌接口标准" class="headerlink" title="PKCS#11：密码令牌接口标准"></a>PKCS#11：密码令牌接口标准</h2><p>PKCS#11或“Cryptoki”为拥有密码信息（如加密密钥和证书）和执行密码学函数的单用户设备定义了一个应用程序接口（API）。</p><p>智能卡就是实现Cryptoki的典型设备。</p><p>注意：Cryptoki定义了密码函数接口，但并未指明设备具体如何实现这些函数。而且Cryptoki只说明了密码接口，并未定义对设备来说可能有用的其他接口，如访问设备的文件系统接口。</p><h2 id="PKCS-12：个人信息交换语法标准"><a href="#PKCS-12：个人信息交换语法标准" class="headerlink" title="PKCS#12：个人信息交换语法标准"></a>PKCS#12：个人信息交换语法标准</h2><p>PKCS#12定义了个人身份信息（包括私钥、证书、各种秘密和扩展字段）的格式。</p><p>PKCS#12有助于传输证书及对应的私钥，于是用户可以在不同设备间移动他们的个人身份信息。</p><h2 id="PDCS-13：椭圆曲线密码标准"><a href="#PDCS-13：椭圆曲线密码标准" class="headerlink" title="PDCS#13：椭圆曲线密码标准"></a>PDCS#13：椭圆曲线密码标准</h2><p>PKCS#13标准当前正在完善之中。</p><p>它包括椭圆曲线参数的生成和验证、密钥生成和验证、数字签名和公钥加密，还有密钥协定，以及参数、密钥和方案标识的ASN.1语法。</p><h2 id="PKCS-14：伪随机数产生标准"><a href="#PKCS-14：伪随机数产生标准" class="headerlink" title="PKCS#14：伪随机数产生标准"></a>PKCS#14：伪随机数产生标准</h2><p>PKCS#14标准当前正在完善之中。</p><p>为什么随机数生成也需要建立自己的标准呢？PKI中用到的许多基本的密码学函数，如密钥生成和Diffie-Hellman共享密钥协商，都需要使用随机数。然而，如果“随机数”不是随机的，而是取自一个可预测的取值集合，那么密码学函数就不再是绝对安全了，因为它的取值被限于一个缩小了的值域中。因此，安全伪随机数的生成对于PKI的安全极为关键。</p><h2 id="PKCS-15：密码令牌信息语法标准"><a href="#PKCS-15：密码令牌信息语法标准" class="headerlink" title="PKCS#15：密码令牌信息语法标准"></a>PKCS#15：密码令牌信息语法标准</h2><p>PKCS#15通过定义令牌上存储的密码对象的通用格式来增进密码令牌的互操作性。</p><p>在实现PKCS#15的设备上存储的数据对于使用该设备的所有应用程序来说都是一样的，尽管实际上在内部实现时可能所用的格式不同。</p><p>PKCS#15的实现扮演了翻译家的角色，它在卡的内部格式与应用程序支持的数据格式间进行转换。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;PKCS-发布的-15-个标准&quot;&gt;&lt;a href=&quot;#PKCS-发布的-15-个标准&quot; class=&quot;headerlink&quot; title=&quot;PKCS 发布的 15 个标准&quot;&gt;&lt;/a&gt;PKCS 发布的 15 个标准&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;The Publi</summary>
+      
+    
+    
+    
+    <category term="计算机网络" scheme="https://abcdoc-cn.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
+    
+    <category term="计算机网络" scheme="https://abcdoc-cn.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vditor 快捷键</title>
+    <link href="https://abcdoc-cn.github.io/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/Vditor%20%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
+    <id>https://abcdoc-cn.github.io/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/Vditor%20%E5%BF%AB%E6%8D%B7%E9%94%AE/</id>
+    <published>2021-04-27T03:38:02.000Z</published>
+    <updated>2021-06-07T02:32:32.772Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="通用"><a href="#通用" class="headerlink" title="通用"></a>通用</h1><table><thead><tr><th>名称</th><th>快捷键</th><th>备注</th></tr></thead><tbody><tr><td>表情</td><td>:/⌘ E</td><td></td></tr><tr><td>标题</td><td>Ctrl H / ⌘ H</td><td>参见下文</td></tr><tr><td>粗体</td><td>Ctrl B / ⌘ B</td><td></td></tr><tr><td>斜体</td><td>Ctrl I / ⌘ I</td><td></td></tr><tr><td>删除线</td><td>Ctrl S / ⌘ S</td><td></td></tr><tr><td>链接</td><td>Ctrl K / ⌘ K</td><td>参见下文</td></tr><tr><td>无序列表</td><td>Ctrl L / ⌘ L</td><td>参见下文</td></tr><tr><td>有序列表</td><td>Ctrl O / ⌘ O</td><td>参见下文</td></tr><tr><td>任务列表</td><td>Ctrl J / ⌘ J</td><td>参见下文</td></tr><tr><td>引用</td><td>Ctrl ; / ⌘ ;</td><td>参见下文</td></tr><tr><td>分割线</td><td>Ctrl Shift H  / ⌘ ⇧ H</td><td></td></tr><tr><td>代码块</td><td>Ctrl U / ⌘ U</td><td>参见下文</td></tr><tr><td>代码</td><td>Ctrl G / ⌘ G</td><td></td></tr><tr><td>元素前插入空块</td><td>Ctrl Shift B / ⌘ ⇧ B</td><td>wysiwyg &amp; ir 模式</td></tr><tr><td>元素后插入空块</td><td>Ctrl Shift E / ⌘ ⇧ E</td><td>wysiwyg &amp; ir 模式</td></tr><tr><td>表格</td><td>Ctrl M / ⌘ M</td><td>参见下文</td></tr><tr><td>撤销</td><td>Ctrl Z / ⌘ Z</td><td></td></tr><tr><td>重做</td><td>Ctrl Y / ⌘ Y</td><td></td></tr><tr><td>隐藏编辑器</td><td>Ctrl P / ⌘ P</td><td>sv 模式</td></tr><tr><td>全屏</td><td>Ctrl ‘ / ⌘ ‘</td><td></td></tr><tr><td>向上移动块元素</td><td>Ctrl Shift U / ⌘ ⇧ U</td><td>wysiwyg &amp; ir 模式</td></tr><tr><td>向下移动块元素</td><td>Ctrl Shift D / ⌘ ⇧ D</td><td>wysiwyg &amp; ir 模式</td></tr><tr><td>移除当前元素</td><td>Ctrl Shift X / ⌘ ⇧ X</td><td>wysiwyg 模式</td></tr><tr><td>At 用户</td><td>@</td><td></td></tr><tr><td>错误输入</td><td>Backspace</td><td></td></tr></tbody></table><h1 id="标题-Ctrl-H-⌘-H"><a href="#标题-Ctrl-H-⌘-H" class="headerlink" title="标题 Ctrl H / ⌘ H"></a>标题 Ctrl H / ⌘ H</h1><table><thead><tr><th>名称</th><th>快捷键</th></tr></thead><tbody><tr><td>变大</td><td>Ctrl + / ⌘ +</td></tr><tr><td>变小</td><td>Ctrl - / ⌘ -</td></tr><tr><td>H1-H6</td><td>Ctrl Alt 1/2/3/4/5/6 / ⌘ ⌥ 1/2/3/4/5/6</td></tr><tr><td>弹出菜单</td><td>Ctrl H / ⌘ H</td></tr></tbody></table><h1 id="链接-Ctrl-K-⌘-K"><a href="#链接-Ctrl-K-⌘-K" class="headerlink" title="链接 Ctrl K / ⌘ K"></a>链接 Ctrl K / ⌘ K</h1><table><thead><tr><th>名称</th><th>快捷键</th></tr></thead><tbody><tr><td>输入框和元素之间切换</td><td>Alt Enter / ⌥ Enter</td></tr><tr><td>输入框之间切换</td><td>Tab</td></tr></tbody></table><h1 id="列表-Ctrl-L-O-J-⌘-L-O-J"><a href="#列表-Ctrl-L-O-J-⌘-L-O-J" class="headerlink" title="列表 Ctrl L/O/J / ⌘ L/O/J"></a>列表 Ctrl L/O/J / ⌘ L/O/J</h1><table><thead><tr><th>名称</th><th>快捷键</th><th>备注</th></tr></thead><tbody><tr><td>缩进</td><td>Tab<br/>Ctrl Shift I / ⌘ ⇧ I</td><td>Tab: 光标需位于开头</td></tr><tr><td>反向缩进</td><td>Shift Tab / ⇧ Tab<br/>Ctrl Shift O / ⌘ ⇧ O<br/>Enter</td><td>Shift Tab / ⇧ Tab: 光标需位于开头<br/>Enter: 需为空列表项</td></tr><tr><td>完成和待办之间切换</td><td>Ctrl Shift J / ⌘ ⇧ J</td><td>任务列表</td></tr></tbody></table><h1 id="引用-Ctrl-⌘"><a href="#引用-Ctrl-⌘" class="headerlink" title="引用 Ctrl ; / ⌘ ;"></a>引用 Ctrl ; / ⌘ ;</h1><table><thead><tr><th>名称</th><th>快捷键</th><th>备注</th></tr></thead><tbody><tr><td>在顶层引用前插入空块</td><td>Ctrl Alt Enter / ⌘ ⌥ Enter</td><td>wysiwyg 模式</td></tr><tr><td>在顶层引用后插入空块</td><td>Alt Enter / ⌥ Enter</td><td>wysiwyg 模式</td></tr><tr><td>插入块元素</td><td>Ctrl Shift : / ⌘ ⇧ :<br/> &gt;</td><td>Ctrl Shift : / ⌘ ⇧ :: 块元素变为引用<br/>&gt;: 内联元素中插入引用</td></tr><tr><td>引用和块元素之间切换</td><td>Ctrl ; / ⌘ ;</td><td></td></tr></tbody></table><h1 id="代码块-Ctrl-U-⌘-U"><a href="#代码块-Ctrl-U-⌘-U" class="headerlink" title="代码块 Ctrl U / ⌘ U"></a>代码块 Ctrl U / ⌘ U</h1><table><thead><tr><th>名称</th><th>快捷键</th></tr></thead><tbody><tr><td>输入框和代码块之间切换</td><td>Alt Enter / ⌥ Enter</td></tr><tr><td>隐藏编辑界面</td><td>Escape</td></tr><tr><td>选中所有代码</td><td>Ctrl A / ⌘ A</td></tr></tbody></table><h1 id="表格-Ctrl-M-⌘-M"><a href="#表格-Ctrl-M-⌘-M" class="headerlink" title="表格 Ctrl M / ⌘ M"></a>表格 Ctrl M / ⌘ M</h1><table><thead><tr><th>名称</th><th>快捷键</th></tr></thead><tbody><tr><td>在上方插入一行</td><td>Ctrl + / ⌘ ⇧ F</td></tr><tr><td>在下方插入一行</td><td>Ctrl + / ⌘ +</td></tr><tr><td>删除行</td><td>Ctrl - / ⌘ -</td></tr><tr><td>在左边插入一列</td><td>Ctrl Shift + / ⌘ ⇧ G</td></tr><tr><td>在右边插入一列</td><td>Ctrl Shift + / ⌘ ⇧ +</td></tr><tr><td>删除列</td><td>Ctrl Shift - / ⌘ ⇧ -</td></tr><tr><td>左对齐</td><td>Ctrl Shift L / ⌘ ⇧ L</td></tr><tr><td>中对齐</td><td>Ctrl Shift C / ⌘ ⇧ C</td></tr><tr><td>右对齐</td><td>Ctrl Shift R / ⌘ ⇧ R</td></tr><tr><td>光标移动到输入框中</td><td>Alt Enter / ⌥ Enter</td></tr><tr><td>输入框之间切换</td><td>Tab</td></tr><tr><td>将光标移动到上一个元素</td><td>Shift Tab / ⇧ Tab<br/>Backspace</td></tr><tr><td>将光标移动到下一个元素</td><td>Tab</td></tr></tbody></table>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;通用&quot;&gt;&lt;a href=&quot;#通用&quot; class=&quot;headerlink&quot; title=&quot;通用&quot;&gt;&lt;/a&gt;通用&lt;/h1&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;名称&lt;/th&gt;
+&lt;th&gt;快捷键&lt;/th&gt;
+&lt;th&gt;备注&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+</summary>
+      
+    
+    
+    
+    <category term="前端" scheme="https://abcdoc-cn.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="Vditor" scheme="https://abcdoc-cn.github.io/tags/Vditor/"/>
+    
+  </entry>
+  
+</feed>
