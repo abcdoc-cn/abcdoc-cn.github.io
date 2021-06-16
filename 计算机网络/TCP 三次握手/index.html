@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    
+    <title>TCP 三次挥手 | 天空</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+<link rel="stylesheet" href="/dist/build.css?v=1623049492098.css">
+
+
+    <script>
+        window.isPost = true
+        window.aomori = {
+            
+            
+            
+        }
+        window.aomori_logo_typed_animated = false
+        window.aomori_search_algolia = false
+
+    </script>
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+
+    <div class="container">
+    <header class="header">
+        <div class="header-type">
+            
+            <div class="header-type-inner">
+                
+                    <a class="header-type-title" href="/">天空</a>
+                
+    
+                
+            </div>
+        </div>
+        <div class="header-menu">
+            <div class="header-menu-inner">
+                
+                <a href="/">首页</a>
+                
+                <a href="/archives">存档</a>
+                
+            </div>
+            <div class="header-menu-social">
+                
+            </div>
+        </div>
+
+        <div class="header-menu-mobile">
+            <div class="header-menu-mobile-inner" id="mobile-menu-open">
+                <i class="icon icon-menu"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="header-menu-mobile-menu">
+        <div class="header-menu-mobile-menu-bg"></div>
+        <div class="header-menu-mobile-menu-wrap">
+            <div class="header-menu-mobile-menu-inner">
+                <div class="header-menu-mobile-menu-close" id="mobile-menu-close">
+                    <i class="icon icon-cross"></i>
+                </div>
+                <div class="header-menu-mobile-menu-list">
+                    
+                    <a href="/">首页</a>
+                    
+                    <a href="/archives">存档</a>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+    <div class="container">
+        <div class="main">
+            <section class="inner">
+                <section class="inner-main">
+                    <div class="post">
+    <article id="post-ckpyuy8vr003s4sip08rq9l25" class="article article-type-post" itemscope
+    itemprop="blogPost">
+
+    <div class="article-inner">
+
+        
+          
+        
+        
+        
+
+        
+        <header class="article-header">
+            
+  
+    <h1 class="article-title" itemprop="name">
+      TCP 三次挥手
+    </h1>
+  
+
+        </header>
+        
+
+        <div class="article-more-info article-more-info-post hairline">
+
+            <div class="article-date">
+  <time datetime="2021-04-25T08:12:46.000Z" itemprop="datePublished">2021-04-25</time>
+</div>
+
+            
+            <div class="article-category">
+                <a class="article-category-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a>
+            </div>
+            
+
+            
+            <div class="article-tag">
+                <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/TCP-IP/" rel="tag">TCP/IP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" rel="tag">计算机网络</a></li></ul>
+            </div>
+            
+
+            
+
+        </div>
+
+        <div class="article-entry post-inner-html hairline" itemprop="articleBody">
+            <h3 id="三次握手"><a href="#三次握手" class="headerlink" title="三次握手"></a>三次握手</h3><p><img src="http://doc.cloudcollect.cc/upload/2021/04/tcpsanciwoshou-ad4a6604a2394f5d931df217d13c1d04.png"></p>
+<p><img src="http://doc.cloudcollect.cc/upload/2021/04/1155312401-1-ba457c6e16f849c5a94da08c63d6a74d.jpg"></p>
+<blockquote>
+<p><strong>TCP 连接的本质就是双方各自维护所需的状态</strong>，并非是在通信设备两端建立信号隧道</p>
+</blockquote>
+<blockquote>
+<ul>
+<li>第一次握手：客户端发送 <strong>SYN</strong> 包（SYN=1）到服务端，并进入 <strong>SYN_SENT</strong> 状态，等待服务端确认<ul>
+<li><strong>SYN</strong>＝1，服务端由 SYN=1 知道，A 要求建立联机</li>
+<li>随机产生 seq number=1234567 的数据包；</li>
+</ul>
+</li>
+<li>第二次握手：服务端收到 SYN 请求，需要给客户端发送 ACK 确认报文，同时服务端也要向客户端发送一个 SYN 报文，即服务端发送给客户端的是 <strong>SYN + ACK</strong> 报文，此时服务端进入 <strong>SYN_RCVD</strong> 状态<ul>
+<li><strong>SYN=1</strong></li>
+<li><strong>ACK=1</strong></li>
+<li>随机产生 seq=7654321 的包，</li>
+<li>向 A 发送 ack number=(主机 A 的 seq+1),</li>
+</ul>
+</li>
+<li>第三次握手：客户端收到 SYN + ACK 报文后，向服务端发送确认报文 <strong>ACK</strong>， 客户端端进入 <strong>ESTABLISHED</strong> 状态<ul>
+<li>收到后检查 ack number 是否正确，即第一次发送的 seq number+1,</li>
+<li>检查位码ack 是否为 1，<ul>
+<li>若正确，主机 A 会再发送 ack number=(主机 B 的 seq+1),ack=1，</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>服务端收到 ACK 请求，进入 <strong>ESTABLISHED</strong> 状态<ul>
+<li>确认 seq 值与 ack=1 则连接建立成功</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<ul>
+<li>SYN （Synchronous）： 同步的，表示建立同步连接</li>
+<li>ACK （Acknowledge）：确认</li>
+<li>Seq （Sequence）： 序列</li>
+<li>FIN （Finish）： 完成</li>
+<li><code>Sequence Number</code> 是记录包的序号，<ul>
+<li>TCP 会按照报文字节进行编号，</li>
+<li>用来解决包在网络中<strong>乱序的问题</strong></li>
+</ul>
+</li>
+<li><code>Acknowledgement Number</code> 确认序列号，<ul>
+<li>用于向发送方确认已经收到了哪些包，</li>
+<li>用来解决不<strong>丢包的问题</strong></li>
+</ul>
+</li>
+</ul>
+<h4 id="三次握手的必要性"><a href="#三次握手的必要性" class="headerlink" title="三次握手的必要性"></a>三次握手的必要性</h4><h5 id="确认双发的收发能力"><a href="#确认双发的收发能力" class="headerlink" title="确认双发的收发能力"></a>确认双发的收发能力</h5><ul>
+<li>第一次握手：客户端发包，服务端收包，服务端确认：<strong>客户端发送能力</strong>、服务端接收能力正常</li>
+<li>第二次握手：服务端发包，客户端收包，客户端确认：<strong>服务端发送能力、接收能力</strong>、客户端发送能力、接收能力正常</li>
+<li>第三次握手：客户端发包，服务端收包，服务端确认：<strong>客户端发送能力、接收能力正常</strong></li>
+</ul>
+<h5 id="序列号可靠同步"><a href="#序列号可靠同步" class="headerlink" title="序列号可靠同步"></a>序列号可靠同步</h5><ul>
+<li>两次握手，服务端无法确定客户端是否已接收了自己发送的初始序列号</li>
+</ul>
+<h5 id="阻止历史连接初始化"><a href="#阻止历史连接初始化" class="headerlink" title="阻止历史连接初始化"></a>阻止历史连接初始化</h5><ul>
+<li>服务端回复 SYN+ACK后，客户端会对比应答的序号，如果是旧的报文会给服务端发送 <strong>RST</strong> 报文，直到最新的 SYN 到达服务器才正常建立连接</li>
+<li>三次握手有足够的上下文判断当前连接是否为历史连接</li>
+</ul>
+<h5 id="安全问题"><a href="#安全问题" class="headerlink" title="安全问题"></a>安全问题</h5><ul>
+<li>防 DDOS 攻击：如果两次握手就建立连接，新建连接时，内核会分配很多的内存资源</li>
+</ul>
+<h4 id="初始序列号（ISN）"><a href="#初始序列号（ISN）" class="headerlink" title="初始序列号（ISN）"></a>初始序列号（ISN）</h4><ul>
+<li>Initial Sequence Number</li>
+<li>TCP 发送方的字节数据编号的原点</li>
+<li>动态生成<ul>
+<li>如果固定，攻击者很容易猜出后续的确认序号，发送伪造的 RST 报文</li>
+</ul>
+</li>
+</ul>
+<h4 id="半连接队列"><a href="#半连接队列" class="headerlink" title="半连接队列"></a>半连接队列</h4><ul>
+<li>服务器收到第一次握手的 SYN，会处于 SYN_RCVD 状态，并把请求连接放到一个队列，这个队列就是半连接队列</li>
+</ul>
+<h4 id="全连接队列"><a href="#全连接队列" class="headerlink" title="全连接队列"></a>全连接队列</h4><ul>
+<li>服务器收到第三次握手连接建立成功，会将连接放到全连接队列中</li>
+<li>如果全连接队列满了，可能会出现丢包现象</li>
+</ul>
+<h4 id="第三次握手可以携带数据"><a href="#第三次握手可以携带数据" class="headerlink" title="第三次握手可以携带数据"></a>第三次握手可以携带数据</h4><ul>
+<li>如果第一次握手可以携带数据，那么可能会给服务器造成恶意功能，服务器需要花费大量内存空间缓存 SYN 报文</li>
+<li>第三次握手，客户端已处于连接状态，且确认服务端接收发送能力正常，可以携带数据</li>
+</ul>
+
+        </div>
+
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+<nav class="article-nav">
+  
+    <a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/TCP%20%E6%95%B0%E6%8D%AE%E5%8C%85/" id="article-nav-newer" class="article-nav-link-wrap">
+      <div class="article-nav-caption">下一篇</div>
+      <div class="article-nav-title">
+        
+          TCP 数据包
+        
+      </div>
+    </a>
+  
+  
+    <a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/TCPIP%20%E5%8D%8F%E8%AE%AE/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-caption">上一篇</div>
+      <div class="article-nav-title">TCP/IP 协议</div>
+    </a>
+  
+</nav>
+
+
+</article>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+                </section>
+            </section>
+
+            
+            <aside class="sidebar ">
+                
+
+
+<div class="widget" id="widget">
+    
+      
+  <div class="widget-wrap">
+    <div class="widget-inner">
+      <div class="toc post-toc-html"></div>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget-wrap widget-tags">
+    <div class="widget-title"><span>Tags</span></div>
+    <div class="widget-inner">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C++</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CentOS/" rel="tag">CentOS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Docker/" rel="tag">Docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Electron/" rel="tag">Electron</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HAProxy/" rel="tag">HAProxy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/" rel="tag">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Jenkins/" rel="tag">Jenkins</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Maven/" rel="tag">Maven</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MySQL/" rel="tag">MySQL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NTP/" rel="tag">NTP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Oracle/" rel="tag">Oracle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SQLite/" rel="tag">SQLite</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/STL/" rel="tag">STL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SpringBoot/" rel="tag">SpringBoot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TCP-IP/" rel="tag">TCP/IP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Typora/" rel="tag">Typora</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VS2015/" rel="tag">VS2015</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VUE/" rel="tag">VUE</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vditor/" rel="tag">Vditor</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/" rel="tag">nodejs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/openssl/" rel="tag">openssl</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/" rel="tag">多线程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/" rel="tag">开发工具</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/" rel="tag">异常处理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%89%B9%E5%A4%84%E7%90%86/" rel="tag">批处理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" rel="tag">环境搭建</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/" rel="tag">计算机组成原理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" rel="tag">计算机网络</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" rel="tag">设计模式</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%80%9F%E6%9F%A5/" rel="tag">速查</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%AB%98%E5%8F%AF%E7%94%A8/" rel="tag">高可用</a></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget-wrap widget-cate">
+    <div class="widget-title"><span>Categories</span></div>
+    <div class="widget-inner">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C++</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/CentOS/">CentOS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Electron/">Electron</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/GIt/">GIt</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Maven/">Maven</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MySQL/">MySQL</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Nodejs/">Nodejs</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Oracle/">Oracle</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/SpringBoot/">SpringBoot</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/VS2015/">VS2015</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/VUE/">VUE</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%BB%98%E8%AE%A4%E5%88%86%E7%B1%BB/">默认分类</a></li></ul>
+    </div>
+  </div>
+
+
+    
+</div>
+
+<div id="backtop"><i class="icon icon-arrow-up"></i></div>
+            </aside>
+            
+        </div>
+    </div>
+
+    <!-- <footer class="footer">
+    <div class="footer-wave">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#3c4859" fill-opacity="1" d="M0,160L60,181.3C120,203,240,245,360,240C480,235,600,181,720,186.7C840,192,960,256,1080,261.3C1200,267,1320,213,1380,186.7L1440,160L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
+    </div>
+
+    <div class="footer-wrap">
+        <div class="footer-inner"> 
+            天空 &copy; 2021<br>
+            Powered By Hexo · Theme By <a href="https://github.com/lh1me/hexo-theme-aomori" target="_blank">Aomori</a>
+        </div>
+    </div>
+
+</footer> -->
+
+<!-- 
+
+ -->
+
+
+<script src="/dist/build.js?1623049492098.js"></script>
+
+
+<script src="/dist/custom.js?1623049492098.js"></script>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

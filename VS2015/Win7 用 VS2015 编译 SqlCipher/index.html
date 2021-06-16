@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    
+    <title>Win7 用 VS2015 编译 SqlCipher | 天空</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+<link rel="stylesheet" href="/dist/build.css?v=1623049492098.css">
+
+
+    <script>
+        window.isPost = true
+        window.aomori = {
+            
+            
+            
+        }
+        window.aomori_logo_typed_animated = false
+        window.aomori_search_algolia = false
+
+    </script>
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+
+    <div class="container">
+    <header class="header">
+        <div class="header-type">
+            
+            <div class="header-type-inner">
+                
+                    <a class="header-type-title" href="/">天空</a>
+                
+    
+                
+            </div>
+        </div>
+        <div class="header-menu">
+            <div class="header-menu-inner">
+                
+                <a href="/">首页</a>
+                
+                <a href="/archives">存档</a>
+                
+            </div>
+            <div class="header-menu-social">
+                
+            </div>
+        </div>
+
+        <div class="header-menu-mobile">
+            <div class="header-menu-mobile-inner" id="mobile-menu-open">
+                <i class="icon icon-menu"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="header-menu-mobile-menu">
+        <div class="header-menu-mobile-menu-bg"></div>
+        <div class="header-menu-mobile-menu-wrap">
+            <div class="header-menu-mobile-menu-inner">
+                <div class="header-menu-mobile-menu-close" id="mobile-menu-close">
+                    <i class="icon icon-cross"></i>
+                </div>
+                <div class="header-menu-mobile-menu-list">
+                    
+                    <a href="/">首页</a>
+                    
+                    <a href="/archives">存档</a>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+    <div class="container">
+        <div class="main">
+            <section class="inner">
+                <section class="inner-main">
+                    <div class="post">
+    <article id="post-ckpyuy8vg002n4sipcl32eyck" class="article article-type-post" itemscope
+    itemprop="blogPost">
+
+    <div class="article-inner">
+
+        
+          
+        
+        
+        
+
+        
+        <header class="article-header">
+            
+  
+    <h1 class="article-title" itemprop="name">
+      Win7 用 VS2015 编译 SqlCipher
+    </h1>
+  
+
+        </header>
+        
+
+        <div class="article-more-info article-more-info-post hairline">
+
+            <div class="article-date">
+  <time datetime="2021-04-25T04:59:09.399Z" itemprop="datePublished">2021-04-25</time>
+</div>
+
+            
+            <div class="article-category">
+                <a class="article-category-link" href="/categories/VS2015/">VS2015</a>
+            </div>
+            
+
+            
+            <div class="article-tag">
+                <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SQLite/" rel="tag">SQLite</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VS2015/" rel="tag">VS2015</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" rel="tag">环境搭建</a></li></ul>
+            </div>
+            
+
+            
+
+        </div>
+
+        <div class="article-entry post-inner-html hairline" itemprop="articleBody">
+            <p>[TOC]</p>
+<h2 id="Win7-用-VS2015-编译-SqlCipher"><a href="#Win7-用-VS2015-编译-SqlCipher" class="headerlink" title="Win7 用 VS2015 编译 SqlCipher"></a>Win7 用 VS2015 编译 SqlCipher</h2><h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><ul>
+<li><strong>Visual Studio 2015</strong></li>
+<li><strong>ActiveState ActivePerl</strong>，编译 OpenSSL 使用</li>
+<li><strong>MinGW</strong>，编译 SqlCipher 使用</li>
+<li><strong>OpenSSL-1.0.2m</strong>，从官网下载</li>
+<li><strong>SqlCipher，</strong>从 github 获取</li>
+</ul>
+<h3 id="安装-VS2015"><a href="#安装-VS2015" class="headerlink" title="安装 VS2015"></a>安装 VS2015</h3><p>  过程略。</p>
+<h3 id="安装-ActivePerl"><a href="#安装-ActivePerl" class="headerlink" title="安装 ActivePerl"></a>安装 ActivePerl</h3><p>  过程略。</p>
+<h3 id="安装-MinGW"><a href="#安装-MinGW" class="headerlink" title="安装 MinGW"></a>安装 MinGW</h3><p>网址: <a target="_blank" rel="noopener" href="http://sourceforge.net/projects/mingw/files/">http://sourceforge.net/projects/mingw/files/</a></p>
+<p>下载 Download mingw-get-setup.exe</p>
+<p>安装 MinGW 是一个多步骤的过程。首先下载并安装包管理器/安装程序，然后使用它来安装编译器和 msys 。</p>
+<p>安装完安装程序后，运行它并在基本窗格下安装msys base，developer-tools，mingw32-base , gcc-g ++ 和 mingw32-tcl。</p>
+<p><img src="http://doc.cloudcollect.cc/upload/2021/04/image-43340e214dcf48c2b34503182a1b38a1.png"></p>
+<p><img src="http://doc.cloudcollect.cc/upload/2021/04/image-328a2ccbc29141db8bf81e220ccf97ee.png"></p>
+<h3 id="编译-OpenSSL（32位）"><a href="#编译-OpenSSL（32位）" class="headerlink" title="编译 OpenSSL（32位）"></a>编译 OpenSSL（32位）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin</span><br><span class="line">vcvars32.bat</span><br><span class="line">perl Configure VC-WIN32 no-asm --prefix=<span class="string">&quot;C:\openssl-1.0.2m\win32-release&quot;</span></span><br><span class="line">ms\do_nasm</span><br><span class="line">nmake -f ms\nt.mak</span><br><span class="line">nmake -f ms\nt.mak <span class="built_in">test</span></span><br><span class="line">nmake -f ms\nt.mak install</span><br><span class="line">nmake -f ms\ntdll.mak</span><br><span class="line">nmake -f ms\ntdll.mak <span class="built_in">test</span></span><br><span class="line">nmake -f ms\ntdll.mak install</span><br><span class="line">nmake -f ms\ntdll.mak clean</span><br></pre></td></tr></table></figure>
+
+<p>目录 C:\openssl-1.0.2m\win32-release 下生成了两个库文件：</p>
+<ul>
+<li>动态库文件 libeay32.dll（位于./bin目录下）</li>
+<li>静态库文件 libeay32.lib （位于./lib目录下）</li>
+</ul>
+<h3 id="编译-SqlCipher"><a href="#编译-SqlCipher" class="headerlink" title="编译 SqlCipher"></a>编译 SqlCipher</h3><ol>
+<li><p>将上一步生成的两个库文件 libeay32.dll 、 libeay32.lib 复制到 C:\SqlCipher 目录下</p>
+</li>
+<li><p><strong>管理员权限</strong>运行 C:\mingw\msys\1.0\msys.bat 批处理文件，进入msys shell命令环境</p>
+</li>
+<li><p>利用命令切换到 SqlCipher 目录</p>
+</li>
+<li><p>```bash<br> cd /c/sqlcipher </p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">    运行以下命令进行配置（注意这是一行），不能复制粘贴，只能手输入：</span><br><span class="line"></span><br><span class="line">5. ```bash</span><br><span class="line">    ./configure --with-crypto-lib=none --disable-tcl CFLAGS=&quot;-DSQLITE_HAS_CODEC -DSQLCIPHER_CRYPTO_OPENSSL -I/C/openssl-1.0.2m/win32-release/include /C/sqlcipher/libeay32.dll -L/C/sqlcipher/ -static-libgcc&quot; LDFLAGS=&quot;-leay32&quot;</span><br></pre></td></tr></table></figure>
+
+<p> 执行命令</p>
+</li>
+<li><p>```bash<br> make clean<br> make sqlite3.cpp</p>
+<h2 id="生成可执行文件sqlcipher-exe"><a href="#生成可执行文件sqlcipher-exe" class="headerlink" title="生成可执行文件sqlcipher.exe"></a>生成可执行文件sqlcipher.exe</h2><p> make</p>
+<h2 id="生成库文件sqlite3-dll"><a href="#生成库文件sqlite3-dll" class="headerlink" title="生成库文件sqlite3.dll"></a>生成库文件sqlite3.dll</h2><p> make dll</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">    生成 sqlite3.dll 和 sqlite3.def</span><br><span class="line"></span><br><span class="line">    - 打开 32 位 Visual Studio 命令提示符</span><br><span class="line">    - cd c:\sqlcipher</span><br><span class="line">    - lib /def:sqlite3.def</span><br><span class="line"></span><br><span class="line">### **测试 SqlCipher**（命令行）</span><br><span class="line"></span><br><span class="line">现在应该有一个功能齐全的 sqlcipher.exe 可执行文件和 dll 文件。</span><br><span class="line"></span><br><span class="line">打开一个正常的命令（cmd.exe）提示符，导航到sqlcipher构建目录：</span><br><span class="line"></span><br><span class="line">```bash</span><br><span class="line">sqlcipher.exe test.db</span><br><span class="line">sqlite&gt;PRAGMA key = &#x27;password&#x27;;</span><br><span class="line">sqlite&gt;create table testtable (id int, name varchar(20));</span><br><span class="line">sqlite&gt;insert into testtable (id,name) values (0,&#x27;alice&#x27;), (1,&#x27;bob&#x27;), (2,&#x27;charlie&#x27;);</span><br><span class="line">sqlite&gt;select * from testtable</span><br><span class="line">0:alice</span><br><span class="line">1:bob</span><br><span class="line">2:charlie</span><br><span class="line">sqlite&gt;.exit</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>现在我们有一个数据库，其中有一些值，让我们退出并尝试访问它没有密码。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sqlcipher.exe test.db</span><br><span class="line">sqlite&gt;select * from testtable</span><br><span class="line">Error: file is encrypted or not a database</span><br><span class="line">sqlite&gt;.<span class="built_in">exit</span></span><br></pre></td></tr></table></figure>
+
+<p>再次输入密码。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">sqlcipher.exe test.db</span><br><span class="line">sqlite&gt;PRAGMA key = <span class="string">&#x27;password&#x27;</span>;</span><br><span class="line">sqlite&gt;select * from testtable</span><br><span class="line">0:alice</span><br><span class="line">1:bob</span><br><span class="line">2:charlie</span><br><span class="line">sqlite&gt;.<span class="built_in">exit</span></span><br></pre></td></tr></table></figure>
+
+<p>如果看起来工作正常，现在可以在十六进制编辑器中打开文件test.db，并验证它没有可辨别的结构。</p>
+<p>如果您想要进行一些对比验证，请在没有PRAGMA密钥语句的情况下对新的数据库文件重复上述实验。它将使未加密的数据库，您将能够轻松地看到清晰的结构和原始数据。</p>
+<h3 id="测试-SqlCipher（VS2015）"><a href="#测试-SqlCipher（VS2015）" class="headerlink" title="测试 SqlCipher（VS2015）"></a>测试 SqlCipher（VS2015）</h3><p>创建一个名为 SQLCipherTest 的 win32 控制台应用程序（关闭预编译头文件）</p>
+<p>复制五个文件：sqlite3.exp，sqlite3.lib，sqlite3.def，sqlite3.dll和sqlite3.h到您的visual studio项目的源目录。</p>
+<p>回到Visual Studio并在解决方案资源管理器中添加一个现有的头文件并选择sqlite3.h</p>
+<p>打开项目属性 - &gt;配置属性 - &gt;连接器 - &gt;输入 - &gt;其他依赖项，并添加sqlite3.lib</p>
+<p>在你的主源文件中输入如下的c程序：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&quot;stdafx.h&quot;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&quot;sqlite3.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">int</span> <span class="title">callback</span><span class="params">(<span class="keyword">void</span> *NotUsed, <span class="keyword">int</span> argc, <span class="keyword">char</span> **argv, <span class="keyword">char</span> **azColName)</span> </span>&#123;</span><br><span class="line">   <span class="keyword">int</span> i;</span><br><span class="line">   <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; argc; i++) &#123; <span class="comment">//loop over results</span></span><br><span class="line">       <span class="built_in">printf</span>(<span class="string">&quot;%s = %s\n&quot;</span>, azColName[i], argv[i] ? argv[i] : <span class="string">&quot;NULL&quot;</span>);</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">   <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">   sqlite3 *db;</span><br><span class="line">   <span class="keyword">if</span> (<span class="built_in">sqlite3_open</span>(<span class="string">&quot;name_and_path_for_db&quot;</span>, &amp;db) == SQLITE_OK) &#123;</span><br><span class="line">      <span class="built_in">printf</span>(<span class="string">&quot;DB file is open\n&quot;</span>);</span><br><span class="line">      <span class="keyword">if</span> (<span class="built_in">sqlite3_exec</span>(db, (<span class="keyword">const</span> <span class="keyword">char</span>*)<span class="string">&quot;PRAGMA key =&#x27;password&#x27;&quot;</span>, <span class="literal">NULL</span>, <span class="literal">NULL</span>, <span class="literal">NULL</span>) == SQLITE_OK)&#123;</span><br><span class="line">         <span class="built_in">printf</span>(<span class="string">&quot;Accepted Key\n&quot;</span>);</span><br><span class="line">      &#125;;</span><br><span class="line">      <span class="keyword">if</span> (<span class="built_in">sqlite3_exec</span>(db, (<span class="keyword">const</span> <span class="keyword">char</span>*)<span class="string">&quot;CREATE TABLE testtable (id int, name varchar(20));&quot;</span>, <span class="literal">NULL</span>, <span class="literal">NULL</span>, <span class="literal">NULL</span>) == SQLITE_OK) &#123;</span><br><span class="line">         <span class="built_in">printf</span>(<span class="string">&quot;Created Table\n&quot;</span>);</span><br><span class="line">      &#125;;</span><br><span class="line">      <span class="keyword">if</span> (<span class="built_in">sqlite3_exec</span>(db, (<span class="keyword">const</span> <span class="keyword">char</span>*)<span class="string">&quot;INSERT INTO testtable (id,name) values (0,&#x27;alice&#x27;), (1,&#x27;bob&#x27;), (2,&#x27;charlie&#x27;);&quot;</span>, <span class="literal">NULL</span>, <span class="literal">NULL</span>, <span class="literal">NULL</span>) == SQLITE_OK) &#123;</span><br><span class="line">         <span class="built_in">printf</span>(<span class="string">&quot;Gave it some data\n&quot;</span>);</span><br><span class="line">      &#125;;</span><br><span class="line">      <span class="keyword">if</span> (<span class="built_in">sqlite3_exec</span>(db, (<span class="keyword">const</span> <span class="keyword">char</span>*)<span class="string">&quot;SELECT * FROM testtable;&quot;</span>, callback, <span class="literal">NULL</span>, <span class="literal">NULL</span>) == SQLITE_OK) &#123;</span><br><span class="line">         <span class="built_in">printf</span>(<span class="string">&quot;Sent Select\n&quot;</span>);</span><br><span class="line">      &#125;;</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="built_in">sqlite3_close</span>(db);</span><br><span class="line">   <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在调试器中运行它，你会看到select state的输出。</p>
+<ul>
+<li>注释掉 CREATE TABLE 和 INSERT INTO 两个 if 语句块并再次运行它，您应该再次看到 select 语句的输出。</li>
+<li>将 password 改为不同的东西，你不应该看到 SELECT 的输出。</li>
+</ul>
+
+        </div>
+
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+<nav class="article-nav">
+  
+    <a href="/VS2015/Jenkins%20%E6%89%93%E5%8C%85%20Virtual%20Studio%202015%20C++%E5%B7%A5%E7%A8%8B/" id="article-nav-newer" class="article-nav-link-wrap">
+      <div class="article-nav-caption">下一篇</div>
+      <div class="article-nav-title">
+        
+          Jenkins 打包 Virtual Studio 2015 C++工程
+        
+      </div>
+    </a>
+  
+  
+    <a href="/VS2015/Win7%20%E7%94%A8%20VS2015%20%E7%BC%96%E8%AF%91%20openssl-1.0.2m/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-caption">上一篇</div>
+      <div class="article-nav-title">Win7 用 VS2015 编译 openssl-1.0.2m</div>
+    </a>
+  
+</nav>
+
+
+</article>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+                </section>
+            </section>
+
+            
+            <aside class="sidebar ">
+                
+
+
+<div class="widget" id="widget">
+    
+      
+  <div class="widget-wrap">
+    <div class="widget-inner">
+      <div class="toc post-toc-html"></div>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget-wrap widget-tags">
+    <div class="widget-title"><span>Tags</span></div>
+    <div class="widget-inner">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C++</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CentOS/" rel="tag">CentOS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Docker/" rel="tag">Docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Electron/" rel="tag">Electron</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HAProxy/" rel="tag">HAProxy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/" rel="tag">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Jenkins/" rel="tag">Jenkins</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Maven/" rel="tag">Maven</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MySQL/" rel="tag">MySQL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NTP/" rel="tag">NTP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Oracle/" rel="tag">Oracle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SQLite/" rel="tag">SQLite</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/STL/" rel="tag">STL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SpringBoot/" rel="tag">SpringBoot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TCP-IP/" rel="tag">TCP/IP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Typora/" rel="tag">Typora</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VS2015/" rel="tag">VS2015</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VUE/" rel="tag">VUE</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vditor/" rel="tag">Vditor</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/" rel="tag">nodejs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/openssl/" rel="tag">openssl</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/" rel="tag">多线程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/" rel="tag">开发工具</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/" rel="tag">异常处理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%89%B9%E5%A4%84%E7%90%86/" rel="tag">批处理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" rel="tag">环境搭建</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/" rel="tag">计算机组成原理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" rel="tag">计算机网络</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" rel="tag">设计模式</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%80%9F%E6%9F%A5/" rel="tag">速查</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%AB%98%E5%8F%AF%E7%94%A8/" rel="tag">高可用</a></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget-wrap widget-cate">
+    <div class="widget-title"><span>Categories</span></div>
+    <div class="widget-inner">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C++</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/CentOS/">CentOS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Electron/">Electron</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/GIt/">GIt</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Maven/">Maven</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MySQL/">MySQL</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Nodejs/">Nodejs</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Oracle/">Oracle</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/SpringBoot/">SpringBoot</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/VS2015/">VS2015</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/VUE/">VUE</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%BB%98%E8%AE%A4%E5%88%86%E7%B1%BB/">默认分类</a></li></ul>
+    </div>
+  </div>
+
+
+    
+</div>
+
+<div id="backtop"><i class="icon icon-arrow-up"></i></div>
+            </aside>
+            
+        </div>
+    </div>
+
+    <!-- <footer class="footer">
+    <div class="footer-wave">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#3c4859" fill-opacity="1" d="M0,160L60,181.3C120,203,240,245,360,240C480,235,600,181,720,186.7C840,192,960,256,1080,261.3C1200,267,1320,213,1380,186.7L1440,160L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
+    </div>
+
+    <div class="footer-wrap">
+        <div class="footer-inner"> 
+            天空 &copy; 2021<br>
+            Powered By Hexo · Theme By <a href="https://github.com/lh1me/hexo-theme-aomori" target="_blank">Aomori</a>
+        </div>
+    </div>
+
+</footer> -->
+
+<!-- 
+
+ -->
+
+
+<script src="/dist/build.js?1623049492098.js"></script>
+
+
+<script src="/dist/custom.js?1623049492098.js"></script>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

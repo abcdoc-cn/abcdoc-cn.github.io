@@ -1,0 +1,1622 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    
+    <title>天空</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+<link rel="stylesheet" href="/dist/build.css?v=1623049492098.css">
+
+
+    <script>
+        window.isPost = false
+        window.aomori = {
+            
+            
+            
+        }
+        window.aomori_logo_typed_animated = false
+        window.aomori_search_algolia = false
+
+    </script>
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+
+    <div class="container">
+    <header class="header">
+        <div class="header-type">
+            
+            <div class="header-type-inner">
+                
+                    <a class="header-type-title" href="/">天空</a>
+                
+    
+                
+            </div>
+        </div>
+        <div class="header-menu">
+            <div class="header-menu-inner">
+                
+                <a href="/">首页</a>
+                
+                <a href="/archives">存档</a>
+                
+            </div>
+            <div class="header-menu-social">
+                
+            </div>
+        </div>
+
+        <div class="header-menu-mobile">
+            <div class="header-menu-mobile-inner" id="mobile-menu-open">
+                <i class="icon icon-menu"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="header-menu-mobile-menu">
+        <div class="header-menu-mobile-menu-bg"></div>
+        <div class="header-menu-mobile-menu-wrap">
+            <div class="header-menu-mobile-menu-inner">
+                <div class="header-menu-mobile-menu-close" id="mobile-menu-close">
+                    <i class="icon icon-cross"></i>
+                </div>
+                <div class="header-menu-mobile-menu-list">
+                    
+                    <a href="/">首页</a>
+                    
+                    <a href="/archives">存档</a>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+    <div class="container">
+        <div class="main">
+            <section class="inner">
+                <section class="inner-main">
+                    <div class="index">
+  
+    
+      <article
+id="post-Java/Java 锁升级"
+class="article article-type-post"
+>
+
+
+
+<div class="article-inner">
+    
+
+    <div class="article-body">
+    <header class="article-title">
+        <a href="/Java/Java%20%E9%94%81%E5%8D%87%E7%BA%A7/">Java 锁升级</a>
+    </header>
+    <div class="article-entry post-inner-html">
+        
+        <h2 id="Java-锁升级"><a href="#Java-锁升级" class="headerlink" title="Java 锁升级"></a>Java 锁升级</h2><h3 id="偏向锁"><a href="#偏向锁" class="headerlink" title="偏向锁"></a>偏向锁</h3><p>当只有一个线程使用synchronized给对象加锁时，其实在对象头中只是记录这个线程的id，并没有实际加锁，此时称为偏向锁（即无锁，对象头中锁标志位为01），效率较高；</p>
+<h3 id="自旋锁"><a href="#自旋锁" class="headerlink" title="自旋锁"></a>自旋锁</h3><ul>
+<li>当有线程争用锁时，锁升级为自旋锁（默认自旋10次，自旋的意义是让线程自旋等待去获取锁而不是阻塞，减少因线程阻塞带来的线程切换（线程挂起、恢复）），</li>
+<li>线程自旋将占用CPU时间，</li>
+<li>自旋结束后进入等待队列阻塞，所以，自旋锁适合少数线程争用锁的情况，否则会占用CPU资源过高；</li>
+</ul>
+<h3 id="自适应自旋锁"><a href="#自适应自旋锁" class="headerlink" title="自适应自旋锁"></a>自适应自旋锁</h3><p>自适应自旋假定不同线程持有同一个锁对象的时间基本相当，竞争程度趋于稳定，</p>
+<p>因此，可以根据上一次自旋的时间与结果调整下一次自旋的时间；</p>
+<h3 id="轻量级锁"><a href="#轻量级锁" class="headerlink" title="轻量级锁"></a>轻量级锁</h3><ul>
+<li>当线程自旋指定次数后仍无法获得锁时，将升级为轻量级锁（对象头中锁标志位为00），</li>
+<li>轻量级锁的目标是，减少无实际竞争情况下，使用重量级锁产生的性能消耗，包括系统调用引起的内核态与用户态切换、线程阻塞造成的线程切换等；</li>
+</ul>
+<h3 id="重量级锁"><a href="#重量级锁" class="headerlink" title="重量级锁"></a>重量级锁</h3><p>当锁竞争激励时，将升级为重量级锁（对象头中锁标志位为10）去操作系统请求资源。</p>
+
+        
+    </div>
+    </div>
+
+    <div class="article-badge">
+        
+        
+    </div>
+
+</div>
+
+<footer class="article-footer">
+    <div class="article-more-info">
+    <div class="article-date">
+  <time datetime="2021-06-04T09:21:11.000Z" itemprop="datePublished">2021-06-04</time>
+</div>
+    
+        <div class="article-category">
+        <a class="article-category-link" href="/categories/Java/">Java</a>
+        </div>
+    
+    
+        <div class="article-tag">
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/" rel="tag">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/" rel="tag">多线程</a></li></ul>
+        </div>
+    
+    </div>
+</footer>
+
+</article>
+
+    
+  
+    
+      <article
+id="post-Java/Java-线程的6种状态"
+class="article article-type-post"
+>
+
+
+
+<div class="article-inner">
+    
+
+    <div class="article-body">
+    <header class="article-title">
+        <a href="/Java/Java-%E7%BA%BF%E7%A8%8B%E7%9A%846%E7%A7%8D%E7%8A%B6%E6%80%81/">Java 线程的6种状态</a>
+    </header>
+    <div class="article-entry post-inner-html">
+        
+        <h2 id="Java-线程的6种状态"><a href="#Java-线程的6种状态" class="headerlink" title="Java 线程的6种状态"></a>Java 线程的6种状态</h2><ol>
+<li>New：线程刚刚创建，还没有启动</li>
+<li>RUNNABLE：可运行状态（调用start()方法后进入可运行状态），由线程调度器可以安排执行。包括READY和RUNNING两种细分状态，READY状态的线程主动调用Thread.yiled()方法让出CPU资源，等待线程调度器重新调起线程后获得CPU时间片继续执行，RUNNING状态的线程是正在执行的线程，正在执行的线程的执行时间就是CPU时间片的大小</li>
+<li>WAITING：线程等待被唤醒，调用Object的notify()或者notifyAll()方法后可以唤醒线程</li>
+<li>TIMED WAITING：线程等待指定时间后自动唤醒</li>
+<li>BLOCKED：线程被阻塞，正在等待synchronied锁，获得锁后进入RUNNABLE状态</li>
+<li>TERMINATED：线程结束，run()方法执行完成或者异常退出</li>
+</ol>
+<p><img src="http://doc.cloudcollect.cc/upload/2021/06/Java%E7%BA%BF%E7%A8%8B%E7%8A%B6%E6%80%81-89966ed0f8db41a6912d00d3c8ab8c11.png"></p>
+
+        
+    </div>
+    </div>
+
+    <div class="article-badge">
+        
+        
+    </div>
+
+</div>
+
+<footer class="article-footer">
+    <div class="article-more-info">
+    <div class="article-date">
+  <time datetime="2021-06-04T08:59:26.000Z" itemprop="datePublished">2021-06-04</time>
+</div>
+    
+        <div class="article-category">
+        <a class="article-category-link" href="/categories/Java/">Java</a>
+        </div>
+    
+    
+        <div class="article-tag">
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/" rel="tag">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/" rel="tag">多线程</a></li></ul>
+        </div>
+    
+    </div>
+</footer>
+
+</article>
+
+    
+  
+    
+      <article
+id="post-Java/Java 创建线程的 5 种方法"
+class="article article-type-post"
+>
+
+
+
+<div class="article-inner">
+    
+
+    <div class="article-body">
+    <header class="article-title">
+        <a href="/Java/Java%20%E5%88%9B%E5%BB%BA%E7%BA%BF%E7%A8%8B%E7%9A%84%205%20%E7%A7%8D%E6%96%B9%E6%B3%95/">Java 创建线程的 5 种方法</a>
+    </header>
+    <div class="article-entry post-inner-html">
+        
+        <h2 id="Java-创建线程的-5-种方法"><a href="#Java-创建线程的-5-种方法" class="headerlink" title="Java 创建线程的 5 种方法"></a>Java 创建线程的 5 种方法</h2><ol>
+<li>继承Thread</li>
+<li>实现Runnable接口，这种方式更加灵活，因为实现接口后还可以继承其他类</li>
+<li>使用lambda方式</li>
+<li>通过线程池创建线程</li>
+<li>实现Callable接口，通过指定泛型来决定call()方法返回值的类型，相比实现Runnable接口来说，重写的call()方法可以有返回值</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line">import java.util.concurrent.*;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * *创建线程的五种方法</span><br><span class="line"> */</span><br><span class="line">public class CreateThread &#123;</span><br><span class="line">  </span><br><span class="line">    //方式一：继承Thread</span><br><span class="line">    static class MyThread extends Thread &#123;</span><br><span class="line">        @Override</span><br><span class="line">        public void run() &#123;</span><br><span class="line">            System.out.println(&quot;Hello MyThread!&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    // 方式二：实现Runnable接口</span><br><span class="line">    static class MyRunnable implements Runnable &#123;</span><br><span class="line">        @Override</span><br><span class="line">        public void run() &#123;</span><br><span class="line">            System.out.println(&quot;Hello MyRunnable!&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    // 方式五：实现Callable接口</span><br><span class="line">    static class MyCallable implements Callable&lt;String&gt; &#123;</span><br><span class="line">        @Override</span><br><span class="line">        public String call() throws Exception &#123;</span><br><span class="line">            System.out.println(&quot;Hello MyCallable!&quot;);</span><br><span class="line">            return &quot;success&quot;;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) throws ExecutionException, InterruptedException &#123;</span><br><span class="line">        // 方式一的启动线程</span><br><span class="line">        new MyThread().start();</span><br><span class="line"></span><br><span class="line">        // 方式二的启动线程</span><br><span class="line">        new Thread(new MyRunnable()).start();</span><br><span class="line"></span><br><span class="line">        // 方式三：lambda方式</span><br><span class="line">        new Thread(() -&gt; &#123;</span><br><span class="line">            System.out.println(&quot;Hello Lambda!&quot;);</span><br><span class="line">        &#125;).start();</span><br><span class="line"></span><br><span class="line">        // 方式四：线程池方式</span><br><span class="line">        ExecutorService executorService = Executors.newCachedThreadPool();</span><br><span class="line">        executorService.execute(() -&gt; &#123;</span><br><span class="line">            System.out.println(&quot;Hello ThreadPool&quot;);</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">        // 方式五的启动线程方式之一</span><br><span class="line">        // 也可以使用以下线程池的方式将Callable对象传进去</span><br><span class="line">        FutureTask&lt;String&gt; task = new FutureTask&lt;&gt;(new MyCallable());</span><br><span class="line">        Thread thread = new Thread(task);</span><br><span class="line">        thread.start();</span><br><span class="line">        System.out.println(task.get());</span><br><span class="line"></span><br><span class="line">        // 方式五的启动线程方式之二</span><br><span class="line">        // 以线程池的方式来启动Callable类型的线程</span><br><span class="line">        // ExecutorService的submit方法可以接收Runnable或者Callable的对象</span><br><span class="line">        // Future代表是异步的，其get()方法是阻塞的，直到submit()方法中的对象（线程）就绪</span><br><span class="line">        Future&lt;String&gt; submit = executorService.submit(new MyCallable());</span><br><span class="line">        String s = submit.get();</span><br><span class="line">        System.out.println(s);</span><br><span class="line">        executorService.shutdown();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+        
+    </div>
+    </div>
+
+    <div class="article-badge">
+        
+        
+    </div>
+
+</div>
+
+<footer class="article-footer">
+    <div class="article-more-info">
+    <div class="article-date">
+  <time datetime="2021-06-04T08:53:20.000Z" itemprop="datePublished">2021-06-04</time>
+</div>
+    
+        <div class="article-category">
+        <a class="article-category-link" href="/categories/Java/">Java</a>
+        </div>
+    
+    
+        <div class="article-tag">
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/" rel="tag">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/" rel="tag">多线程</a></li></ul>
+        </div>
+    
+    </div>
+</footer>
+
+</article>
+
+    
+  
+    
+      <article
+id="post-Electron/Electron 异常：Failed to fetch extension"
+class="article article-type-post"
+>
+
+
+
+<div class="article-inner">
+    
+
+    <div class="article-body">
+    <header class="article-title">
+        <a href="/Electron/Electron%20%E5%BC%82%E5%B8%B8%EF%BC%9AFailed%20to%20fetch%20extension/">Electron异常：Failed to fetch extension</a>
+    </header>
+    <div class="article-entry post-inner-html">
+        
+        <h2 id="问题现象"><a href="#问题现象" class="headerlink" title="问题现象"></a>问题现象</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Failed to fetch extension, trying 4 more times</span><br><span class="line">Failed to fetch extension, trying 3 more times</span><br><span class="line">Failed to fetch extension, trying 2 more times</span><br><span class="line">Failed to fetch extension, trying 1 more times</span><br><span class="line">Failed to fetch extension, trying 0 more times</span><br><span class="line">Vue Devtools failed to install: Error: net::ERR_TIMED_OUT</span><br></pre></td></tr></table></figure>
+
+<h2 id="错误原因"><a href="#错误原因" class="headerlink" title="错误原因"></a>错误原因</h2><p>background.js 中安装 devtools 导致</p>
+<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>background.js中这几行注释掉</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">app.on(&#x27;ready&#x27;, async () =&gt; &#123;</span><br><span class="line">  // if (isDevelopment &amp;&amp; !process.env.IS_TEST) &#123;</span><br><span class="line">  //   // Install Vue Devtools</span><br><span class="line">  //   try &#123;</span><br><span class="line">  //     await installExtension(VUEJS_DEVTOOLS)</span><br><span class="line">  //   &#125; catch (e) &#123;</span><br><span class="line">  //     console.error(&#x27;Vue Devtools failed to install:&#x27;, e.toString())</span><br><span class="line">  //   &#125;</span><br><span class="line">  // &#125;</span><br><span class="line">  createWindow()</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+        
+    </div>
+    </div>
+
+    <div class="article-badge">
+        
+        
+    </div>
+
+</div>
+
+<footer class="article-footer">
+    <div class="article-more-info">
+    <div class="article-date">
+  <time datetime="2021-06-04T01:54:24.000Z" itemprop="datePublished">2021-06-04</time>
+</div>
+    
+        <div class="article-category">
+        <a class="article-category-link" href="/categories/Electron/">Electron</a>
+        </div>
+    
+    
+        <div class="article-tag">
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Electron/" rel="tag">Electron</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/" rel="tag">异常处理</a></li></ul>
+        </div>
+    
+    </div>
+</footer>
+
+</article>
+
+    
+  
+    
+      <article
+id="post-GCC/GCC 编译过程"
+class="article article-type-post"
+>
+
+
+
+<div class="article-inner">
+    
+
+    <div class="article-body">
+    <header class="article-title">
+        <a href="/GCC/GCC%20%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B/">GCC 编译过程</a>
+    </header>
+    <div class="article-entry post-inner-html">
+        
+        <h1 id="GCC-编译过程"><a href="#GCC-编译过程" class="headerlink" title="GCC 编译过程"></a>GCC 编译过程</h1><ul>
+<li>GCC（GUC 编译器套装，GNU Compiler Collectipon）</li>
+</ul>
+<p><img src="http://doc.cloudcollect.cc/upload/2021/04/GCC%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B-2b136eefac1b437eab9145b6ac338b54.png" alt="GCC编译过程"></p>
+<h2 id="预处理-Prepressing"><a href="#预处理-Prepressing" class="headerlink" title="预处理(Prepressing)"></a>预处理(Prepressing)</h2><h3 id="执行命令"><a href="#执行命令" class="headerlink" title="执行命令"></a>执行命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc -E hello.c -o hello.i</span><br></pre></td></tr></table></figure>
+
+<h3 id="处理过程"><a href="#处理过程" class="headerlink" title="处理过程"></a>处理过程</h3><ul>
+<li>将所有的”#define”删除，并且展开所有的宏定义</li>
+<li>处理所有条件预编译指令，比如”#if”、”#ifdef”、“#elif”、“#else”、”#endif”。</li>
+<li>处理”#include”预编译指令<ul>
+<li>将被包含的文件插入到该项预编译指令的位置</li>
+<li>注意：这个过程是递归进行的，也就是说被包含的文件可能还包含其它文件。</li>
+</ul>
+</li>
+<li>删除所有的注释”//”和”/* */”</li>
+<li>添加行号和文件名标识<ul>
+<li>便于编译时编译器产生调试用的行号信息及用于编译时产生编译错误或警告时能够显示行号。</li>
+</ul>
+</li>
+<li>保留所有的#pragma编译器指令<ul>
+<li>编译器须要使用它们</li>
+</ul>
+</li>
+</ul>
+<h2 id="编译-Compilation"><a href="#编译-Compilation" class="headerlink" title="编译(Compilation)"></a>编译(Compilation)</h2><ul>
+<li><strong>编译过程就是把预处理完的文件进行一系列词法分析、语法分析、语义分析及优化后生成相应的汇编代码文件</strong></li>
+</ul>
+<p><img src="http://doc.cloudcollect.cc/upload/2021/04/%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B-360de1c62f4a4c5c9fd2e7ed08a5f972.png" alt="编译过程"></p>
+<h3 id="执行命令-1"><a href="#执行命令-1" class="headerlink" title="执行命令"></a>执行命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc -S hello.i -o hello.s</span><br></pre></td></tr></table></figure>
+
+<p>现在版本的GCC把预编译和编译两个步骤合成一个步骤，使用如下命令，也会生成 hello.s 文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc -S hello.c -o hello.s</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<ul>
+<li>对于 C 语言来说，这个预编译和编译的程序是cc1</li>
+<li>对于 C++ 来说，有对应的程序叫做cc1plus</li>
+<li>Objective-C是cc1obj</li>
+<li>Java 是 jc1</li>
+</ul>
+<p>gcc 这个命令只是这些后台程序的包装</p>
+</blockquote>
+<h3 id="处理过程-1"><a href="#处理过程-1" class="headerlink" title="处理过程"></a>处理过程</h3><p><a target="_blank" rel="noopener" href="http://doc.cloudcollect.cc/archives/gcc%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B-%E7%BC%96%E8%AF%91compilation%E7%9A%846%E4%B8%AA%E6%AD%A5%E9%AA%A4">编译 (compilation) 的6个步骤</a></p>
+<h2 id="汇编-Assembly"><a href="#汇编-Assembly" class="headerlink" title="汇编(Assembly)"></a>汇编(Assembly)</h2><h3 id="执行命令-2"><a href="#执行命令-2" class="headerlink" title="执行命令"></a>执行命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc -c hello.s -o hello.o</span><br></pre></td></tr></table></figure>
+
+<p>也可以直接进行编译</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc -c hello.c -o hello.o</span><br></pre></td></tr></table></figure>
+
+<p>查看汇编代码</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">objdump -d -M intel -S test.o</span><br></pre></td></tr></table></figure>
+
+<h3 id="处理过程-2"><a href="#处理过程-2" class="headerlink" title="处理过程"></a>处理过程</h3><ul>
+<li>汇编器是将汇编代码转变成机器可以执行的指令</li>
+<li><strong>汇编过程只是根据汇编指令和机器指令的对照表一一翻译</strong><ul>
+<li>没有复杂的语法</li>
+<li>没有语义</li>
+<li>也不需要做指令优化</li>
+</ul>
+</li>
+<li><strong>每一个汇编语句几乎都对应一条机器指令</strong></li>
+</ul>
+<p><strong>符号 (Symbol) 用来表示一个地址</strong></p>
+<ul>
+<li>这个地址可能是一段子程序(后来发展成函数)的起始地址，</li>
+<li>也可以是一个变量的起始地址</li>
+</ul>
+<h2 id="链接-Linking"><a href="#链接-Linking" class="headerlink" title="链接(Linking)"></a>链接(Linking)</h2><ul>
+<li>链接的过程就是组装模块的过程<ul>
+<li><strong>每个源代码模块独立地编译</strong></li>
+<li><strong>然后按照须要将它们 <code>组装</code> 起来</strong></li>
+</ul>
+</li>
+<li>链接的主要内容就是把各个模块之间相互引用的部分都处理好，使得各个模块之间能够正确地衔接。</li>
+<li>从原理上来讲，链接器的工作就是<strong>把一些指令对其它符号地址的引用加以修正</strong></li>
+</ul>
+<h3 id="处理过程-3"><a href="#处理过程-3" class="headerlink" title="处理过程"></a>处理过程</h3><ul>
+<li>链接过程主要包括：<ul>
+<li><strong>地址和空间分配(Address and Storage Allocation)</strong></li>
+<li><strong>符号决议(Symbol Resolution)</strong></li>
+<li><strong>重定位(Relocation)</strong></li>
+<li>……</li>
+</ul>
+</li>
+</ul>
+<h3 id="静态链接的最基本的过程和作用"><a href="#静态链接的最基本的过程和作用" class="headerlink" title="静态链接的最基本的过程和作用"></a><strong>静态链接的最基本的过程和作用</strong></h3><ul>
+<li><p>在编译器编译main.c的时候它并不知道foo函数的地址，</p>
+</li>
+<li><p>所以它暂时把这些调用foo的指令的目标地址搁置，</p>
+</li>
+<li><p>等待最后链接的时候由链接器去将这些指令的目标地址修正。</p>
+<ul>
+<li>如果没有链接器，须要我们手工把每个调用foo的指令进行修正，则填入正确的foo函数地址。</li>
+<li>当func.c模块被重新编译，foo函数的地址有可能改变时，那么我们在main.c中所有使用到foo的地址的指令将要全部重新调整。</li>
+</ul>
+</li>
+<li><p>使用链接器，你可以直接引用其它模块的函数和全局变量而无需知道它们的地址</p>
+<ul>
+<li>链接器在链接的时候，会根据你所引用的符号foo，自动去相应的func.o模块查找foo的地址</li>
+<li>然后将main.c模块中所有引用到foo的指令重新修正</li>
+</ul>
+</li>
+</ul>
+
+        
+    </div>
+    </div>
+
+    <div class="article-badge">
+        
+        
+    </div>
+
+</div>
+
+<footer class="article-footer">
+    <div class="article-more-info">
+    <div class="article-date">
+  <time datetime="2021-04-30T07:43:45.237Z" itemprop="datePublished">2021-04-30</time>
+</div>
+    
+        <div class="article-category">
+        <a class="article-category-link" href="/categories/C/">C++</a>
+        </div>
+    
+    
+        <div class="article-tag">
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/" rel="tag">C++</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/" rel="tag">计算机组成原理</a></li></ul>
+        </div>
+    
+    </div>
+</footer>
+
+</article>
+
+    
+  
+    
+      <article
+id="post-GCC/GCC 编译过程 - 编译 (Compilation) 的 6 个步骤"
+class="article article-type-post"
+>
+
+
+
+<div class="article-inner">
+    
+
+    <div class="article-body">
+    <header class="article-title">
+        <a href="/GCC/GCC%20%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B%20-%20%E7%BC%96%E8%AF%91%20(Compilation)%20%E7%9A%84%206%20%E4%B8%AA%E6%AD%A5%E9%AA%A4/">GCC 编译过程 - 编译 (Compilation) 的 6 个步骤</a>
+    </header>
+    <div class="article-entry post-inner-html">
+        
+        <h1 id="编译-Compilation-的-6-个步骤"><a href="#编译-Compilation-的-6-个步骤" class="headerlink" title="编译 (Compilation) 的 6 个步骤"></a>编译 (Compilation) 的 6 个步骤</h1><h2 id="词法分析"><a href="#词法分析" class="headerlink" title="词法分析"></a>词法分析</h2><ul>
+<li>首先源代码程序被输入到扫描器(Scanner)</li>
+<li>运用一种类似于有限状态机(Finite State Machine)的算法可以很轻松地将源代码的字符序列分割成一系列的记号(Token)</li>
+<li>产生的记号分为几大类：<ul>
+<li>关键字</li>
+<li>标识符</li>
+<li>字面量(包含数字、字符串等)</li>
+<li>特殊符号(如加号、等号)</li>
+</ul>
+</li>
+<li>可用工具：<ul>
+<li><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Lex">lex</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="语法分析"><a href="#语法分析" class="headerlink" title="语法分析"></a>语法分析</h2><ul>
+<li>语法分析器(Grammar Parser)将对由扫描器产生的记号进行语法分析，从而产生语法树(Syntax Tree)</li>
+<li>整个分析过程采用了上下文无关语法(Context-free Grammar)的分析手段</li>
+<li>语法树就是以表达式(Expression)为节点的树<ul>
+<li>C语言的一个语句是一个表达式</li>
+<li>复杂的语句是很多表达式的组合</li>
+</ul>
+</li>
+<li>语法分析阶段必须对表达式内容进行区分，<ul>
+<li>如果出现了表达式不合法，<ul>
+<li>比如各种括号不匹配、</li>
+<li>表达式中缺少操作符等</li>
+</ul>
+</li>
+<li>编译器就会报告语法分析阶段的错误</li>
+</ul>
+</li>
+<li>可用工具：<ul>
+<li><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Yacc">yacc</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="语义分析"><a href="#语义分析" class="headerlink" title="语义分析"></a>语义分析</h2><ul>
+<li>由语义分析器(Semantic Analyzer)完成</li>
+<li>判断语句是否真正有意义<ul>
+<li>如一个指针和一个浮点数做乘法运算是否合法等</li>
+</ul>
+</li>
+<li><strong>编译器所能分析的语义是静态语义(Static Semantic)</strong><ul>
+<li><strong>静态语义是指在编译期可以确定的语义</strong><ul>
+<li>静态语义通常包括声明和类型的匹配，类型的转换</li>
+<li>比如当一个浮点型的表达式赋值给一个整型的表达式时，其中隐含了一个浮点到整型转换的过程，语义分析过程中需要完成这个步骤</li>
+<li>比如将一个浮点型赋值给一个指针的时候，语义分析程序会发现这个类型不匹配，编译器将会报错</li>
+</ul>
+</li>
+<li>与之对应的动态语义 (Dynamic Semantic) 就是只有在运行期才能确定的语义<ul>
+<li>比如将0作为除数是一个运行期语义错误</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>经过语义分析阶段以后，整个语法树的表达式都被标识了类型<ul>
+<li>如果有些类型需要做隐式转换，语义分析程序会在语法树中插入相应的转换节点</li>
+</ul>
+</li>
+</ul>
+<h2 id="源代码优化"><a href="#源代码优化" class="headerlink" title="源代码优化"></a>源代码优化</h2><ul>
+<li>往往在源代码级别会有一个优化过程，使用源码级优化器 (Source Code Optimizer)<ul>
+<li>不同的编译器中可能会有不同的定义或有一些其它的差异</li>
+</ul>
+</li>
+<li>源代码优化器往往将整个语法树转换成中间代码(Intermediate Code)，</li>
+<li>它是语法树的顺序表示</li>
+<li>一般跟目标机器和运行时环境是无关的</li>
+<li>中间代码使得编译器可以被分为前端和后端<ul>
+<li><strong>编译器前端负责产生机器无关的中间代码</strong></li>
+<li><strong>编译器后端将中间代码转换成目标机器代码</strong></li>
+<li>这样对于一些可以跨平台的编译器而言，它们可以针对不同的平台使用同一个前端和针对不同机器平台的数个后端</li>
+</ul>
+</li>
+</ul>
+<h2 id="代码生成"><a href="#代码生成" class="headerlink" title="代码生成"></a>代码生成</h2><ul>
+<li>属于编译器后端</li>
+<li>代码生成器(Code Generator)</li>
+<li>将中间代码转换成目标机器代码<ul>
+<li><strong>过程十分依赖于目标机器</strong></li>
+<li><strong>因为不同的机器有着不同的字长、寄存器、整数数据类型和浮点数数据类型等</strong></li>
+</ul>
+</li>
+</ul>
+<h2 id="目标代码优化"><a href="#目标代码优化" class="headerlink" title="目标代码优化"></a>目标代码优化</h2><ul>
+<li>属于编译器后端</li>
+<li>目标代码优化器(Target Code Optimizer)</li>
+<li>对目标代码进行优化<ul>
+<li>比如选择合适的寻址方式</li>
+<li>使用位移来代替乘法运算</li>
+<li>删除多余的指令</li>
+<li>……</li>
+</ul>
+</li>
+</ul>
+
+        
+    </div>
+    </div>
+
+    <div class="article-badge">
+        
+        
+    </div>
+
+</div>
+
+<footer class="article-footer">
+    <div class="article-more-info">
+    <div class="article-date">
+  <time datetime="2021-04-30T07:43:40.948Z" itemprop="datePublished">2021-04-30</time>
+</div>
+    
+        <div class="article-category">
+        <a class="article-category-link" href="/categories/C/">C++</a>
+        </div>
+    
+    
+        <div class="article-tag">
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/" rel="tag">C++</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/" rel="tag">计算机组成原理</a></li></ul>
+        </div>
+    
+    </div>
+</footer>
+
+</article>
+
+    
+  
+    
+      <article
+id="post-计算机网络/PKCS 发布的 15 个标准"
+class="article article-type-post"
+>
+
+
+
+<div class="article-inner">
+    
+
+    <div class="article-body">
+    <header class="article-title">
+        <a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/PKCS%20%E5%8F%91%E5%B8%83%E7%9A%84%2015%20%E4%B8%AA%E6%A0%87%E5%87%86/">PKCS 发布的 15 个标准</a>
+    </header>
+    <div class="article-entry post-inner-html">
+        
+        <h1 id="PKCS-发布的-15-个标准"><a href="#PKCS-发布的-15-个标准" class="headerlink" title="PKCS 发布的 15 个标准"></a>PKCS 发布的 15 个标准</h1><ul>
+<li><p>The Public-Key Cryptography Standards</p>
+</li>
+<li><p>由美国RSA<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%95%B0%E6%8D%AE%E5%AE%89%E5%85%A8/3204964">数据安全</a>公司及其合作伙伴制定的一组公钥密码学标准，</p>
+</li>
+<li><p>其中包括证书申请、证书更新、证书作废表发布、扩展证书内容以及<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%95%B0%E5%AD%97%E7%AD%BE%E5%90%8D/212550">数字签名</a>、<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%95%B0%E5%AD%97%E4%BF%A1%E5%B0%81/425647">数字信封</a>的格式等方面的一系列相关协议。</p>
+</li>
+</ul>
+<h2 id="PKCS-1：RSA加密标准"><a href="#PKCS-1：RSA加密标准" class="headerlink" title="PKCS#1：RSA加密标准"></a>PKCS#1：RSA加密标准</h2><ul>
+<li>PKCS#1定义了RSA公钥函数的基本格式标准，特别是数字签名。</li>
+<li>它定义了数字签名如何计算，包括待签名数据和签名本身的格式；</li>
+<li>它也定义了PSA公/私钥的语法。</li>
+</ul>
+<h2 id="PKCS-2"><a href="#PKCS-2" class="headerlink" title="PKCS#2"></a>PKCS#2</h2><p>涉及了RSA的消息摘要加密，这已被并入PKCS#1中。</p>
+<h2 id="PKCS-3：Diffie-Hellman密钥协议标准"><a href="#PKCS-3：Diffie-Hellman密钥协议标准" class="headerlink" title="PKCS#3：Diffie-Hellman密钥协议标准"></a>PKCS#3：Diffie-Hellman密钥协议标准</h2><p>PKCS#3描述了一种实现Diffie- Hellman密钥协议的方法。</p>
+<h2 id="PKCS-4"><a href="#PKCS-4" class="headerlink" title="PKCS#4"></a>PKCS#4</h2><p>最初是规定RSA密钥语法的，现已经被包含进PKCS#1中。</p>
+<h2 id="PKCS-5：基于口令的加密标准"><a href="#PKCS-5：基于口令的加密标准" class="headerlink" title="PKCS#5：基于口令的加密标准"></a>PKCS#5：基于口令的加密标准</h2><p>PKCS#5描述了使用由口令生成的密钥来加密8位位组串并产生一个加密的8位位组串的方法。</p>
+<p>PKCS#5可以用于加密私钥，以便于密钥的安全传输（这在PKCS#8中描述）。</p>
+<h2 id="PKCS-6：扩展证书语法标准"><a href="#PKCS-6：扩展证书语法标准" class="headerlink" title="PKCS#6：扩展证书语法标准"></a>PKCS#6：扩展证书语法标准</h2><p>PKCS#6定义了提供附加实体信息的X.509证书属性扩展的语法</p>
+<p>（当PKCS#6第一次发布时，X.509还不支持扩展。这些扩展因此被包括在X.509中）。</p>
+<h2 id="PKCS-7：密码消息语法标准"><a href="#PKCS-7：密码消息语法标准" class="headerlink" title="PKCS#7：密码消息语法标准"></a>PKCS#7：密码消息语法标准</h2><p>PKCS#7为使用密码算法的数据规定了通用语法，比如数字签名和数字信封。</p>
+<p>PKCS#7提供了许多格式选项，包括未加密或签名的格式化消息、已封装（加密）消息、已签名消息和既经过签名又经过加密的消息。</p>
+<h2 id="PKCS-8：私钥信息语法标准"><a href="#PKCS-8：私钥信息语法标准" class="headerlink" title="PKCS#8：私钥信息语法标准"></a>PKCS#8：私钥信息语法标准</h2><p>PKCS#8定义了私钥信息语法和加密私钥语法，其中私钥加密使用了PKCS#5标准。</p>
+<h2 id="PKCS-9：可选属性类型"><a href="#PKCS-9：可选属性类型" class="headerlink" title="PKCS#9：可选属性类型"></a>PKCS#9：可选属性类型</h2><p>PKCS#9定义了PKCS#6扩展证书、PKCS#7数字签名消息、PKCS#8私钥信息和PKCS#10证书签名请求中要用到的可选属性类型。</p>
+<p>已定义的证书属性包括E-mail地址、无格式姓名、内容类型、消息摘要、签名时间、签名副本（counter signature）、质询口令字和扩展证书属性。</p>
+<h2 id="PKCS-10：证书请求语法标准"><a href="#PKCS-10：证书请求语法标准" class="headerlink" title="PKCS#10：证书请求语法标准"></a>PKCS#10：证书请求语法标准</h2><p>PKCS#10定义了证书请求的语法。</p>
+<p>证书请求包含了一个唯一识别名、公钥和可选的一组属性，它们一起被请求证书的实体签名（证书管理协议中的PKIX证书请求消息就是一个PKCS#10）。</p>
+<h2 id="PKCS-11：密码令牌接口标准"><a href="#PKCS-11：密码令牌接口标准" class="headerlink" title="PKCS#11：密码令牌接口标准"></a>PKCS#11：密码令牌接口标准</h2><p>PKCS#11或“Cryptoki”为拥有密码信息（如加密密钥和证书）和执行密码学函数的单用户设备定义了一个应用程序接口（API）。</p>
+<p>智能卡就是实现Cryptoki的典型设备。</p>
+<p>注意：Cryptoki定义了密码函数接口，但并未指明设备具体如何实现这些函数。而且Cryptoki只说明了密码接口，并未定义对设备来说可能有用的其他接口，如访问设备的文件系统接口。</p>
+<h2 id="PKCS-12：个人信息交换语法标准"><a href="#PKCS-12：个人信息交换语法标准" class="headerlink" title="PKCS#12：个人信息交换语法标准"></a>PKCS#12：个人信息交换语法标准</h2><p>PKCS#12定义了个人身份信息（包括私钥、证书、各种秘密和扩展字段）的格式。</p>
+<p>PKCS#12有助于传输证书及对应的私钥，于是用户可以在不同设备间移动他们的个人身份信息。</p>
+<h2 id="PDCS-13：椭圆曲线密码标准"><a href="#PDCS-13：椭圆曲线密码标准" class="headerlink" title="PDCS#13：椭圆曲线密码标准"></a>PDCS#13：椭圆曲线密码标准</h2><p>PKCS#13标准当前正在完善之中。</p>
+<p>它包括椭圆曲线参数的生成和验证、密钥生成和验证、数字签名和公钥加密，还有密钥协定，以及参数、密钥和方案标识的ASN.1语法。</p>
+<h2 id="PKCS-14：伪随机数产生标准"><a href="#PKCS-14：伪随机数产生标准" class="headerlink" title="PKCS#14：伪随机数产生标准"></a>PKCS#14：伪随机数产生标准</h2><p>PKCS#14标准当前正在完善之中。</p>
+<p>为什么随机数生成也需要建立自己的标准呢？PKI中用到的许多基本的密码学函数，如密钥生成和Diffie-Hellman共享密钥协商，都需要使用随机数。然而，如果“随机数”不是随机的，而是取自一个可预测的取值集合，那么密码学函数就不再是绝对安全了，因为它的取值被限于一个缩小了的值域中。因此，安全伪随机数的生成对于PKI的安全极为关键。</p>
+<h2 id="PKCS-15：密码令牌信息语法标准"><a href="#PKCS-15：密码令牌信息语法标准" class="headerlink" title="PKCS#15：密码令牌信息语法标准"></a>PKCS#15：密码令牌信息语法标准</h2><p>PKCS#15通过定义令牌上存储的密码对象的通用格式来增进密码令牌的互操作性。</p>
+<p>在实现PKCS#15的设备上存储的数据对于使用该设备的所有应用程序来说都是一样的，尽管实际上在内部实现时可能所用的格式不同。</p>
+<p>PKCS#15的实现扮演了翻译家的角色，它在卡的内部格式与应用程序支持的数据格式间进行转换。</p>
+
+        
+    </div>
+    </div>
+
+    <div class="article-badge">
+        
+        
+    </div>
+
+</div>
+
+<footer class="article-footer">
+    <div class="article-more-info">
+    <div class="article-date">
+  <time datetime="2021-04-28T04:45:38.000Z" itemprop="datePublished">2021-04-28</time>
+</div>
+    
+        <div class="article-category">
+        <a class="article-category-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a>
+        </div>
+    
+    
+        <div class="article-tag">
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" rel="tag">计算机网络</a></li></ul>
+        </div>
+    
+    </div>
+</footer>
+
+</article>
+
+    
+  
+    
+      <article
+id="post-常用工具/Vditor 快捷键"
+class="article article-type-post"
+>
+
+
+
+<div class="article-inner">
+    
+
+    <div class="article-body">
+    <header class="article-title">
+        <a href="/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/Vditor%20%E5%BF%AB%E6%8D%B7%E9%94%AE/">Vditor 快捷键</a>
+    </header>
+    <div class="article-entry post-inner-html">
+        
+        <h1 id="通用"><a href="#通用" class="headerlink" title="通用"></a>通用</h1><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>快捷键</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>表情</td>
+<td>:/⌘ E</td>
+<td></td>
+</tr>
+<tr>
+<td>标题</td>
+<td>Ctrl H / ⌘ H</td>
+<td>参见下文</td>
+</tr>
+<tr>
+<td>粗体</td>
+<td>Ctrl B / ⌘ B</td>
+<td></td>
+</tr>
+<tr>
+<td>斜体</td>
+<td>Ctrl I / ⌘ I</td>
+<td></td>
+</tr>
+<tr>
+<td>删除线</td>
+<td>Ctrl S / ⌘ S</td>
+<td></td>
+</tr>
+<tr>
+<td>链接</td>
+<td>Ctrl K / ⌘ K</td>
+<td>参见下文</td>
+</tr>
+<tr>
+<td>无序列表</td>
+<td>Ctrl L / ⌘ L</td>
+<td>参见下文</td>
+</tr>
+<tr>
+<td>有序列表</td>
+<td>Ctrl O / ⌘ O</td>
+<td>参见下文</td>
+</tr>
+<tr>
+<td>任务列表</td>
+<td>Ctrl J / ⌘ J</td>
+<td>参见下文</td>
+</tr>
+<tr>
+<td>引用</td>
+<td>Ctrl ; / ⌘ ;</td>
+<td>参见下文</td>
+</tr>
+<tr>
+<td>分割线</td>
+<td>Ctrl Shift H  / ⌘ ⇧ H</td>
+<td></td>
+</tr>
+<tr>
+<td>代码块</td>
+<td>Ctrl U / ⌘ U</td>
+<td>参见下文</td>
+</tr>
+<tr>
+<td>代码</td>
+<td>Ctrl G / ⌘ G</td>
+<td></td>
+</tr>
+<tr>
+<td>元素前插入空块</td>
+<td>Ctrl Shift B / ⌘ ⇧ B</td>
+<td>wysiwyg &amp; ir 模式</td>
+</tr>
+<tr>
+<td>元素后插入空块</td>
+<td>Ctrl Shift E / ⌘ ⇧ E</td>
+<td>wysiwyg &amp; ir 模式</td>
+</tr>
+<tr>
+<td>表格</td>
+<td>Ctrl M / ⌘ M</td>
+<td>参见下文</td>
+</tr>
+<tr>
+<td>撤销</td>
+<td>Ctrl Z / ⌘ Z</td>
+<td></td>
+</tr>
+<tr>
+<td>重做</td>
+<td>Ctrl Y / ⌘ Y</td>
+<td></td>
+</tr>
+<tr>
+<td>隐藏编辑器</td>
+<td>Ctrl P / ⌘ P</td>
+<td>sv 模式</td>
+</tr>
+<tr>
+<td>全屏</td>
+<td>Ctrl ‘ / ⌘ ‘</td>
+<td></td>
+</tr>
+<tr>
+<td>向上移动块元素</td>
+<td>Ctrl Shift U / ⌘ ⇧ U</td>
+<td>wysiwyg &amp; ir 模式</td>
+</tr>
+<tr>
+<td>向下移动块元素</td>
+<td>Ctrl Shift D / ⌘ ⇧ D</td>
+<td>wysiwyg &amp; ir 模式</td>
+</tr>
+<tr>
+<td>移除当前元素</td>
+<td>Ctrl Shift X / ⌘ ⇧ X</td>
+<td>wysiwyg 模式</td>
+</tr>
+<tr>
+<td>At 用户</td>
+<td>@</td>
+<td></td>
+</tr>
+<tr>
+<td>错误输入</td>
+<td>Backspace</td>
+<td></td>
+</tr>
+</tbody></table>
+<h1 id="标题-Ctrl-H-⌘-H"><a href="#标题-Ctrl-H-⌘-H" class="headerlink" title="标题 Ctrl H / ⌘ H"></a>标题 Ctrl H / ⌘ H</h1><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>快捷键</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>变大</td>
+<td>Ctrl + / ⌘ +</td>
+</tr>
+<tr>
+<td>变小</td>
+<td>Ctrl - / ⌘ -</td>
+</tr>
+<tr>
+<td>H1-H6</td>
+<td>Ctrl Alt 1/2/3/4/5/6 / ⌘ ⌥ 1/2/3/4/5/6</td>
+</tr>
+<tr>
+<td>弹出菜单</td>
+<td>Ctrl H / ⌘ H</td>
+</tr>
+</tbody></table>
+<h1 id="链接-Ctrl-K-⌘-K"><a href="#链接-Ctrl-K-⌘-K" class="headerlink" title="链接 Ctrl K / ⌘ K"></a>链接 Ctrl K / ⌘ K</h1><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>快捷键</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>输入框和元素之间切换</td>
+<td>Alt Enter / ⌥ Enter</td>
+</tr>
+<tr>
+<td>输入框之间切换</td>
+<td>Tab</td>
+</tr>
+</tbody></table>
+<h1 id="列表-Ctrl-L-O-J-⌘-L-O-J"><a href="#列表-Ctrl-L-O-J-⌘-L-O-J" class="headerlink" title="列表 Ctrl L/O/J / ⌘ L/O/J"></a>列表 Ctrl L/O/J / ⌘ L/O/J</h1><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>快捷键</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>缩进</td>
+<td>Tab<br/>Ctrl Shift I / ⌘ ⇧ I</td>
+<td>Tab: 光标需位于开头</td>
+</tr>
+<tr>
+<td>反向缩进</td>
+<td>Shift Tab / ⇧ Tab<br/>Ctrl Shift O / ⌘ ⇧ O<br/>Enter</td>
+<td>Shift Tab / ⇧ Tab: 光标需位于开头<br/>Enter: 需为空列表项</td>
+</tr>
+<tr>
+<td>完成和待办之间切换</td>
+<td>Ctrl Shift J / ⌘ ⇧ J</td>
+<td>任务列表</td>
+</tr>
+</tbody></table>
+<h1 id="引用-Ctrl-⌘"><a href="#引用-Ctrl-⌘" class="headerlink" title="引用 Ctrl ; / ⌘ ;"></a>引用 Ctrl ; / ⌘ ;</h1><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>快捷键</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>在顶层引用前插入空块</td>
+<td>Ctrl Alt Enter / ⌘ ⌥ Enter</td>
+<td>wysiwyg 模式</td>
+</tr>
+<tr>
+<td>在顶层引用后插入空块</td>
+<td>Alt Enter / ⌥ Enter</td>
+<td>wysiwyg 模式</td>
+</tr>
+<tr>
+<td>插入块元素</td>
+<td>Ctrl Shift : / ⌘ ⇧ :<br/> &gt;</td>
+<td>Ctrl Shift : / ⌘ ⇧ :: 块元素变为引用<br/>&gt;: 内联元素中插入引用</td>
+</tr>
+<tr>
+<td>引用和块元素之间切换</td>
+<td>Ctrl ; / ⌘ ;</td>
+<td></td>
+</tr>
+</tbody></table>
+<h1 id="代码块-Ctrl-U-⌘-U"><a href="#代码块-Ctrl-U-⌘-U" class="headerlink" title="代码块 Ctrl U / ⌘ U"></a>代码块 Ctrl U / ⌘ U</h1><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>快捷键</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>输入框和代码块之间切换</td>
+<td>Alt Enter / ⌥ Enter</td>
+</tr>
+<tr>
+<td>隐藏编辑界面</td>
+<td>Escape</td>
+</tr>
+<tr>
+<td>选中所有代码</td>
+<td>Ctrl A / ⌘ A</td>
+</tr>
+</tbody></table>
+<h1 id="表格-Ctrl-M-⌘-M"><a href="#表格-Ctrl-M-⌘-M" class="headerlink" title="表格 Ctrl M / ⌘ M"></a>表格 Ctrl M / ⌘ M</h1><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>快捷键</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>在上方插入一行</td>
+<td>Ctrl + / ⌘ ⇧ F</td>
+</tr>
+<tr>
+<td>在下方插入一行</td>
+<td>Ctrl + / ⌘ +</td>
+</tr>
+<tr>
+<td>删除行</td>
+<td>Ctrl - / ⌘ -</td>
+</tr>
+<tr>
+<td>在左边插入一列</td>
+<td>Ctrl Shift + / ⌘ ⇧ G</td>
+</tr>
+<tr>
+<td>在右边插入一列</td>
+<td>Ctrl Shift + / ⌘ ⇧ +</td>
+</tr>
+<tr>
+<td>删除列</td>
+<td>Ctrl Shift - / ⌘ ⇧ -</td>
+</tr>
+<tr>
+<td>左对齐</td>
+<td>Ctrl Shift L / ⌘ ⇧ L</td>
+</tr>
+<tr>
+<td>中对齐</td>
+<td>Ctrl Shift C / ⌘ ⇧ C</td>
+</tr>
+<tr>
+<td>右对齐</td>
+<td>Ctrl Shift R / ⌘ ⇧ R</td>
+</tr>
+<tr>
+<td>光标移动到输入框中</td>
+<td>Alt Enter / ⌥ Enter</td>
+</tr>
+<tr>
+<td>输入框之间切换</td>
+<td>Tab</td>
+</tr>
+<tr>
+<td>将光标移动到上一个元素</td>
+<td>Shift Tab / ⇧ Tab<br/>Backspace</td>
+</tr>
+<tr>
+<td>将光标移动到下一个元素</td>
+<td>Tab</td>
+</tr>
+</tbody></table>
+
+        
+    </div>
+    </div>
+
+    <div class="article-badge">
+        
+        
+    </div>
+
+</div>
+
+<footer class="article-footer">
+    <div class="article-more-info">
+    <div class="article-date">
+  <time datetime="2021-04-27T03:38:02.000Z" itemprop="datePublished">2021-04-27</time>
+</div>
+    
+        <div class="article-category">
+        <a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
+        </div>
+    
+    
+        <div class="article-tag">
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Vditor/" rel="tag">Vditor</a></li></ul>
+        </div>
+    
+    </div>
+</footer>
+
+</article>
+
+    
+  
+    
+      <article
+id="post-C/C 语言基本数据类型"
+class="article article-type-post"
+>
+
+
+
+<div class="article-inner">
+    
+
+    <div class="article-body">
+    <header class="article-title">
+        <a href="/C/C%20%E8%AF%AD%E8%A8%80%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">C 语言基本数据类型</a>
+    </header>
+    <div class="article-entry post-inner-html">
+        
+        <h1 id="整数类型"><a href="#整数类型" class="headerlink" title="整数类型"></a>整数类型</h1><table>
+<thead>
+<tr>
+<th>类型</th>
+<th>存储大小</th>
+<th>值范围</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>char</td>
+<td>1 字节</td>
+<td>-128 到 127 或 0 到 255</td>
+</tr>
+<tr>
+<td>unsigned char</td>
+<td>1 字节</td>
+<td>0 到 255</td>
+</tr>
+<tr>
+<td>signed char</td>
+<td>1 字节</td>
+<td>-128 到 127</td>
+</tr>
+<tr>
+<td>int</td>
+<td>2 或 4 字节</td>
+<td>-32,768 到 32,767 或 -2,147,483,648 到 2,147,483,647</td>
+</tr>
+<tr>
+<td>unsigned int</td>
+<td>2 或 4 字节</td>
+<td>0 到 65,535 或 0 到 4,294,967,295</td>
+</tr>
+<tr>
+<td>short</td>
+<td>2 字节</td>
+<td>-32,768 到 32,767</td>
+</tr>
+<tr>
+<td>unsigned short</td>
+<td>2 字节</td>
+<td>0 到 65,535</td>
+</tr>
+<tr>
+<td>long</td>
+<td>4 字节</td>
+<td>-2,147,483,648 到 2,147,483,647</td>
+</tr>
+<tr>
+<td>unsigned long</td>
+<td>4 字节</td>
+<td>0 到 4,294,967,295</td>
+</tr>
+</tbody></table>
+<h1 id="浮点类型"><a href="#浮点类型" class="headerlink" title="浮点类型"></a>浮点类型</h1><table>
+<thead>
+<tr>
+<th>类型</th>
+<th>存储大小</th>
+<th>值范围</th>
+<th>精度</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>float</td>
+<td>4 字节</td>
+<td>1.2E-38 到 3.4E+38</td>
+<td>6 位小数</td>
+</tr>
+<tr>
+<td>double</td>
+<td>8 字节</td>
+<td>2.3E-308 到 1.7E+308</td>
+<td>15 位小数</td>
+</tr>
+<tr>
+<td>long double</td>
+<td>16 字节</td>
+<td>3.4E-4932 到 1.1E+4932</td>
+<td>19 位小数</td>
+</tr>
+</tbody></table>
+
+        
+    </div>
+    </div>
+
+    <div class="article-badge">
+        
+        
+    </div>
+
+</div>
+
+<footer class="article-footer">
+    <div class="article-more-info">
+    <div class="article-date">
+  <time datetime="2021-04-27T03:09:17.000Z" itemprop="datePublished">2021-04-27</time>
+</div>
+    
+        <div class="article-category">
+        <a class="article-category-link" href="/categories/C/">C</a>
+        </div>
+    
+    
+        <div class="article-tag">
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/" rel="tag">C</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%80%9F%E6%9F%A5/" rel="tag">速查</a></li></ul>
+        </div>
+    
+    </div>
+</footer>
+
+</article>
+
+    
+  
+    
+      <article
+id="post-MySQL/MySQL 函数列表"
+class="article article-type-post"
+>
+
+
+
+<div class="article-inner">
+    
+
+    <div class="article-body">
+    <header class="article-title">
+        <a href="/MySQL/MySQL%20%E5%87%BD%E6%95%B0%E5%88%97%E8%A1%A8/">MySQL 函数列表</a>
+    </header>
+    <div class="article-entry post-inner-html">
+        
+        <h1 id="MySQL-数值型函数"><a href="#MySQL-数值型函数" class="headerlink" title="MySQL 数值型函数"></a>MySQL 数值型函数</h1><table>
+<thead>
+<tr>
+<th>函数名称</th>
+<th>作 用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a target="_blank" rel="noopener" href="http://c.biancheng.net/mysql/abc.html">ABS</a></td>
+<td>求绝对值</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="http://c.biancheng.net/mysql/sqrt.html">SQRT</a></td>
+<td>求二次方根</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="http://c.biancheng.net/mysql/mod.html">MOD</a></td>
+<td>求余数</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="http://c.biancheng.net/mysql/ceil_celing.html">CEIL 和 CEILING</a></td>
+<td>两个函数功能相同，都是返回不小于参数的最小整数，即向上取整</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="http://c.biancheng.net/mysql/floor.html">FLOOR</a></td>
+<td>向下取整，返回值转化为一个BIGINT</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="http://c.biancheng.net/mysql/rand.html">RAND</a></td>
+<td>生成一个0~1之间的随机数，传入整数参数是，用来产生重复序列</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="http://c.biancheng.net/mysql/round.html">ROUND</a></td>
+<td>对所传参数进行四舍五入</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="http://c.biancheng.net/mysql/sign.html">SIGN</a></td>
+<td>返回参数的符号</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="http://c.biancheng.net/mysql/pow_power.html">POW 和 POWER</a></td>
+<td>两个函数的功能相同，都是所传参数的次方的结果值</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="http://c.biancheng.net/mysql/sin.html">SIN</a></td>
+<td>求正弦值</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="http://c.biancheng.net/mysql/asin.html">ASIN</a></td>
+<td>求反正弦值，与函数 SIN 互为反函数</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="http://c.biancheng.net/mysql/cos.html">COS</a></td>
+<td>求余弦值</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="http://c.biancheng.net/mysql/acos.html">ACOS</a></td>
+<td>求反余弦值，与函数 COS 互为反函数</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="http://c.biancheng.net/mysql/tan.html">TAN</a></td>
+<td>求正切值</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="http://c.biancheng.net/mysql/atan.html">ATAN</a></td>
+<td>求反正切值，与函数 TAN 互为反函数</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="http://c.biancheng.net/mysql/cot.html">COT</a></td>
+<td>求余切值</td>
+</tr>
+</tbody></table>
+<h1 id="MySQL-字符串函数"><a href="#MySQL-字符串函数" class="headerlink" title="MySQL 字符串函数"></a>MySQL 字符串函数</h1><table>
+<thead>
+<tr>
+<th>函数名称</th>
+<th>作 用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a target="_blank" rel="noopener" href="http://c.biancheng.net/mysql/length.html">LENGTH</a></td>
+<td>计算字符串长度函数，返回字符串的字节长度</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="http://c.biancheng.net/mysql/concat.html">CONCAT</a></td>
+<td>合并字符串函数，返回结果为连接参数产生的字符串，参数可以使一个或多个</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="http://c.biancheng.net/mysql/insert.html">INSERT</a></td>
+<td>替换字符串函数</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="http://c.biancheng.net/mysql/lower.html">LOWER</a></td>
+<td>将字符串中的字母转换为小写</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="http://c.biancheng.net/mysql/upper.html">UPPER</a></td>
+<td>将字符串中的字母转换为大写</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="http://c.biancheng.net/mysql/left.html">LEFT</a></td>
+<td>从左侧字截取符串，返回字符串左边的若干个字符</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="http://c.biancheng.net/mysql/right.html">RIGHT</a></td>
+<td>从右侧字截取符串，返回字符串右边的若干个字符</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="http://c.biancheng.net/mysql/trim.html">TRIM</a></td>
+<td>删除字符串左右两侧的空格</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="http://c.biancheng.net/mysql/replace.html">REPLACE</a></td>
+<td>字符串替换函数，返回替换后的新字符串</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="http://c.biancheng.net/mysql/substring.html">SUBSTRING</a></td>
+<td>截取字符串，返回从指定位置开始的指定长度的字符换</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="http://c.biancheng.net/mysql/reverse.html">REVERSE</a></td>
+<td>字符串反转（逆序）函数，返回与原始字符串顺序相反的字符串</td>
+</tr>
+</tbody></table>
+<h1 id="MySQL-日期和时间函数"><a href="#MySQL-日期和时间函数" class="headerlink" title="MySQL 日期和时间函数"></a>MySQL 日期和时间函数</h1><table>
+<thead>
+<tr>
+<th>函数名称</th>
+<th>作 用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a target="_blank" rel="noopener" href="http://c.biancheng.net/mysql/curdate_current_date.html">CURDATE 和 CURRENT_DATE</a></td>
+<td>两个函数作用相同，返回当前系统的日期值</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="http://c.biancheng.net/mysql/curtime_current_time.html">CURTIME 和 CURRENT_TIME</a></td>
+<td>两个函数作用相同，返回当前系统的时间值</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="http://c.biancheng.net/mysql/now_sysdate.html">NOW 和  SYSDATE</a></td>
+<td>两个函数作用相同，返回当前系统的日期和时间值</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="http://c.biancheng.net/mysql/unix_timestamp.html">UNIX_TIMESTAMP</a></td>
+<td>获取UNIX时间戳函数，返回一个以 UNIX 时间戳为基础的无符号整数</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="http://c.biancheng.net/mysql/from_unixtime.html">FROM_UNIXTIME</a></td>
+<td>将 UNIX 时间戳转换为时间格式，与UNIX_TIMESTAMP互为反函数</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="http://c.biancheng.net/mysql/month.html">MONTH</a></td>
+<td>获取指定日期中的月份</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="http://c.biancheng.net/mysql/monthname.html">MONTHNAME</a></td>
+<td>获取指定日期中的月份英文名称</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="http://c.biancheng.net/mysql/dayname.html">DAYNAME</a></td>
+<td>获取指定曰期对应的星期几的英文名称</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="http://c.biancheng.net/mysql/dayofweek.html">DAYOFWEEK</a></td>
+<td>获取指定日期对应的一周的索引位置值</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="http://c.biancheng.net/mysql/week.html">WEEK</a></td>
+<td>获取指定日期是一年中的第几周，返回值的范围是否为 0〜52 或 1〜53</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="http://c.biancheng.net/mysql/dayofyear.html">DAYOFYEAR</a></td>
+<td>获取指定曰期是一年中的第几天，返回值范围是1~366</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="http://c.biancheng.net/mysql/dayofmonth.html">DAYOFMONTH</a></td>
+<td>获取指定日期是一个月中是第几天，返回值范围是1~31</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="http://c.biancheng.net/mysql/year.html">YEAR</a></td>
+<td>获取年份，返回值范围是 1970〜2069</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="http://c.biancheng.net/mysql/time_to_sec.html">TIME_TO_SEC</a></td>
+<td>将时间参数转换为秒数</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="http://c.biancheng.net/mysql/sec_to_time.html">SEC_TO_TIME</a></td>
+<td>将秒数转换为时间，与TIME_TO_SEC 互为反函数</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="http://c.biancheng.net/mysql/date_add_adddate.html">DATE_ADD 和 ADDDATE</a></td>
+<td>两个函数功能相同，都是向日期添加指定的时间间隔</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="http://c.biancheng.net/mysql/date_sub_subdate.html">DATE_SUB 和 SUBDATE</a></td>
+<td>两个函数功能相同，都是向日期减去指定的时间间隔</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="http://c.biancheng.net/mysql/addtime.html">ADDTIME</a></td>
+<td>时间加法运算，在原始时间上添加指定的时间</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="http://c.biancheng.net/mysql/subtime.html">SUBTIME</a></td>
+<td>时间减法运算，在原始时间上减去指定的时间</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="http://c.biancheng.net/mysql/datediff.html">DATEDIFF</a></td>
+<td>获取两个日期之间间隔，返回参数 1 减去参数 2 的值</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="http://c.biancheng.net/mysql/date_format.html">DATE_FORMAT</a></td>
+<td>格式化指定的日期，根据参数返回指定格式的值</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="http://c.biancheng.net/mysql/weekday.html">WEEKDAY</a></td>
+<td>获取指定日期在一周内的对应的工作日索引</td>
+</tr>
+</tbody></table>
+<h1 id="MySQL-聚合函数"><a href="#MySQL-聚合函数" class="headerlink" title="MySQL 聚合函数"></a>MySQL 聚合函数</h1><table>
+<thead>
+<tr>
+<th>函数名称</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a target="_blank" rel="noopener" href="http://c.biancheng.net/mysql/max.html">MAX</a></td>
+<td>查询指定列的最大值</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="http://c.biancheng.net/mysql/min.html">MIN</a></td>
+<td>查询指定列的最小值</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="http://c.biancheng.net/mysql/count.html">COUNT</a></td>
+<td>统计查询结果的行数</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="http://c.biancheng.net/mysql/sum.html">SUM</a></td>
+<td>求和，返回指定列的总和</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="http://c.biancheng.net/mysql/avg.html">AVG</a></td>
+<td>求平均值，返回指定列数据的平均值</td>
+</tr>
+</tbody></table>
+<h1 id="MySQL-流程控制函数"><a href="#MySQL-流程控制函数" class="headerlink" title="MySQL 流程控制函数"></a>MySQL 流程控制函数</h1><table>
+<thead>
+<tr>
+<th>函数名称</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a target="_blank" rel="noopener" href="http://c.biancheng.net/mysql/if.html">IF</a></td>
+<td>判断，流程控制</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="http://c.biancheng.net/mysql/ifnull.html">IFNULL</a></td>
+<td>判断是否为空</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="http://c.biancheng.net/mysql/case.html">CASE</a></td>
+<td>搜索语句</td>
+</tr>
+</tbody></table>
+
+        
+    </div>
+    </div>
+
+    <div class="article-badge">
+        
+        
+    </div>
+
+</div>
+
+<footer class="article-footer">
+    <div class="article-more-info">
+    <div class="article-date">
+  <time datetime="2021-04-27T02:52:20.000Z" itemprop="datePublished">2021-04-27</time>
+</div>
+    
+        <div class="article-category">
+        <a class="article-category-link" href="/categories/MySQL/">MySQL</a>
+        </div>
+    
+    
+        <div class="article-tag">
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MySQL/" rel="tag">MySQL</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%80%9F%E6%9F%A5/" rel="tag">速查</a></li></ul>
+        </div>
+    
+    </div>
+</footer>
+
+</article>
+
+    
+  
+
+  
+    <nav class="pagination">
+        <a class="extend prev" rel="prev" href="/">Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/3/">Next</a>
+    </nav>
+  
+</div>
+
+                </section>
+            </section>
+
+            
+            <aside class="sidebar ">
+                
+
+
+<div class="widget" id="widget">
+    
+      
+    
+      
+  <div class="widget-wrap widget-tags">
+    <div class="widget-title"><span>Tags</span></div>
+    <div class="widget-inner">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C++</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CentOS/" rel="tag">CentOS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Docker/" rel="tag">Docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Electron/" rel="tag">Electron</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HAProxy/" rel="tag">HAProxy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/" rel="tag">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Jenkins/" rel="tag">Jenkins</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Maven/" rel="tag">Maven</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MySQL/" rel="tag">MySQL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NTP/" rel="tag">NTP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Oracle/" rel="tag">Oracle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SQLite/" rel="tag">SQLite</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/STL/" rel="tag">STL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SpringBoot/" rel="tag">SpringBoot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TCP-IP/" rel="tag">TCP/IP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Typora/" rel="tag">Typora</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VS2015/" rel="tag">VS2015</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VUE/" rel="tag">VUE</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vditor/" rel="tag">Vditor</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/" rel="tag">nodejs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/openssl/" rel="tag">openssl</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/" rel="tag">多线程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/" rel="tag">开发工具</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/" rel="tag">异常处理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%89%B9%E5%A4%84%E7%90%86/" rel="tag">批处理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" rel="tag">环境搭建</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/" rel="tag">计算机组成原理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" rel="tag">计算机网络</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" rel="tag">设计模式</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%80%9F%E6%9F%A5/" rel="tag">速查</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%AB%98%E5%8F%AF%E7%94%A8/" rel="tag">高可用</a></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget-wrap widget-cate">
+    <div class="widget-title"><span>Categories</span></div>
+    <div class="widget-inner">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C++</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/CentOS/">CentOS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Electron/">Electron</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/GIt/">GIt</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Maven/">Maven</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MySQL/">MySQL</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Nodejs/">Nodejs</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Oracle/">Oracle</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/SpringBoot/">SpringBoot</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/VS2015/">VS2015</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/VUE/">VUE</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%BB%98%E8%AE%A4%E5%88%86%E7%B1%BB/">默认分类</a></li></ul>
+    </div>
+  </div>
+
+
+    
+</div>
+
+<div id="backtop"><i class="icon icon-arrow-up"></i></div>
+            </aside>
+            
+        </div>
+    </div>
+
+    <!-- <footer class="footer">
+    <div class="footer-wave">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#3c4859" fill-opacity="1" d="M0,160L60,181.3C120,203,240,245,360,240C480,235,600,181,720,186.7C840,192,960,256,1080,261.3C1200,267,1320,213,1380,186.7L1440,160L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
+    </div>
+
+    <div class="footer-wrap">
+        <div class="footer-inner"> 
+            天空 &copy; 2021<br>
+            Powered By Hexo · Theme By <a href="https://github.com/lh1me/hexo-theme-aomori" target="_blank">Aomori</a>
+        </div>
+    </div>
+
+</footer> -->
+
+<!-- 
+
+ -->
+
+
+<script src="/dist/build.js?1623049492098.js"></script>
+
+
+<script src="/dist/custom.js?1623049492098.js"></script>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

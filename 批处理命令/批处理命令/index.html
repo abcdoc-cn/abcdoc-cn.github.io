@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    
+    <title>批处理命令 | 天空</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+<link rel="stylesheet" href="/dist/build.css?v=1623049492098.css">
+
+
+    <script>
+        window.isPost = true
+        window.aomori = {
+            
+            
+            
+        }
+        window.aomori_logo_typed_animated = false
+        window.aomori_search_algolia = false
+
+    </script>
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+
+    <div class="container">
+    <header class="header">
+        <div class="header-type">
+            
+            <div class="header-type-inner">
+                
+                    <a class="header-type-title" href="/">天空</a>
+                
+    
+                
+            </div>
+        </div>
+        <div class="header-menu">
+            <div class="header-menu-inner">
+                
+                <a href="/">首页</a>
+                
+                <a href="/archives">存档</a>
+                
+            </div>
+            <div class="header-menu-social">
+                
+            </div>
+        </div>
+
+        <div class="header-menu-mobile">
+            <div class="header-menu-mobile-inner" id="mobile-menu-open">
+                <i class="icon icon-menu"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="header-menu-mobile-menu">
+        <div class="header-menu-mobile-menu-bg"></div>
+        <div class="header-menu-mobile-menu-wrap">
+            <div class="header-menu-mobile-menu-inner">
+                <div class="header-menu-mobile-menu-close" id="mobile-menu-close">
+                    <i class="icon icon-cross"></i>
+                </div>
+                <div class="header-menu-mobile-menu-list">
+                    
+                    <a href="/">首页</a>
+                    
+                    <a href="/archives">存档</a>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+    <div class="container">
+        <div class="main">
+            <section class="inner">
+                <section class="inner-main">
+                    <div class="post">
+    <article id="post-ckpyuy8vj00314sipfogwenic" class="article article-type-post" itemscope
+    itemprop="blogPost">
+
+    <div class="article-inner">
+
+        
+          
+        
+        
+        
+
+        
+        <header class="article-header">
+            
+  
+    <h1 class="article-title" itemprop="name">
+      批处理命令
+    </h1>
+  
+
+        </header>
+        
+
+        <div class="article-more-info article-more-info-post hairline">
+
+            <div class="article-date">
+  <time datetime="2021-04-23T05:27:13.137Z" itemprop="datePublished">2021-04-23</time>
+</div>
+
+            
+
+            
+            <div class="article-tag">
+                <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%89%B9%E5%A4%84%E7%90%86/" rel="tag">批处理</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%80%9F%E6%9F%A5/" rel="tag">速查</a></li></ul>
+            </div>
+            
+
+            
+
+        </div>
+
+        <div class="article-entry post-inner-html hairline" itemprop="articleBody">
+            <h1 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h1><h2 id="复制包含关键字的行到新文件"><a href="#复制包含关键字的行到新文件" class="headerlink" title="复制包含关键字的行到新文件"></a>复制包含关键字的行到新文件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">findstr /c:<span class="string">&quot;keyworld&quot;</span> old-file.txt &gt; new-file.txt</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="关闭回显"><a href="#关闭回显" class="headerlink" title="关闭回显"></a>关闭回显</h3><ul>
+<li><p>@ 的作用就是关闭紧跟其后的一条命令的回显</p>
+</li>
+<li><p>echo 显示</p>
+</li>
+<li><p>echo.  输出一个空行，相当于敲一个回车</p>
+<ul>
+<li>“.” 必须紧跟在 echo 命令的后面，而且 “.” 也可以被 ，：；”／等任一的符号代替</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">rem 后面所有的命令均不显示，包括本条命令</span><br><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"></span><br><span class="line">rem 后面所有的命令均不显示，但本条命令是显示的</span><br><span class="line"><span class="built_in">echo</span> off</span><br></pre></td></tr></table></figure>
+
+<h3 id="pause-暂停执行"><a href="#pause-暂停执行" class="headerlink" title="pause 暂停执行"></a>pause 暂停执行</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rem 请按任意键以继续</span><br><span class="line">pause</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rem 其他提示语</span><br><span class="line"><span class="built_in">echo</span> 其他提示语 &amp; pause &gt; nul</span><br></pre></td></tr></table></figure>
+
+<h3 id="Set-设置变量"><a href="#Set-设置变量" class="headerlink" title="Set 设置变量"></a>Set 设置变量</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">set</span> a=1</span><br><span class="line">rem 显示 变量</span><br><span class="line"><span class="built_in">echo</span> %a%</span><br></pre></td></tr></table></figure>
+
+<h3 id="Set-是否继续执行"><a href="#Set-是否继续执行" class="headerlink" title="Set 是否继续执行"></a>Set 是否继续执行</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">:: 输入 y，执行操作</span><br><span class="line">:: 输入 n，跳过执行</span><br><span class="line">:: 输入 q，退出执行</span><br><span class="line">set /p input=&quot;是否继续执行 (y/n/q): &quot;</span><br><span class="line">if %input% == y (</span><br><span class="line">	rem 执行操作</span><br><span class="line">) else (</span><br><span class="line">	if %input% == q (</span><br><span class="line">		pause</span><br><span class="line">		exit 0</span><br><span class="line">	)</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<h3 id="title-改变窗口标题"><a href="#title-改变窗口标题" class="headerlink" title="title 改变窗口标题"></a>title 改变窗口标题</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">:: 使用之后就会显示新的标题框了</span><br><span class="line">title 新标题</span><br></pre></td></tr></table></figure>
+
+<h3 id="call-调用另一个批处理文件"><a href="#call-调用另一个批处理文件" class="headerlink" title="call 调用另一个批处理文件"></a>call 调用另一个批处理文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">call E:\Temp.bat</span><br><span class="line">rem 正在执行 Temp.bat</span><br><span class="line">pause</span><br></pre></td></tr></table></figure>
+
+<h3 id="attrib-更改文件属性"><a href="#attrib-更改文件属性" class="headerlink" title="attrib 更改文件属性"></a>attrib 更改文件属性</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">:: 将文件夹Temp属性设为存档、系统、隐藏属性</span><br><span class="line">:: 如果没有在 Temp 所在路径执行需要加上Temp的路径</span><br><span class="line">attrib +a +s +h Temp</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="修改系统时间"><a href="#修改系统时间" class="headerlink" title="修改系统时间"></a>修改系统时间</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> 设置时间为23:59:10</span><br><span class="line">time 23:59:10</span><br></pre></td></tr></table></figure>
+
+<h3 id="跳转当前目录"><a href="#跳转当前目录" class="headerlink" title="跳转当前目录"></a>跳转当前目录</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /d %~dp0</span><br></pre></td></tr></table></figure>
+
+<h3 id="循环获取-config-ini-参数"><a href="#循环获取-config-ini-参数" class="headerlink" title="循环获取 config.ini 参数"></a>循环获取 config.ini 参数</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> /d %~dp0</span><br><span class="line"></span><br><span class="line">setlocal enabledelayedexpansion</span><br><span class="line"><span class="keyword">for</span> /f <span class="string">&quot;delims=&quot;</span> %%i <span class="keyword">in</span> (<span class="string">&#x27;type &quot;config.ini&quot;^| find /i &quot;=&quot;&#x27;</span>) <span class="keyword">do</span> <span class="built_in">set</span> %%i</span><br><span class="line"></span><br><span class="line">:: 使用方法</span><br><span class="line"><span class="built_in">echo</span> %ZIP_PATH%</span><br><span class="line"><span class="built_in">echo</span> %MSBUILD_PATH%</span><br></pre></td></tr></table></figure>
+
+<p>config.ini 内容</p>
+<figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">ZIP_PATH</span>=<span class="string">&quot;C:\Program Files\WinRAR\&quot;</span></span><br><span class="line"><span class="attr">MSBUILD_PATH</span>=<span class="string">C:\Program Files (x86)\MSBuild\14.0\Bin\MSBuild.exe</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="目录操作"><a href="#目录操作" class="headerlink" title="目录操作"></a>目录操作</h2><h3 id="mklink-创建目录链接"><a href="#mklink-创建目录链接" class="headerlink" title="mklink 创建目录链接"></a>mklink 创建目录链接</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">:: 创建 pathA  到 pathB 链接</span><br><span class="line">mklink /j pathB pathA</span><br></pre></td></tr></table></figure>
+
+<h3 id="md-创建目录"><a href="#md-创建目录" class="headerlink" title="md 创建目录"></a>md 创建目录</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">:: 如果 app 目录不存在，创建 app 目录</span><br><span class="line"><span class="keyword">if</span> not exist app md app</span><br></pre></td></tr></table></figure>
+
+<h3 id="cp-拷贝文件"><a href="#cp-拷贝文件" class="headerlink" title="cp 拷贝文件"></a>cp 拷贝文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">:: 将 uninst.exe 拷贝到 app 目录</span><br><span class="line">copy %SETUP_PATH%\app\uninst.exe app\</span><br></pre></td></tr></table></figure>
+
+<h2 id="WinRAR"><a href="#WinRAR" class="headerlink" title="WinRAR"></a>WinRAR</h2><h3 id="添加到压缩文件"><a href="#添加到压缩文件" class="headerlink" title="添加到压缩文件"></a>添加到压缩文件</h3><p>命令格式：</p>
+<ul>
+<li>RAR &lt;命令&gt;   [ -&lt;开关&gt;  ]  &lt;压缩文件&gt;  [ &lt;@列表文件…&gt; ]</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;C:\Program Files (x86)\WinRAR\WinRAR.exe&quot;</span> a -as -r -ibck new.zip file1.ini path1</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>a</td>
+<td>备份所有文件</td>
+<td></td>
+</tr>
+<tr>
+<td>-as</td>
+<td>同步压缩文件内容</td>
+<td></td>
+</tr>
+<tr>
+<td>-r</td>
+<td>备份目录和子目录</td>
+<td></td>
+</tr>
+<tr>
+<td>-ibck</td>
+<td>后台运行</td>
+<td></td>
+</tr>
+</tbody></table>
+
+        </div>
+
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+<nav class="article-nav">
+  
+    <a href="/SpringBoot/SpringBoot%20%E6%89%93%E5%8C%85%E5%8F%AF%E6%89%A7%E8%A1%8C%20jar/" id="article-nav-newer" class="article-nav-link-wrap">
+      <div class="article-nav-caption">下一篇</div>
+      <div class="article-nav-title">
+        
+          SpringBoot 打包可执行 jar
+        
+      </div>
+    </a>
+  
+  
+    <a href="/Maven/pom.xml%20%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%AF%B4%E6%98%8E/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-caption">上一篇</div>
+      <div class="article-nav-title">pom.xml配置文件说明</div>
+    </a>
+  
+</nav>
+
+
+</article>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+                </section>
+            </section>
+
+            
+            <aside class="sidebar ">
+                
+
+
+<div class="widget" id="widget">
+    
+      
+  <div class="widget-wrap">
+    <div class="widget-inner">
+      <div class="toc post-toc-html"></div>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget-wrap widget-tags">
+    <div class="widget-title"><span>Tags</span></div>
+    <div class="widget-inner">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C++</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CentOS/" rel="tag">CentOS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Docker/" rel="tag">Docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Electron/" rel="tag">Electron</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HAProxy/" rel="tag">HAProxy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/" rel="tag">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Jenkins/" rel="tag">Jenkins</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Maven/" rel="tag">Maven</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MySQL/" rel="tag">MySQL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NTP/" rel="tag">NTP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Oracle/" rel="tag">Oracle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SQLite/" rel="tag">SQLite</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/STL/" rel="tag">STL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SpringBoot/" rel="tag">SpringBoot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TCP-IP/" rel="tag">TCP/IP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Typora/" rel="tag">Typora</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VS2015/" rel="tag">VS2015</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VUE/" rel="tag">VUE</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vditor/" rel="tag">Vditor</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/" rel="tag">nodejs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/openssl/" rel="tag">openssl</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/" rel="tag">多线程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/" rel="tag">开发工具</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/" rel="tag">异常处理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%89%B9%E5%A4%84%E7%90%86/" rel="tag">批处理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" rel="tag">环境搭建</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/" rel="tag">计算机组成原理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" rel="tag">计算机网络</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" rel="tag">设计模式</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%80%9F%E6%9F%A5/" rel="tag">速查</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%AB%98%E5%8F%AF%E7%94%A8/" rel="tag">高可用</a></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget-wrap widget-cate">
+    <div class="widget-title"><span>Categories</span></div>
+    <div class="widget-inner">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C++</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/CentOS/">CentOS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Electron/">Electron</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/GIt/">GIt</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Maven/">Maven</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MySQL/">MySQL</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Nodejs/">Nodejs</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Oracle/">Oracle</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/SpringBoot/">SpringBoot</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/VS2015/">VS2015</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/VUE/">VUE</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%BB%98%E8%AE%A4%E5%88%86%E7%B1%BB/">默认分类</a></li></ul>
+    </div>
+  </div>
+
+
+    
+</div>
+
+<div id="backtop"><i class="icon icon-arrow-up"></i></div>
+            </aside>
+            
+        </div>
+    </div>
+
+    <!-- <footer class="footer">
+    <div class="footer-wave">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#3c4859" fill-opacity="1" d="M0,160L60,181.3C120,203,240,245,360,240C480,235,600,181,720,186.7C840,192,960,256,1080,261.3C1200,267,1320,213,1380,186.7L1440,160L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
+    </div>
+
+    <div class="footer-wrap">
+        <div class="footer-inner"> 
+            天空 &copy; 2021<br>
+            Powered By Hexo · Theme By <a href="https://github.com/lh1me/hexo-theme-aomori" target="_blank">Aomori</a>
+        </div>
+    </div>
+
+</footer> -->
+
+<!-- 
+
+ -->
+
+
+<script src="/dist/build.js?1623049492098.js"></script>
+
+
+<script src="/dist/custom.js?1623049492098.js"></script>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

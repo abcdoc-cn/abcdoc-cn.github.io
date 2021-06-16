@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    
+    <title>JDK8 Stream 常用方法 | 天空</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+<link rel="stylesheet" href="/dist/build.css?v=1623049492098.css">
+
+
+    <script>
+        window.isPost = true
+        window.aomori = {
+            
+            
+            
+        }
+        window.aomori_logo_typed_animated = false
+        window.aomori_search_algolia = false
+
+    </script>
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+
+    <div class="container">
+    <header class="header">
+        <div class="header-type">
+            
+            <div class="header-type-inner">
+                
+                    <a class="header-type-title" href="/">天空</a>
+                
+    
+                
+            </div>
+        </div>
+        <div class="header-menu">
+            <div class="header-menu-inner">
+                
+                <a href="/">首页</a>
+                
+                <a href="/archives">存档</a>
+                
+            </div>
+            <div class="header-menu-social">
+                
+            </div>
+        </div>
+
+        <div class="header-menu-mobile">
+            <div class="header-menu-mobile-inner" id="mobile-menu-open">
+                <i class="icon icon-menu"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="header-menu-mobile-menu">
+        <div class="header-menu-mobile-menu-bg"></div>
+        <div class="header-menu-mobile-menu-wrap">
+            <div class="header-menu-mobile-menu-inner">
+                <div class="header-menu-mobile-menu-close" id="mobile-menu-close">
+                    <i class="icon icon-cross"></i>
+                </div>
+                <div class="header-menu-mobile-menu-list">
+                    
+                    <a href="/">首页</a>
+                    
+                    <a href="/archives">存档</a>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+    <div class="container">
+        <div class="main">
+            <section class="inner">
+                <section class="inner-main">
+                    <div class="post">
+    <article id="post-ckpyuy8uu000t4sipcl9b16s7" class="article article-type-post" itemscope
+    itemprop="blogPost">
+
+    <div class="article-inner">
+
+        
+          
+        
+        
+        
+
+        
+        <header class="article-header">
+            
+  
+    <h1 class="article-title" itemprop="name">
+      JDK8 Stream 常用方法
+    </h1>
+  
+
+        </header>
+        
+
+        <div class="article-more-info article-more-info-post hairline">
+
+            <div class="article-date">
+  <time datetime="2021-04-25T04:40:44.571Z" itemprop="datePublished">2021-04-25</time>
+</div>
+
+            
+            <div class="article-category">
+                <a class="article-category-link" href="/categories/Java/">Java</a>
+            </div>
+            
+
+            
+            <div class="article-tag">
+                <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/" rel="tag">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%80%9F%E6%9F%A5/" rel="tag">速查</a></li></ul>
+            </div>
+            
+
+            
+
+        </div>
+
+        <div class="article-entry post-inner-html hairline" itemprop="articleBody">
+            <h3 id="Stream"><a href="#Stream" class="headerlink" title="Stream"></a>Stream</h3><p><strong>首先创建一个对象</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Employee</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">int</span> id;</span><br><span class="line">  <span class="keyword">private</span> String name;</span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">double</span> salary;</span><br><span class="line">  <span class="keyword">private</span> Status status;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">public</span> <span class="class"><span class="keyword">enum</span> <span class="title">Status</span> </span>&#123;</span><br><span class="line">    FREE, BUSY, VOCATION;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="title">Employee</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="title">Employee</span><span class="params">(<span class="keyword">int</span> id, String name, <span class="keyword">int</span> age, <span class="keyword">double</span> salary, Status status)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.id = id;</span><br><span class="line">    <span class="keyword">this</span>.name = name;</span><br><span class="line">    <span class="keyword">this</span>.age = age;</span><br><span class="line">    <span class="keyword">this</span>.salary = salary;</span><br><span class="line">    <span class="keyword">this</span>.status = status;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">//省略get，set等。。。</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>随便初始化一些数据</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">List&lt;Employee&gt; empList = Arrays.asList(</span><br><span class="line">    <span class="keyword">new</span> Employee(<span class="number">101</span>, <span class="string">&quot;张三&quot;</span>, <span class="number">18</span>, <span class="number">9999.99</span>, Status.FREE),</span><br><span class="line">    <span class="keyword">new</span> Employee(<span class="number">102</span>, <span class="string">&quot;李四&quot;</span>, <span class="number">59</span>, <span class="number">6666.66</span>, Status.BUSY),</span><br><span class="line">    <span class="keyword">new</span> Employee(<span class="number">103</span>, <span class="string">&quot;王五&quot;</span>, <span class="number">28</span>, <span class="number">3333.33</span>, Status.VOCATION),</span><br><span class="line">    <span class="keyword">new</span> Employee(<span class="number">104</span>, <span class="string">&quot;赵六&quot;</span>, <span class="number">8</span>, <span class="number">7777.77</span>, Status.BUSY),</span><br><span class="line">    <span class="keyword">new</span> Employee(<span class="number">104</span>, <span class="string">&quot;赵六&quot;</span>, <span class="number">8</span>, <span class="number">7777.77</span>, Status.FREE),</span><br><span class="line">    <span class="keyword">new</span> Employee(<span class="number">104</span>, <span class="string">&quot;赵六&quot;</span>, <span class="number">8</span>, <span class="number">7777.77</span>, Status.FREE),</span><br><span class="line">    <span class="keyword">new</span> Employee(<span class="number">105</span>, <span class="string">&quot;田七&quot;</span>, <span class="number">38</span>, <span class="number">5555.55</span>, Status.BUSY));</span><br></pre></td></tr></table></figure>
+
+<h4 id="中间操作"><a href="#中间操作" class="headerlink" title="中间操作"></a><strong>中间操作</strong></h4><h5 id="根据条件筛选-filter"><a href="#根据条件筛选-filter" class="headerlink" title="根据条件筛选 filter"></a><strong>根据条件筛选 filter</strong></h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* 接收Lambda, 从流中排除某些元素。</span></span><br><span class="line"><span class="comment">*/</span><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">testFilter</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  empList.stream().filter((e) -&gt; &#123;</span><br><span class="line">    <span class="keyword">return</span> e.getSalary() &gt;= <span class="number">5000</span>;</span><br><span class="line">  &#125;).forEach(System.out::println);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="跳过流的前n个元素-skip"><a href="#跳过流的前n个元素-skip" class="headerlink" title="跳过流的前n个元素 skip"></a><strong>跳过流的前n个元素 skip</strong></h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* 跳过元素，返回一个扔掉了前n个元素的流。</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">testSkip</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  empList.stream().filter((e) -&gt; e.getSalary() &gt;= <span class="number">5000</span>).skip(<span class="number">2</span>).forEach(System.out::println);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="去除重复元素-distinct"><a href="#去除重复元素-distinct" class="headerlink" title="去除重复元素 distinct"></a><strong>去除重复元素 distinct</strong></h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* 筛选，通过流所生成元素的 hashCode() 和 equals() 去除重复元素</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">testDistinct</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  empList.stream().distinct().forEach(System.out::println);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="截取流的前n个元素-limit"><a href="#截取流的前n个元素-limit" class="headerlink" title="截取流的前n个元素 limit"></a><strong>截取流的前n个元素 limit</strong></h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* 截断流，使其元素不超过给定数量。</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">testLimit</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  empList.stream().filter((e) -&gt; &#123;</span><br><span class="line">    <span class="keyword">return</span> e.getSalary() &gt;= <span class="number">5000</span>;</span><br><span class="line">  &#125;).limit(<span class="number">3</span>).forEach(System.out::println);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="映射-map"><a href="#映射-map" class="headerlink" title="映射 map"></a><strong>映射 map</strong></h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* 接收一个函数作为参数，该函数会被应用到每个元素上，并将其映射成一个新的元素</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">testMap</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  empList.stream().map(e -&gt; e.getName()).forEach(System.out::println);</span><br><span class="line"></span><br><span class="line">  empList.stream().map(e -&gt; &#123;</span><br><span class="line">    empList.forEach(i -&gt; &#123;</span><br><span class="line">      i.setName(i.getName() + <span class="string">&quot;111&quot;</span>);</span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="keyword">return</span> e;</span><br><span class="line">  &#125;).collect(Collectors.toList());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="自然排序-sorted"><a href="#自然排序-sorted" class="headerlink" title="自然排序 sorted"></a><strong>自然排序 sorted</strong></h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* 产生一个新流，其中按自然顺序排序</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">testSorted</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  empList.stream().map(Employee::getName).sorted().forEach(System.out::println);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="自定义排序-sorted-Comparator-comp"><a href="#自定义排序-sorted-Comparator-comp" class="headerlink" title="自定义排序 sorted(Comparator comp)"></a><strong>自定义排序 sorted(Comparator comp)</strong></h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* 产生一个新流，其中按自然顺序排序</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">testSortedComparator</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  empList.stream().sorted((x, y) -&gt; &#123;</span><br><span class="line">   <span class="keyword">if</span> (x.getAge() == y.getAge()) &#123;</span><br><span class="line">     <span class="keyword">return</span> x.getName().compareTo(y.getName());</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">     <span class="keyword">return</span> Integer.compare(x.getAge(), y.getAge());</span><br><span class="line">   &#125;</span><br><span class="line">  &#125;).forEach(System.out::println);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="最终操作"><a href="#最终操作" class="headerlink" title="最终操作"></a><strong>最终操作</strong></h4><h5 id="是否匹配任一元素-anyMatch"><a href="#是否匹配任一元素-anyMatch" class="headerlink" title="是否匹配任一元素 anyMatch"></a><strong>是否匹配任一元素 anyMatch</strong></h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 检查是否至少匹配一个元素</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">testAnyMatch</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="keyword">boolean</span> b = empList.stream().anyMatch((e) -&gt; e.getStatus().equals(Status.BUSY));</span><br><span class="line">  System.out.println(<span class="string">&quot;boolean is : &quot;</span> + b);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="是否匹配所有元素-allMatch"><a href="#是否匹配所有元素-allMatch" class="headerlink" title="是否匹配所有元素 allMatch"></a><strong>是否匹配所有元素 allMatch</strong></h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 检查是否匹配所有元素</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">testAllMatch</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="keyword">boolean</span> b = empList.stream().allMatch((e) -&gt; e.getStatus().equals(Status.BUSY));</span><br><span class="line">  System.out.println(<span class="string">&quot;boolean is : &quot;</span> + b);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="是否未匹配所有元素-noneMatch"><a href="#是否未匹配所有元素-noneMatch" class="headerlink" title="是否未匹配所有元素 noneMatch"></a><strong>是否未匹配所有元素 noneMatch</strong></h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 检查是否没有匹配的元素</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">testNoneMatch</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="keyword">boolean</span> b = empList.stream().noneMatch((e) -&gt; e.getStatus().equals(Status.BUSY));</span><br><span class="line">  System.out.println(<span class="string">&quot;boolean is : &quot;</span> + b);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="返回第一个元素-findFirst"><a href="#返回第一个元素-findFirst" class="headerlink" title="返回第一个元素 findFirst"></a><strong>返回第一个元素 findFirst</strong></h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 返回第一个元素</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">testFindFirst</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    Optional&lt;Employee&gt; op = empList.stream()</span><br><span class="line">            .sorted((e1, e2) -&gt; Double.compare(e1.getSalary(), e2.getSalary()))</span><br><span class="line">            .findFirst();</span><br><span class="line">    <span class="keyword">if</span> (op.isPresent()) &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;first employee name is : &quot;</span> + op.get().getName().toString());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="返回流中任意元素-findAny"><a href="#返回流中任意元素-findAny" class="headerlink" title="返回流中任意元素 findAny"></a><strong>返回流中任意元素 findAny</strong></h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 返回当前流中的任意元素</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">testFindAny</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    Optional&lt;Employee&gt; op = empList.stream()</span><br><span class="line">            .sorted((e1, e2) -&gt; Double.compare(e1.getSalary(), e2.getSalary()))</span><br><span class="line">            .findAny();</span><br><span class="line">    <span class="keyword">if</span> (op.isPresent()) &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;any employee name is : &quot;</span> + op.get().getName().toString());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="返回流的总数-count"><a href="#返回流的总数-count" class="headerlink" title="返回流的总数 count"></a><strong>返回流的总数 count</strong></h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 返回流中元素的总个数</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">testCount</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="keyword">long</span> count = empList.stream().filter((e) -&gt; e.getStatus().equals(Status.FREE)).count();</span><br><span class="line">  System.out.println(<span class="string">&quot;Count is : &quot;</span> + count);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="返回流中的最大值-max"><a href="#返回流中的最大值-max" class="headerlink" title="返回流中的最大值 max"></a><strong>返回流中的最大值 max</strong></h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 返回流中最大值</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">testMax</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  Optional&lt;Double&gt; op = empList.stream().map(Employee::getSalary).max(Double::compare);</span><br><span class="line">  System.out.println(op.get());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="返回流中的最小值-min"><a href="#返回流中的最小值-min" class="headerlink" title="返回流中的最小值 min"></a><strong>返回流中的最小值 min</strong></h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 返回流中最小值</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">testMin</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  Optional&lt;Employee&gt; op2 = empList.stream().min((e1, e2) -&gt; Double.compare(e1.getSalary(), e2.getSalary()));</span><br><span class="line">  System.out.println(op2.get());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="归约-reduce"><a href="#归约-reduce" class="headerlink" title="归约 reduce"></a><strong>归约 reduce</strong></h5><p><strong>归约是将集合中的所有元素经过指定运算，折叠成一个元素输出</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 可以将流中元素反复结合起来，得到一个值。返回T</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">testReduce</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  Optional&lt;Double&gt; op = empList.stream().map(Employee::getSalary).reduce(Double::sum);</span><br><span class="line"></span><br><span class="line">  System.out.println(op.get());</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 可以将流中元素反复结合起来，得到一个值，返回Optional&lt; T&gt;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">testReduce1</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  Optional&lt;Integer&gt; sum = empList.stream().map(Employee::getName).flatMap(Java8Stream::filterCharacter)</span><br><span class="line">      .map((ch) -&gt; &#123;</span><br><span class="line">        <span class="keyword">if</span> (ch.equals(<span class="string">&#x27;六&#x27;</span>))</span><br><span class="line">          <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">          <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">      &#125;).reduce(Integer::sum);</span><br><span class="line">  System.out.println(sum.get());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="将元素收集到-list-里-Collectors-toList"><a href="#将元素收集到-list-里-Collectors-toList" class="headerlink" title="将元素收集到 list 里 Collectors.toList()"></a><strong>将元素收集到 list 里 Collectors.toList()</strong></h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 把流中的元素收集到list里。</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">testCollectorsToList</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  List&lt;String&gt; list = empList.stream().map(Employee::getName).collect(Collectors.toList());</span><br><span class="line">  list.forEach(System.out::println);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="将元素收集到-set-里-Collectors-toSet"><a href="#将元素收集到-set-里-Collectors-toSet" class="headerlink" title="将元素收集到 set 里 Collectors.toSet()"></a><strong>将元素收集到 set 里 Collectors.toSet()</strong></h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 把流中的元素收集到set里。</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">testCollectorsToSet</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  Set&lt;String&gt; list = empList.stream().map(Employee::getName).collect(Collectors.toSet());</span><br><span class="line">  list.forEach(System.out::println);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="把流中的元素收集到新创建的集合里-Collectors-toCollection-HashSet-new"><a href="#把流中的元素收集到新创建的集合里-Collectors-toCollection-HashSet-new" class="headerlink" title="把流中的元素收集到新创建的集合里 Collectors.toCollection(HashSet::new)"></a><strong>把流中的元素收集到新创建的集合里</strong> <strong>Collectors.toCollection(HashSet::new)</strong></h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 把流中的元素收集到新创建的集合里。</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">testCollectorsToCollection</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  HashSet&lt;String&gt; hs = empList.stream().map(Employee::getName).collect(Collectors.toCollection(HashSet::<span class="keyword">new</span>));</span><br><span class="line">  hs.forEach(System.out::println);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="根据比较器选择最大值-Collectors-maxBy"><a href="#根据比较器选择最大值-Collectors-maxBy" class="headerlink" title="根据比较器选择最大值 Collectors.maxBy()"></a><strong>根据比较器选择最大值 Collectors.maxBy()</strong></h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 根据比较器选择最大值。</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">testCollectorsMaxBy</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  Optional&lt;Double&gt; max = empList.stream().map(Employee::getSalary).collect(Collectors.maxBy(Double::compare));</span><br><span class="line">  System.out.println(max.get());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="根据比较器选择最小值-Collectors-minBy"><a href="#根据比较器选择最小值-Collectors-minBy" class="headerlink" title="根据比较器选择最小值 Collectors.minBy()"></a><strong>根据比较器选择最小值 Collectors.minBy()</strong></h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 根据比较器选择最小值。</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">testCollectorsMinBy</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  Optional&lt;Double&gt; max = empList.stream().map(Employee::getSalary).collect(Collectors.minBy(Double::compare));</span><br><span class="line">  System.out.println(max.get());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="对流中元素的某个字段求和-Collectors-summingDouble"><a href="#对流中元素的某个字段求和-Collectors-summingDouble" class="headerlink" title="对流中元素的某个字段求和 Collectors.summingDouble()"></a><strong>对流中元素的某个字段求和 Collectors.summingDouble()</strong></h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 对流中元素的整数属性求和。</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">testCollectorsSummingDouble</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  Double sum = empList.stream().collect(Collectors.summingDouble(Employee::getSalary));</span><br><span class="line">  System.out.println(sum);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="对流中元素的某个字段求平均值-Collectors-averagingDouble"><a href="#对流中元素的某个字段求平均值-Collectors-averagingDouble" class="headerlink" title="对流中元素的某个字段求平均值 Collectors.averagingDouble()"></a><strong>对流中元素的某个字段求平均值 Collectors.averagingDouble()</strong></h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 计算流中元素Integer属性的平均值。</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">testCollectorsAveragingDouble</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  Double avg = empList.stream().collect(Collectors.averagingDouble(Employee::getSalary));</span><br><span class="line">  System.out.println(avg);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="分组-Collectors-groupingBy"><a href="#分组-Collectors-groupingBy" class="headerlink" title="分组 Collectors.groupingBy"></a><strong>分组 Collectors.groupingBy</strong></h5><p>类似sql的 group by</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 分组</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">testCollectorsGroupingBy</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  Map&lt;Status, List&lt;Employee&gt;&gt; map = empList.stream().collect(Collectors.groupingBy(Employee::getStatus));</span><br><span class="line"></span><br><span class="line">  System.out.println(map);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="多级分组"><a href="#多级分组" class="headerlink" title="多级分组"></a><strong>多级分组</strong></h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 多级分组</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">testCollectorsGroupingBy1</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  Map&lt;Status, Map&lt;String, List&lt;Employee&gt;&gt;&gt; map = empList.stream()</span><br><span class="line">      .collect(Collectors.groupingBy(Employee::getStatus, Collectors.groupingBy((e) -&gt; &#123;</span><br><span class="line">        <span class="keyword">if</span> (e.getAge() &gt;= <span class="number">60</span>)</span><br><span class="line">          <span class="keyword">return</span> <span class="string">&quot;老年&quot;</span>;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (e.getAge() &gt;= <span class="number">35</span>)</span><br><span class="line">          <span class="keyword">return</span> <span class="string">&quot;中年&quot;</span>;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">          <span class="keyword">return</span> <span class="string">&quot;成年&quot;</span>;</span><br><span class="line">      &#125;)));</span><br><span class="line">  System.out.println(map);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="字符串拼接-Collectors-joining"><a href="#字符串拼接-Collectors-joining" class="headerlink" title="字符串拼接 Collectors.joining()"></a><strong>字符串拼接 Collectors.joining()</strong></h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 字符串拼接</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">testCollectorsJoining</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  String str = empList.stream().map(Employee::getName).collect(Collectors.joining(<span class="string">&quot;,&quot;</span>, <span class="string">&quot;----&quot;</span>, <span class="string">&quot;----&quot;</span>));</span><br><span class="line">  System.out.println(str);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Stream&lt;Character&gt; <span class="title">filterCharacter</span><span class="params">(String str)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">  List&lt;Character&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">  <span class="keyword">for</span> (Character ch : str.toCharArray()) &#123;</span><br><span class="line">    list.add(ch);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> list.stream();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+        </div>
+
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+<nav class="article-nav">
+  
+    <a href="/Linux/Linux%20%E5%BF%98%E8%AE%B0%20root%20%E5%AF%86%E7%A0%81/" id="article-nav-newer" class="article-nav-link-wrap">
+      <div class="article-nav-caption">下一篇</div>
+      <div class="article-nav-title">
+        
+          Linux 忘记 root 密码
+        
+      </div>
+    </a>
+  
+  
+    <a href="/C++/C++%20%E6%A0%87%E5%87%86%E6%A8%A1%E6%9D%BF%E5%BA%93%20STL/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-caption">上一篇</div>
+      <div class="article-nav-title">C++ 标准模板库 STL</div>
+    </a>
+  
+</nav>
+
+
+</article>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+                </section>
+            </section>
+
+            
+            <aside class="sidebar ">
+                
+
+
+<div class="widget" id="widget">
+    
+      
+  <div class="widget-wrap">
+    <div class="widget-inner">
+      <div class="toc post-toc-html"></div>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget-wrap widget-tags">
+    <div class="widget-title"><span>Tags</span></div>
+    <div class="widget-inner">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C++</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CentOS/" rel="tag">CentOS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Docker/" rel="tag">Docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Electron/" rel="tag">Electron</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HAProxy/" rel="tag">HAProxy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/" rel="tag">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Jenkins/" rel="tag">Jenkins</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Maven/" rel="tag">Maven</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MySQL/" rel="tag">MySQL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NTP/" rel="tag">NTP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Oracle/" rel="tag">Oracle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SQLite/" rel="tag">SQLite</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/STL/" rel="tag">STL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SpringBoot/" rel="tag">SpringBoot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TCP-IP/" rel="tag">TCP/IP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Typora/" rel="tag">Typora</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VS2015/" rel="tag">VS2015</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VUE/" rel="tag">VUE</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vditor/" rel="tag">Vditor</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/" rel="tag">nodejs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/openssl/" rel="tag">openssl</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/" rel="tag">多线程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/" rel="tag">开发工具</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/" rel="tag">异常处理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%89%B9%E5%A4%84%E7%90%86/" rel="tag">批处理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" rel="tag">环境搭建</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/" rel="tag">计算机组成原理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" rel="tag">计算机网络</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" rel="tag">设计模式</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%80%9F%E6%9F%A5/" rel="tag">速查</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%AB%98%E5%8F%AF%E7%94%A8/" rel="tag">高可用</a></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget-wrap widget-cate">
+    <div class="widget-title"><span>Categories</span></div>
+    <div class="widget-inner">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C++</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/CentOS/">CentOS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Electron/">Electron</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/GIt/">GIt</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Maven/">Maven</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MySQL/">MySQL</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Nodejs/">Nodejs</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Oracle/">Oracle</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/SpringBoot/">SpringBoot</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/VS2015/">VS2015</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/VUE/">VUE</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%BB%98%E8%AE%A4%E5%88%86%E7%B1%BB/">默认分类</a></li></ul>
+    </div>
+  </div>
+
+
+    
+</div>
+
+<div id="backtop"><i class="icon icon-arrow-up"></i></div>
+            </aside>
+            
+        </div>
+    </div>
+
+    <!-- <footer class="footer">
+    <div class="footer-wave">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#3c4859" fill-opacity="1" d="M0,160L60,181.3C120,203,240,245,360,240C480,235,600,181,720,186.7C840,192,960,256,1080,261.3C1200,267,1320,213,1380,186.7L1440,160L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
+    </div>
+
+    <div class="footer-wrap">
+        <div class="footer-inner"> 
+            天空 &copy; 2021<br>
+            Powered By Hexo · Theme By <a href="https://github.com/lh1me/hexo-theme-aomori" target="_blank">Aomori</a>
+        </div>
+    </div>
+
+</footer> -->
+
+<!-- 
+
+ -->
+
+
+<script src="/dist/build.js?1623049492098.js"></script>
+
+
+<script src="/dist/custom.js?1623049492098.js"></script>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
