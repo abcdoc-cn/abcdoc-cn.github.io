@@ -2,20 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://abcdoc-cn.github.io/%E6%B5%8B%E8%AF%95%E4%BF%AE%E6%94%B9/</loc>
-    
-    <lastmod>2021-06-16</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://abcdoc-cn.github.io/%E6%B5%8B%E8%AF%95%E6%B7%BB%E5%8A%A0/</loc>
-    
-    <lastmod>2021-06-16</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://abcdoc-cn.github.io/Hexo/Hexo%20%E6%8A%A5%E9%94%99%EF%BC%9AERROR%20Deployer%20not%20found%20git/</loc>
     
     <lastmod>2021-06-15</lastmod>
@@ -296,14 +282,14 @@
   </url>
   
   <url>
-    <loc>https://abcdoc-cn.github.io/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/TCP%20%E5%A5%97%E6%8E%A5%E5%AD%97%E7%8A%B6%E6%80%81/</loc>
+    <loc>https://abcdoc-cn.github.io/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/TCP%20%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/</loc>
     
     <lastmod>2021-04-27</lastmod>
     
   </url>
   
   <url>
-    <loc>https://abcdoc-cn.github.io/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/TCP%20%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/</loc>
+    <loc>https://abcdoc-cn.github.io/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/TCP%20%E5%A5%97%E6%8E%A5%E5%AD%97%E7%8A%B6%E6%80%81/</loc>
     
     <lastmod>2021-04-27</lastmod>
     
@@ -424,7 +410,14 @@
 
   
   <url>
-    <loc>https://abcdoc-cn.github.io/tags/%E6%B5%8B%E8%AF%95/</loc>
+    <loc>https://abcdoc-cn.github.io/tags/STL/</loc>
+    <lastmod>2021-06-16</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://abcdoc-cn.github.io/tags/C/</loc>
     <lastmod>2021-06-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -445,6 +438,13 @@
   </url>
   
   <url>
+    <loc>https://abcdoc-cn.github.io/tags/MySQL/</loc>
+    <lastmod>2021-06-16</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://abcdoc-cn.github.io/tags/CentOS/</loc>
     <lastmod>2021-06-16</lastmod>
     <changefreq>daily</changefreq>
@@ -459,21 +459,14 @@
   </url>
   
   <url>
-    <loc>https://abcdoc-cn.github.io/tags/Docker/</loc>
+    <loc>https://abcdoc-cn.github.io/tags/Linux/</loc>
     <lastmod>2021-06-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://abcdoc-cn.github.io/tags/HAProxy/</loc>
-    <lastmod>2021-06-16</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://abcdoc-cn.github.io/tags/MySQL/</loc>
+    <loc>https://abcdoc-cn.github.io/tags/NTP/</loc>
     <lastmod>2021-06-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -494,13 +487,6 @@
   </url>
   
   <url>
-    <loc>https://abcdoc-cn.github.io/tags/C/</loc>
-    <lastmod>2021-06-16</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://abcdoc-cn.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/</loc>
     <lastmod>2021-06-16</lastmod>
     <changefreq>daily</changefreq>
@@ -508,7 +494,7 @@
   </url>
   
   <url>
-    <loc>https://abcdoc-cn.github.io/tags/Git/</loc>
+    <loc>https://abcdoc-cn.github.io/tags/Docker/</loc>
     <lastmod>2021-06-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -536,14 +522,7 @@
   </url>
   
   <url>
-    <loc>https://abcdoc-cn.github.io/tags/Linux/</loc>
-    <lastmod>2021-06-16</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://abcdoc-cn.github.io/tags/STL/</loc>
+    <loc>https://abcdoc-cn.github.io/tags/HAProxy/</loc>
     <lastmod>2021-06-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -578,14 +557,14 @@
   </url>
   
   <url>
-    <loc>https://abcdoc-cn.github.io/tags/SpringBoot/</loc>
+    <loc>https://abcdoc-cn.github.io/tags/Git/</loc>
     <lastmod>2021-06-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://abcdoc-cn.github.io/tags/NTP/</loc>
+    <loc>https://abcdoc-cn.github.io/tags/%E6%89%B9%E5%A4%84%E7%90%86/</loc>
     <lastmod>2021-06-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -606,7 +585,14 @@
   </url>
   
   <url>
-    <loc>https://abcdoc-cn.github.io/tags/%E6%89%B9%E5%A4%84%E7%90%86/</loc>
+    <loc>https://abcdoc-cn.github.io/tags/openssl/</loc>
+    <lastmod>2021-06-16</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://abcdoc-cn.github.io/tags/SpringBoot/</loc>
     <lastmod>2021-06-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -614,13 +600,6 @@
   
   <url>
     <loc>https://abcdoc-cn.github.io/tags/SQLite/</loc>
-    <lastmod>2021-06-16</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://abcdoc-cn.github.io/tags/openssl/</loc>
     <lastmod>2021-06-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -685,7 +664,7 @@
 
   
   <url>
-    <loc>https://abcdoc-cn.github.io/categories/%E6%B5%8B%E8%AF%95/</loc>
+    <loc>https://abcdoc-cn.github.io/categories/C/</loc>
     <lastmod>2021-06-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -706,21 +685,14 @@
   </url>
   
   <url>
+    <loc>https://abcdoc-cn.github.io/categories/Linux/</loc>
+    <lastmod>2021-06-16</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://abcdoc-cn.github.io/categories/Electron/</loc>
-    <lastmod>2021-06-16</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://abcdoc-cn.github.io/categories/C/</loc>
-    <lastmod>2021-06-16</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://abcdoc-cn.github.io/categories/GIt/</loc>
     <lastmod>2021-06-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -735,13 +707,6 @@
   
   <url>
     <loc>https://abcdoc-cn.github.io/categories/Java/</loc>
-    <lastmod>2021-06-16</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://abcdoc-cn.github.io/categories/Linux/</loc>
     <lastmod>2021-06-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -769,7 +734,7 @@
   </url>
   
   <url>
-    <loc>https://abcdoc-cn.github.io/categories/SpringBoot/</loc>
+    <loc>https://abcdoc-cn.github.io/categories/GIt/</loc>
     <lastmod>2021-06-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -777,6 +742,13 @@
   
   <url>
     <loc>https://abcdoc-cn.github.io/categories/VS2015/</loc>
+    <lastmod>2021-06-16</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://abcdoc-cn.github.io/categories/SpringBoot/</loc>
     <lastmod>2021-06-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

@@ -6,58 +6,10 @@
   <link href="https://abcdoc-cn.github.io/atom.xml" rel="self"/>
   
   <link href="https://abcdoc-cn.github.io/"/>
-  <updated>2021-06-16T07:52:24.786Z</updated>
+  <updated>2021-06-10T07:38:20.000Z</updated>
   <id>https://abcdoc-cn.github.io/</id>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>测试修改</title>
-    <link href="https://abcdoc-cn.github.io/%E6%B5%8B%E8%AF%95%E4%BF%AE%E6%94%B9/"/>
-    <id>https://abcdoc-cn.github.io/%E6%B5%8B%E8%AF%95%E4%BF%AE%E6%94%B9/</id>
-    <published>2021-06-16T07:51:13.000Z</published>
-    <updated>2021-06-16T07:52:24.786Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="测试修改1"><a href="#测试修改1" class="headerlink" title="测试修改1"></a>测试修改1</h2>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;测试修改1&quot;&gt;&lt;a href=&quot;#测试修改1&quot; class=&quot;headerlink&quot; title=&quot;测试修改1&quot;&gt;&lt;/a&gt;测试修改1&lt;/h2&gt;</summary>
-      
-    
-    
-    
-    <category term="测试" scheme="https://abcdoc-cn.github.io/categories/%E6%B5%8B%E8%AF%95/"/>
-    
-    
-    <category term="测试" scheme="https://abcdoc-cn.github.io/tags/%E6%B5%8B%E8%AF%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>测试添加</title>
-    <link href="https://abcdoc-cn.github.io/%E6%B5%8B%E8%AF%95%E6%B7%BB%E5%8A%A0/"/>
-    <id>https://abcdoc-cn.github.io/%E6%B5%8B%E8%AF%95%E6%B7%BB%E5%8A%A0/</id>
-    <published>2021-06-16T07:49:09.000Z</published>
-    <updated>2021-06-16T07:49:09.751Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="测试添加"><a href="#测试添加" class="headerlink" title="测试添加"></a>测试添加</h2>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;测试添加&quot;&gt;&lt;a href=&quot;#测试添加&quot; class=&quot;headerlink&quot; title=&quot;测试添加&quot;&gt;&lt;/a&gt;测试添加&lt;/h2&gt;</summary>
-      
-    
-    
-    
-    <category term="测试" scheme="https://abcdoc-cn.github.io/categories/%E6%B5%8B%E8%AF%95/"/>
-    
-    
-    <category term="测试" scheme="https://abcdoc-cn.github.io/tags/%E6%B5%8B%E8%AF%95/"/>
-    
-  </entry>
   
   <entry>
     <title>VUE 常用方法</title>
@@ -534,6 +486,68 @@
     
     
     <category term="Vditor" scheme="https://abcdoc-cn.github.io/tags/Vditor/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C 语言基本数据类型</title>
+    <link href="https://abcdoc-cn.github.io/C/C%20%E8%AF%AD%E8%A8%80%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
+    <id>https://abcdoc-cn.github.io/C/C%20%E8%AF%AD%E8%A8%80%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</id>
+    <published>2021-04-27T03:09:17.000Z</published>
+    <updated>2021-06-09T09:37:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="整数类型"><a href="#整数类型" class="headerlink" title="整数类型"></a>整数类型</h1><table><thead><tr><th>类型</th><th>存储大小</th><th>值范围</th></tr></thead><tbody><tr><td>char</td><td>1 字节</td><td>-128 到 127 或 0 到 255</td></tr><tr><td>unsigned char</td><td>1 字节</td><td>0 到 255</td></tr><tr><td>signed char</td><td>1 字节</td><td>-128 到 127</td></tr><tr><td>int</td><td>2 或 4 字节</td><td>-32,768 到 32,767 或 -2,147,483,648 到 2,147,483,647</td></tr><tr><td>unsigned int</td><td>2 或 4 字节</td><td>0 到 65,535 或 0 到 4,294,967,295</td></tr><tr><td>short</td><td>2 字节</td><td>-32,768 到 32,767</td></tr><tr><td>unsigned short</td><td>2 字节</td><td>0 到 65,535</td></tr><tr><td>long</td><td>4 字节</td><td>-2,147,483,648 到 2,147,483,647</td></tr><tr><td>unsigned long</td><td>4 字节</td><td>0 到 4,294,967,295</td></tr></tbody></table><h1 id="浮点类型"><a href="#浮点类型" class="headerlink" title="浮点类型"></a>浮点类型</h1><table><thead><tr><th>类型</th><th>存储大小</th><th>值范围</th><th>精度</th></tr></thead><tbody><tr><td>float</td><td>4 字节</td><td>1.2E-38 到 3.4E+38</td><td>6 位小数</td></tr><tr><td>double</td><td>8 字节</td><td>2.3E-308 到 1.7E+308</td><td>15 位小数</td></tr><tr><td>long double</td><td>16 字节</td><td>3.4E-4932 到 1.1E+4932</td><td>19 位小数</td></tr></tbody></table>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;整数类型&quot;&gt;&lt;a href=&quot;#整数类型&quot; class=&quot;headerlink&quot; title=&quot;整数类型&quot;&gt;&lt;/a&gt;整数类型&lt;/h1&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;类型&lt;/th&gt;
+&lt;th&gt;存储大小&lt;/th&gt;
+&lt;th&gt;值范围&lt;/th&gt;
+&lt;/tr&gt;</summary>
+      
+    
+    
+    
+    <category term="C" scheme="https://abcdoc-cn.github.io/categories/C/"/>
+    
+    
+    <category term="速查" scheme="https://abcdoc-cn.github.io/tags/%E9%80%9F%E6%9F%A5/"/>
+    
+    <category term="C" scheme="https://abcdoc-cn.github.io/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MySQL 函数列表</title>
+    <link href="https://abcdoc-cn.github.io/MySQL/MySQL%20%E5%87%BD%E6%95%B0%E5%88%97%E8%A1%A8/"/>
+    <id>https://abcdoc-cn.github.io/MySQL/MySQL%20%E5%87%BD%E6%95%B0%E5%88%97%E8%A1%A8/</id>
+    <published>2021-04-27T02:52:20.000Z</published>
+    <updated>2021-06-07T02:30:23.324Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="MySQL-数值型函数"><a href="#MySQL-数值型函数" class="headerlink" title="MySQL 数值型函数"></a>MySQL 数值型函数</h1><table><thead><tr><th>函数名称</th><th>作 用</th></tr></thead><tbody><tr><td><a href="http://c.biancheng.net/mysql/abc.html">ABS</a></td><td>求绝对值</td></tr><tr><td><a href="http://c.biancheng.net/mysql/sqrt.html">SQRT</a></td><td>求二次方根</td></tr><tr><td><a href="http://c.biancheng.net/mysql/mod.html">MOD</a></td><td>求余数</td></tr><tr><td><a href="http://c.biancheng.net/mysql/ceil_celing.html">CEIL 和 CEILING</a></td><td>两个函数功能相同，都是返回不小于参数的最小整数，即向上取整</td></tr><tr><td><a href="http://c.biancheng.net/mysql/floor.html">FLOOR</a></td><td>向下取整，返回值转化为一个BIGINT</td></tr><tr><td><a href="http://c.biancheng.net/mysql/rand.html">RAND</a></td><td>生成一个0~1之间的随机数，传入整数参数是，用来产生重复序列</td></tr><tr><td><a href="http://c.biancheng.net/mysql/round.html">ROUND</a></td><td>对所传参数进行四舍五入</td></tr><tr><td><a href="http://c.biancheng.net/mysql/sign.html">SIGN</a></td><td>返回参数的符号</td></tr><tr><td><a href="http://c.biancheng.net/mysql/pow_power.html">POW 和 POWER</a></td><td>两个函数的功能相同，都是所传参数的次方的结果值</td></tr><tr><td><a href="http://c.biancheng.net/mysql/sin.html">SIN</a></td><td>求正弦值</td></tr><tr><td><a href="http://c.biancheng.net/mysql/asin.html">ASIN</a></td><td>求反正弦值，与函数 SIN 互为反函数</td></tr><tr><td><a href="http://c.biancheng.net/mysql/cos.html">COS</a></td><td>求余弦值</td></tr><tr><td><a href="http://c.biancheng.net/mysql/acos.html">ACOS</a></td><td>求反余弦值，与函数 COS 互为反函数</td></tr><tr><td><a href="http://c.biancheng.net/mysql/tan.html">TAN</a></td><td>求正切值</td></tr><tr><td><a href="http://c.biancheng.net/mysql/atan.html">ATAN</a></td><td>求反正切值，与函数 TAN 互为反函数</td></tr><tr><td><a href="http://c.biancheng.net/mysql/cot.html">COT</a></td><td>求余切值</td></tr></tbody></table><h1 id="MySQL-字符串函数"><a href="#MySQL-字符串函数" class="headerlink" title="MySQL 字符串函数"></a>MySQL 字符串函数</h1><table><thead><tr><th>函数名称</th><th>作 用</th></tr></thead><tbody><tr><td><a href="http://c.biancheng.net/mysql/length.html">LENGTH</a></td><td>计算字符串长度函数，返回字符串的字节长度</td></tr><tr><td><a href="http://c.biancheng.net/mysql/concat.html">CONCAT</a></td><td>合并字符串函数，返回结果为连接参数产生的字符串，参数可以使一个或多个</td></tr><tr><td><a href="http://c.biancheng.net/mysql/insert.html">INSERT</a></td><td>替换字符串函数</td></tr><tr><td><a href="http://c.biancheng.net/mysql/lower.html">LOWER</a></td><td>将字符串中的字母转换为小写</td></tr><tr><td><a href="http://c.biancheng.net/mysql/upper.html">UPPER</a></td><td>将字符串中的字母转换为大写</td></tr><tr><td><a href="http://c.biancheng.net/mysql/left.html">LEFT</a></td><td>从左侧字截取符串，返回字符串左边的若干个字符</td></tr><tr><td><a href="http://c.biancheng.net/mysql/right.html">RIGHT</a></td><td>从右侧字截取符串，返回字符串右边的若干个字符</td></tr><tr><td><a href="http://c.biancheng.net/mysql/trim.html">TRIM</a></td><td>删除字符串左右两侧的空格</td></tr><tr><td><a href="http://c.biancheng.net/mysql/replace.html">REPLACE</a></td><td>字符串替换函数，返回替换后的新字符串</td></tr><tr><td><a href="http://c.biancheng.net/mysql/substring.html">SUBSTRING</a></td><td>截取字符串，返回从指定位置开始的指定长度的字符换</td></tr><tr><td><a href="http://c.biancheng.net/mysql/reverse.html">REVERSE</a></td><td>字符串反转（逆序）函数，返回与原始字符串顺序相反的字符串</td></tr></tbody></table><h1 id="MySQL-日期和时间函数"><a href="#MySQL-日期和时间函数" class="headerlink" title="MySQL 日期和时间函数"></a>MySQL 日期和时间函数</h1><table><thead><tr><th>函数名称</th><th>作 用</th></tr></thead><tbody><tr><td><a href="http://c.biancheng.net/mysql/curdate_current_date.html">CURDATE 和 CURRENT_DATE</a></td><td>两个函数作用相同，返回当前系统的日期值</td></tr><tr><td><a href="http://c.biancheng.net/mysql/curtime_current_time.html">CURTIME 和 CURRENT_TIME</a></td><td>两个函数作用相同，返回当前系统的时间值</td></tr><tr><td><a href="http://c.biancheng.net/mysql/now_sysdate.html">NOW 和  SYSDATE</a></td><td>两个函数作用相同，返回当前系统的日期和时间值</td></tr><tr><td><a href="http://c.biancheng.net/mysql/unix_timestamp.html">UNIX_TIMESTAMP</a></td><td>获取UNIX时间戳函数，返回一个以 UNIX 时间戳为基础的无符号整数</td></tr><tr><td><a href="http://c.biancheng.net/mysql/from_unixtime.html">FROM_UNIXTIME</a></td><td>将 UNIX 时间戳转换为时间格式，与UNIX_TIMESTAMP互为反函数</td></tr><tr><td><a href="http://c.biancheng.net/mysql/month.html">MONTH</a></td><td>获取指定日期中的月份</td></tr><tr><td><a href="http://c.biancheng.net/mysql/monthname.html">MONTHNAME</a></td><td>获取指定日期中的月份英文名称</td></tr><tr><td><a href="http://c.biancheng.net/mysql/dayname.html">DAYNAME</a></td><td>获取指定曰期对应的星期几的英文名称</td></tr><tr><td><a href="http://c.biancheng.net/mysql/dayofweek.html">DAYOFWEEK</a></td><td>获取指定日期对应的一周的索引位置值</td></tr><tr><td><a href="http://c.biancheng.net/mysql/week.html">WEEK</a></td><td>获取指定日期是一年中的第几周，返回值的范围是否为 0〜52 或 1〜53</td></tr><tr><td><a href="http://c.biancheng.net/mysql/dayofyear.html">DAYOFYEAR</a></td><td>获取指定曰期是一年中的第几天，返回值范围是1~366</td></tr><tr><td><a href="http://c.biancheng.net/mysql/dayofmonth.html">DAYOFMONTH</a></td><td>获取指定日期是一个月中是第几天，返回值范围是1~31</td></tr><tr><td><a href="http://c.biancheng.net/mysql/year.html">YEAR</a></td><td>获取年份，返回值范围是 1970〜2069</td></tr><tr><td><a href="http://c.biancheng.net/mysql/time_to_sec.html">TIME_TO_SEC</a></td><td>将时间参数转换为秒数</td></tr><tr><td><a href="http://c.biancheng.net/mysql/sec_to_time.html">SEC_TO_TIME</a></td><td>将秒数转换为时间，与TIME_TO_SEC 互为反函数</td></tr><tr><td><a href="http://c.biancheng.net/mysql/date_add_adddate.html">DATE_ADD 和 ADDDATE</a></td><td>两个函数功能相同，都是向日期添加指定的时间间隔</td></tr><tr><td><a href="http://c.biancheng.net/mysql/date_sub_subdate.html">DATE_SUB 和 SUBDATE</a></td><td>两个函数功能相同，都是向日期减去指定的时间间隔</td></tr><tr><td><a href="http://c.biancheng.net/mysql/addtime.html">ADDTIME</a></td><td>时间加法运算，在原始时间上添加指定的时间</td></tr><tr><td><a href="http://c.biancheng.net/mysql/subtime.html">SUBTIME</a></td><td>时间减法运算，在原始时间上减去指定的时间</td></tr><tr><td><a href="http://c.biancheng.net/mysql/datediff.html">DATEDIFF</a></td><td>获取两个日期之间间隔，返回参数 1 减去参数 2 的值</td></tr><tr><td><a href="http://c.biancheng.net/mysql/date_format.html">DATE_FORMAT</a></td><td>格式化指定的日期，根据参数返回指定格式的值</td></tr><tr><td><a href="http://c.biancheng.net/mysql/weekday.html">WEEKDAY</a></td><td>获取指定日期在一周内的对应的工作日索引</td></tr></tbody></table><h1 id="MySQL-聚合函数"><a href="#MySQL-聚合函数" class="headerlink" title="MySQL 聚合函数"></a>MySQL 聚合函数</h1><table><thead><tr><th>函数名称</th><th>作用</th></tr></thead><tbody><tr><td><a href="http://c.biancheng.net/mysql/max.html">MAX</a></td><td>查询指定列的最大值</td></tr><tr><td><a href="http://c.biancheng.net/mysql/min.html">MIN</a></td><td>查询指定列的最小值</td></tr><tr><td><a href="http://c.biancheng.net/mysql/count.html">COUNT</a></td><td>统计查询结果的行数</td></tr><tr><td><a href="http://c.biancheng.net/mysql/sum.html">SUM</a></td><td>求和，返回指定列的总和</td></tr><tr><td><a href="http://c.biancheng.net/mysql/avg.html">AVG</a></td><td>求平均值，返回指定列数据的平均值</td></tr></tbody></table><h1 id="MySQL-流程控制函数"><a href="#MySQL-流程控制函数" class="headerlink" title="MySQL 流程控制函数"></a>MySQL 流程控制函数</h1><table><thead><tr><th>函数名称</th><th>作用</th></tr></thead><tbody><tr><td><a href="http://c.biancheng.net/mysql/if.html">IF</a></td><td>判断，流程控制</td></tr><tr><td><a href="http://c.biancheng.net/mysql/ifnull.html">IFNULL</a></td><td>判断是否为空</td></tr><tr><td><a href="http://c.biancheng.net/mysql/case.html">CASE</a></td><td>搜索语句</td></tr></tbody></table>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;MySQL-数值型函数&quot;&gt;&lt;a href=&quot;#MySQL-数值型函数&quot; class=&quot;headerlink&quot; title=&quot;MySQL 数值型函数&quot;&gt;&lt;/a&gt;MySQL 数值型函数&lt;/h1&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;函数名称&lt;/th&gt;
+&lt;t</summary>
+      
+    
+    
+    
+    <category term="MySQL" scheme="https://abcdoc-cn.github.io/categories/MySQL/"/>
+    
+    
+    <category term="速查" scheme="https://abcdoc-cn.github.io/tags/%E9%80%9F%E6%9F%A5/"/>
+    
+    <category term="MySQL" scheme="https://abcdoc-cn.github.io/tags/MySQL/"/>
     
   </entry>
   
